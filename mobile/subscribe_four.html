@@ -12,6 +12,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap"
         rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         rel="stylesheet" />
@@ -57,146 +59,134 @@
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script
-        id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {"colors": {"tertiary-container": "#c28425", "secondary": "#cec6b6", "surface-container-high": "#2e2927", "surface-variant": "#393431", "on-secondary": "#343025", "surface-bright": "#3d3836", "outline-variant": "#5e3e41", "primary": "#ffb2b8", "on-primary-fixed": "#40000f", "error": "#ffb4ab", "on-secondary-fixed": "#1f1b12", "on-tertiary-fixed": "#2a1800", "surface-tint": "#ffb2b8", "surface-dim": "#171210", "surface-container-lowest": "#110d0b", "outline": "#ae8789", "on-tertiary-fixed-variant": "#643f00", "background": "#171210", "error-container": "#93000a", "inverse-primary": "#be003d", "surface-container": "#231f1c", "primary-fixed": "#ffdadb", "on-error": "#690005", "primary-fixed-dim": "#ffb2b8", "surface-container-highest": "#393431", "inverse-on-surface": "#342f2d", "on-secondary-container": "#bfb8a9", "on-error-container": "#ffdad6", "primary-container": "#ff506e", "on-primary-fixed-variant": "#91002d", "on-tertiary": "#462b00", "on-surface-variant": "#e8bcbe", "tertiary-fixed": "#ffddb5", "secondary-container": "#4e493d", "tertiary-fixed-dim": "#ffb958", "surface": "#171210", "surface-container-low": "#1f1b18", "on-tertiary-container": "#3d2500", "on-primary-container": "#5b0018", "on-secondary-fixed-variant": "#4b463b", "on-primary": "#67001d", "secondary-fixed": "#eae1d2", "on-background": "#eae0dd", "secondary-fixed-dim": "#cec6b6", "inverse-surface": "#eae0dd", "on-surface": "#eae0dd", "tertiary": "#ffb958"}, "borderRadius": {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"}, "spacing": {"margin-md": "3rem", "space-md": "1rem", "space-xl": "3.5rem", "space-xs": "0.25rem", "gutter-lg": "2.5rem", "gutter-sm": "1rem", "space-lg": "2rem", "space-2xl": "6rem", "margin-lg": "5rem", "gutter": "1.5rem", "margin": "1.5rem", "space-sm": "0.5rem"}, "fontFamily": {"body-lg": ["Hanken Grotesk"], "headline-lg": ["Bodoni Moda"], "label-caps": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "headline-md": ["Bodoni Moda"], "title-editorial": ["Bodoni Moda"], "headline-sm": ["Bodoni Moda"], "headline-lg-mobile": ["Bodoni Moda"], "label-mono-technical": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "display-hero-mobile": ["Bodoni Moda"], "display-hero": ["Bodoni Moda"]}, "fontSize": {"body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}], "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "label-caps": ["11px", {"lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "700"}], "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400"}], "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "500"}], "title-editorial": ["18px", {"lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600"}], "headline-sm": ["22px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "500"}], "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "0em", "fontWeight": "600"}], "label-mono-technical": ["12px", {"lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500"}], "body-sm": ["13px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "400"}], "display-hero-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "display-hero": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}]}}}}</script>
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#c28425", "secondary": "#cec6b6", "surface-container-high": "#2e2927", "surface-variant": "#393431", "on-secondary": "#343025", "surface-bright": "#3d3836", "outline-variant": "#5e3e41", "primary": "#ffb2b8", "on-primary-fixed": "#40000f", "error": "#ffb4ab", "on-secondary-fixed": "#1f1b12", "on-tertiary-fixed": "#2a1800", "surface-tint": "#ffb2b8", "surface-dim": "#171210", "surface-container-lowest": "#110d0b", "outline": "#ae8789", "on-tertiary-fixed-variant": "#643f00", "background": "#171210", "error-container": "#93000a", "inverse-primary": "#be003d", "surface-container": "#231f1c", "primary-fixed": "#ffdadb", "on-error": "#690005", "primary-fixed-dim": "#ffb2b8", "surface-container-highest": "#393431", "inverse-on-surface": "#342f2d", "on-secondary-container": "#bfb8a9", "on-error-container": "#ffdad6", "primary-container": "#ff506e", "on-primary-fixed-variant": "#91002d", "on-tertiary": "#462b00", "on-surface-variant": "#e8bcbe", "tertiary-fixed": "#ffddb5", "secondary-container": "#4e493d", "tertiary-fixed-dim": "#ffb958", "surface": "#171210", "surface-container-low": "#1f1b18", "on-tertiary-container": "#3d2500", "on-primary-container": "#5b0018", "on-secondary-fixed-variant": "#4b463b", "on-primary": "#67001d", "secondary-fixed": "#eae1d2", "on-background": "#eae0dd", "secondary-fixed-dim": "#cec6b6", "inverse-surface": "#eae0dd", "on-surface": "#eae0dd", "tertiary": "#ffb958" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-md": "3rem", "space-md": "1rem", "space-xl": "3.5rem", "space-xs": "0.25rem", "gutter-lg": "2.5rem", "gutter-sm": "1rem", "space-lg": "2rem", "space-2xl": "6rem", "margin-lg": "5rem", "gutter": "1.5rem", "margin": "1.5rem", "space-sm": "0.5rem" }, "fontFamily": { "body-lg": ["Hanken Grotesk"], "headline-lg": ["Bodoni Moda"], "label-caps": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "headline-md": ["Bodoni Moda"], "title-editorial": ["Bodoni Moda"], "headline-sm": ["Bodoni Moda"], "headline-lg-mobile": ["Bodoni Moda"], "label-mono-technical": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "display-hero-mobile": ["Bodoni Moda"], "display-hero": ["Bodoni Moda"] }, "fontSize": { "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "700" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "500" }], "title-editorial": ["18px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "0em", "fontWeight": "600" }], "label-mono-technical": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "400" }], "display-hero-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "display-hero": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } }</script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
 </head>
 
 <body
-    class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col pt-safe pb-safe">
-    <main class="flex-1 flex flex-col relative w-full bg-surface">
+    class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col pt-safe pb-safe"
+    style="background-color: #07130E; color: #EDEDED; font-family: 'Plus Jakarta Sans', sans-serif;">
+    <main class="flex-1 flex flex-col relative w-full bg-surface" style="background-color: #07130E;">
         <div class="flex flex-col w-full text-on-surface">
             <header class="flex items-center justify-between px-6 py-4 w-full bg-surface-container-lowest">
-                <div class="w-8"></div>
-                <span class="font-headline-md text-headline-md tracking-wider text-on-surface select-none">JALADO</span>
-                <button aria-label="Fermer"
-                    class="w-8 h-8 flex items-center justify-center text-secondary hover:text-on-surface transition-colors"
-                    type="button">
-                    <span class="material-symbols-outlined text-[20px]">close</span>
-                </button>
+                <div class="w-8"></div><span
+                    class="text-[22px] font-extrabold tracking-wider text-[#EDEDED] select-none flex items-center gap-0.5"
+                    style="font-family: 'Plus Jakarta Sans', sans-serif;">JALADO<span
+                        class="w-2 h-2 rounded-full bg-[#1FA463] inline-block mb-1"></span></span><button
+                    aria-label="Fermer"
+                    class="w-8 h-8 flex items-center justify-center text-[#EDEDED] hover:text-[#1FA463] transition-colors"
+                    type="button"><span class="material-symbols-outlined text-[20px]">close</span></button>
             </header>
             <div class="flex flex-col px-6 pt-6 pb-12 gap-8 w-full max-w-md mx-auto">
                 <div class="flex flex-col items-center text-center gap-4">
-                    <div class="relative flex items-center justify-center w-16 h-16 bg-surface-container rounded-full">
-                        <svg class="w-8 h-8 text-primary-container" fill="none" stroke="currentColor"
-                            stroke-linecap="square" stroke-linejoin="miter" stroke-width="2.5" viewbox="0 0 24 24">
+                    <div class="relative flex items-center justify-center w-16 h-16 rounded-full border border-[#1FA463]/30"
+                        style="background-color: #0E2A1D;"><svg class="w-8 h-8 text-[#1FA463]" fill="none"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            viewbox="0 0 24 24">
                             <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                    </div>
-                    <div class="inline-flex items-center px-2.5 py-1 bg-surface-container-high">
-                        <span class="font-label-caps text-label-caps text-tertiary tracking-widest uppercase">Adhésion
-                            confirmée</span>
-                    </div>
+                        </svg></div>
+                    <div class="inline-flex items-center px-3 py-1 rounded border border-[#C9A227]/40"
+                        style="background-color: rgba(201, 162, 39, 0.12);"><span
+                            class="text-[11px] font-bold text-[#C9A227] tracking-widest uppercase"
+                            style="font-family: 'Plus Jakarta Sans', sans-serif;">Adhésion confirmée</span></div>
                     <div class="flex flex-col gap-2">
-                        <h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">
-                            Bienvenue en Premium</h1>
-                        <p class="font-body-md text-body-md text-secondary max-w-xs mx-auto">
-                            Ton compte est désormais actif. Tu as un accès illimité à toute la création audiovisuelle
-                            béninoise.
-                        </p>
+                        <h1 class="text-[28px] font-extrabold text-[#EDEDED] tracking-tight leading-tight"
+                            style="font-family: 'Plus Jakarta Sans', sans-serif;">Bienvenue en Premium</h1>
+                        <p class="text-[14px] text-[#EDEDED]/70 max-w-xs mx-auto leading-relaxed"
+                            style="font-family: 'Plus Jakarta Sans', sans-serif;">Ton compte est désormais actif. Tu as
+                            un accès illimité à toute la création audiovisuelle béninoise.</p>
                     </div>
                 </div>
-                <div class="flex flex-col bg-surface-container rounded-lg p-5 gap-4">
+                <div class="flex flex-col rounded-xl p-5 gap-4 border border-[#1FA463]/20"
+                    style="background-color: #0E2A1D;">
                     <div class="flex justify-between items-start">
-                        <div class="flex flex-col">
-                            <span
-                                class="font-label-caps text-label-caps text-secondary tracking-wider uppercase">Abonnement</span>
-                            <span class="font-title-editorial text-title-editorial text-on-surface">Jalado
-                                Premium</span>
-                        </div>
-                        <span
-                            class="font-label-caps text-label-caps bg-primary-container text-on-surface px-2 py-0.5 uppercase tracking-wider">1
-                            Mois</span>
+                        <div class="flex flex-col"><span
+                                class="text-[11px] font-semibold text-[#EDEDED]/60 tracking-wider uppercase"
+                                style="font-family: 'Plus Jakarta Sans', sans-serif;">Abonnement</span><span
+                                class="text-[20px] font-bold text-[#EDEDED]"
+                                style="font-family: 'Plus Jakarta Sans', sans-serif;">Jalado Premium</span></div><span
+                            class="text-[11px] font-bold bg-[#1FA463] text-[#07130E] px-2.5 py-0.5 rounded uppercase tracking-wider"
+                            style="font-family: 'Plus Jakarta Sans', sans-serif;">1 Mois</span>
                     </div>
                     <div class="grid grid-cols-2 gap-4 pt-1">
-                        <div class="flex flex-col">
-                            <span
-                                class="font-label-caps text-label-caps text-secondary tracking-wider uppercase">Validité</span>
-                            <span class="font-body-sm text-body-sm text-on-surface">Jusqu'au 18 Nov 2026</span>
-                        </div>
-                        <div class="flex flex-col">
-                            <span
-                                class="font-label-caps text-label-caps text-secondary tracking-wider uppercase">Montant
-                                Réglé</span>
-                            <span class="font-body-sm text-body-sm text-on-surface">3 000 FCFA</span>
+                        <div class="flex flex-col"><span
+                                class="text-[11px] font-semibold text-[#EDEDED]/60 tracking-wider uppercase"
+                                style="font-family: 'Plus Jakarta Sans', sans-serif;">Validité</span><span
+                                class="text-[13px] font-medium text-[#EDEDED]">Jusqu'au 18 Nov 2026</span></div>
+                        <div class="flex flex-col"><span
+                                class="text-[11px] font-semibold text-[#EDEDED]/60 tracking-wider uppercase"
+                                style="font-family: 'Plus Jakarta Sans', sans-serif;">Montant Réglé</span><span
+                                class="text-[13px] font-bold text-[#EDEDED]">3 000 FCFA</span></div>
+                    </div>
+                    <div class="flex flex-col p-2.5 rounded border border-white/5" style="background-color: #07130E;">
+                        <div class="flex justify-between items-center"><span
+                                class="text-[12px] text-[#EDEDED]/60 font-medium">Règlement</span><span
+                                class="text-[12px] text-[#EDEDED] font-semibold">MTN Mobile Money</span></div>
+                        <div class="flex justify-between items-center mt-1"><span
+                                class="text-[12px] text-[#EDEDED]/60 font-medium">Référence</span><span
+                                class="text-[12px] text-[#C9A227] font-semibold tracking-wide">JAL-2026-9482-BJ</span>
                         </div>
                     </div>
-                    <div class="flex flex-col bg-surface-container-low p-2.5 rounded">
-                        <div class="flex justify-between items-center">
-                            <span
-                                class="font-label-mono-technical text-label-mono-technical text-secondary">Règlement</span>
-                            <span class="font-label-mono-technical text-label-mono-technical text-on-surface">MTN Mobile
-                                Money</span>
-                        </div>
-                        <div class="flex justify-between items-center mt-1">
-                            <span
-                                class="font-label-mono-technical text-label-mono-technical text-secondary">Référence</span>
-                            <span
-                                class="font-label-mono-technical text-label-mono-technical text-tertiary">JAL-2026-9482-BJ</span>
-                        </div>
-                    </div>
-                    <div class="w-full h-px bg-surface-container-highest my-1"></div>
-                    <div class="flex items-start gap-3">
-                        <span class="material-symbols-outlined text-[18px] text-tertiary mt-0.5">event_available</span>
-                        <p class="font-body-sm text-body-sm text-secondary leading-snug">
-                            On te prévient avant l'échéance. Aucun renouvellement automatique, zéro prélèvement
-                            surprise.
-                        </p>
+                    <div class="w-full h-px bg-white/10 my-0.5"></div>
+                    <div class="flex items-start gap-3"><span
+                            class="material-symbols-outlined text-[18px] text-[#C9A227] mt-0.5">event_available</span>
+                        <p class="text-[13px] text-[#EDEDED]/70 leading-snug"
+                            style="font-family: 'Plus Jakarta Sans', sans-serif;">On te prévient avant l'échéance. Aucun
+                            renouvellement automatique, zéro prélèvement surprise.</p>
                     </div>
                 </div>
-                <div class="flex flex-col gap-3">
-                    <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Recommandé
-                        pour toi dès maintenant</span>
-                    <div
-                        class="flex bg-surface-container rounded-lg overflow-hidden group cursor-pointer transition-colors hover:bg-surface-container-high">
-                        <div class="w-28 h-20 bg-surface-container-highest flex-shrink-0 relative overflow-hidden">
-                            <img class="w-full h-full object-cover"
+                <div class="flex flex-col gap-3"><span
+                        class="text-[12px] font-bold text-[#EDEDED]/70 uppercase tracking-widest"
+                        style="font-family: 'Plus Jakarta Sans', sans-serif;">Recommandé pour toi dès maintenant</span>
+                    <div class="flex rounded-xl overflow-hidden group cursor-pointer transition-colors border border-white/5 hover:border-[#1FA463]/40"
+                        style="background-color: #0E2A1D;">
+                        <div class="w-28 h-20 flex-shrink-0 relative overflow-hidden bg-black"><img
+                                class="w-full h-full object-cover"
                                 data-alt="Cinematic still from West African art film Les Gardiens de Ganvie, fishermen navigating golden sunlit misty lagoon waters at twilight, wooden pirogues, warm amber and mahogany tones, atmospheric hyperrealistic 4K cinema shot"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp9SIK_HUm7mQOyi6UeVqeBVyvJXEtwabDLvTDjxjxUaP5lUeBKM4vDv2vwskxH2nM782MnMxZAAuS565YYUG9rq6q2wS7PGFCrAECNU49aKfPrMKF4AARaJVzxMi_jSWrRBpDlWc-2CdESlKDnI7ikyyFJufMDt6_T65YrOH3zvYtMU-XoPyHT-H6wMG9iTs8uumUgobuquW87SqCgrU79l7QinEm01pBv3qLrpayL1gcIkoarAgxJw" />
-                            <div class="absolute bottom-1 left-1 bg-surface-container-lowest px-1.5 py-0.2">
-                                <span
-                                    class="font-label-caps text-[9px] text-primary-container font-bold uppercase tracking-wider">Master
-                                    4K</span>
-                            </div>
+                            <div class="absolute bottom-1 left-1 px-1.5 py-0.5 rounded border border-[#C9A227]/30"
+                                style="background-color: rgba(7, 19, 14, 0.85);"><span
+                                    class="text-[9px] text-[#C9A227] font-extrabold uppercase tracking-wider"
+                                    style="font-family: 'Plus Jakarta Sans', sans-serif;">Master 4K</span></div>
                         </div>
-                        <div class="flex flex-col justify-center px-3 py-2 min-w-0">
-                            <span class="font-title-editorial text-body-md text-on-surface truncate">Les Gardiens de
-                                Ganvié</span>
-                            <span class="font-body-sm text-body-sm text-secondary truncate">Fresque documentaire • 1h
-                                48m</span>
-                        </div>
+                        <div class="flex flex-col justify-center px-3 py-2 min-w-0"><span
+                                class="text-[15px] font-bold text-[#EDEDED] truncate"
+                                style="font-family: 'Plus Jakarta Sans', sans-serif;">Les Gardiens de Ganvié</span><span
+                                class="text-[13px] text-[#EDEDED]/60 truncate mt-0.5">Fresque documentaire • 1h
+                                48m</span></div>
                     </div>
-                    <div
-                        class="flex bg-surface-container rounded-lg overflow-hidden group cursor-pointer transition-colors hover:bg-surface-container-high">
-                        <div class="w-28 h-20 bg-surface-container-highest flex-shrink-0 relative overflow-hidden">
-                            <img class="w-full h-full object-cover"
+                    <div class="flex rounded-xl overflow-hidden group cursor-pointer transition-colors border border-white/5 hover:border-[#1FA463]/40"
+                        style="background-color: #0E2A1D;">
+                        <div class="w-28 h-20 flex-shrink-0 relative overflow-hidden bg-black"><img
+                                class="w-full h-full object-cover"
                                 data-alt="Visual representation of contemporary African traditional sound archives, ceremonial bronze bells and resonant sacred percussion instruments set against textured deep charcoal linen with warm amber rim lighting"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLlQlTixtrCcsScJfOFWEx4TGqWJz4-9NESAC3QkC3qVsiurIihk4waH5oQumuzENORijMowqJFHXiGLCH5H59DCl_4RV8mttCDGlHJNgFffAwdsbloIMOsrjdXafPQNxhcrBmea_B_sybn0tnmsROMm79373ZuDoOt_ROSTg3NMSKvOVBO4whl-LYVF54CTvapBccaaj4Dcg8jWhvbInjngjNZe_dXCXNmQ7FJGctgOFgxd9BmxucCg" />
-                            <div class="absolute bottom-1 left-1 bg-surface-container-lowest px-1.5 py-0.2">
-                                <span
-                                    class="font-label-caps text-[9px] text-tertiary font-bold uppercase tracking-wider">Binaural</span>
-                            </div>
+                            <div class="absolute bottom-1 left-1 px-1.5 py-0.5 rounded border border-[#C9A227]/30"
+                                style="background-color: rgba(7, 19, 14, 0.85);"><span
+                                    class="text-[9px] text-[#C9A227] font-extrabold uppercase tracking-wider"
+                                    style="font-family: 'Plus Jakarta Sans', sans-serif;">Binaural</span></div>
                         </div>
-                        <div class="flex flex-col justify-center px-3 py-2 min-w-0">
-                            <span class="font-title-editorial text-body-md text-on-surface truncate">Symphonie
-                                Vodun</span>
-                            <span class="font-body-sm text-body-sm text-secondary truncate">Archives sonores d'Abomey •
-                                42m</span>
-                        </div>
+                        <div class="flex flex-col justify-center px-3 py-2 min-w-0"><span
+                                class="text-[15px] font-bold text-[#EDEDED] truncate"
+                                style="font-family: 'Plus Jakarta Sans', sans-serif;">Symphonie Vodun</span><span
+                                class="text-[13px] text-[#EDEDED]/60 truncate mt-0.5">Archives sonores d'Abomey •
+                                42m</span></div>
                     </div>
                 </div>
-                <div class="flex flex-col gap-3 pt-2">
-                    <button
-                        class="w-full py-4 bg-primary-container text-on-surface font-label-caps text-label-caps tracking-widest uppercase transition-opacity active:opacity-90 text-center"
-                        type="button">
-                        Commencer à regarder
-                    </button>
-                    <button
-                        class="flex items-center justify-center gap-2 py-3 bg-transparent text-secondary hover:text-on-surface transition-colors"
-                        id="downloadReceiptBtn" type="button">
-                        <span class="material-symbols-outlined text-[18px]">download</span>
-                        <span class="font-body-sm text-body-sm underline underline-offset-4">Télécharger mon reçu
-                            (PDF)</span>
-                    </button>
-                </div>  
+                <div class="flex flex-col gap-3 pt-2"><button
+                        class="w-full py-4 rounded-lg bg-[#EDEDED] text-[#07130E] text-[13px] font-extrabold tracking-widest uppercase transition-opacity active:opacity-90 text-center hover:bg-white shadow-lg"
+                        style="font-family: 'Plus Jakarta Sans', sans-serif;" type="button">Commencer à
+                        regarder</button><button
+                        class="flex items-center justify-center gap-2 py-3 bg-transparent text-[#EDEDED]/80 hover:text-[#EDEDED] transition-colors"
+                        id="downloadReceiptBtn" type="button"><span
+                            class="material-symbols-outlined text-[18px] text-[#EDEDED]">download</span><span
+                            class="text-[13px] font-medium text-[#EDEDED] underline underline-offset-4"
+                            style="font-family: 'Plus Jakarta Sans', sans-serif;">Télécharger mon reçu
+                            (PDF)</span></button></div>
             </div>
             <script>
                 document.getElementById('downloadReceiptBtn')?.addEventListener('click', function () {

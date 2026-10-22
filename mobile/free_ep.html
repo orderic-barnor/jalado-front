@@ -1,389 +1,758 @@
 <!DOCTYPE html>
+<html class="dark" lang="en">
 
-<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#171210;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#40000f", "on-surface": "#eae0dd", "on-secondary-fixed-variant": "#4b463b", "on-background": "#eae0dd", "on-secondary": "#343025", "on-secondary-container": "#bfb8a9", "tertiary-container": "#c28425", "outline": "#ae8789", "primary-fixed": "#ffdadb", "primary-container": "#ff506e", "on-primary-container": "#5b0018", "error-container": "#93000a", "inverse-surface": "#eae0dd", "secondary-fixed": "#eae1d2", "secondary-fixed-dim": "#cec6b6", "on-secondary-fixed": "#1f1b12", "error": "#ffb4ab", "primary": "#ffb2b8", "background": "#171210", "surface": "#171210", "surface-container-high": "#2e2927", "surface-container": "#231f1c", "on-tertiary-container": "#3d2500", "surface-container-lowest": "#110d0b", "outline-variant": "#5e3e41", "tertiary-fixed": "#ffddb5", "on-error": "#690005", "surface-variant": "#393431", "inverse-on-surface": "#342f2d", "primary-fixed-dim": "#ffb2b8", "secondary": "#cec6b6", "surface-tint": "#ffb2b8", "tertiary-fixed-dim": "#ffb958", "on-tertiary": "#462b00", "on-primary-fixed-variant": "#91002d", "on-tertiary-fixed-variant": "#643f00", "surface-container-low": "#1f1b18", "inverse-primary": "#be003d", "on-surface-variant": "#e8bcbe", "on-primary": "#67001d", "on-error-container": "#ffdad6", "on-tertiary-fixed": "#2a1800", "tertiary": "#ffb958", "surface-dim": "#171210", "surface-container-highest": "#393431", "secondary-container": "#4e493d", "surface-bright": "#3d3836" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "6rem", "gutter-lg": "2.5rem", "gutter": "1.5rem", "gutter-sm": "1rem", "space-xs": "0.25rem", "space-xl": "3.5rem", "space-sm": "0.5rem", "margin-lg": "5rem", "space-md": "1rem", "space-lg": "2rem", "margin": "1.5rem", "margin-md": "3rem" }, "fontFamily": { "label-mono-technical": ["Hanken Grotesk"], "label-caps": ["Hanken Grotesk"], "headline-lg": ["Bodoni Moda"], "body-md": ["Hanken Grotesk"], "title-editorial": ["Bodoni Moda"], "display-hero-mobile": ["Bodoni Moda"], "body-sm": ["Hanken Grotesk"], "display-hero": ["Bodoni Moda"], "headline-lg-mobile": ["Bodoni Moda"], "headline-sm": ["Bodoni Moda"], "headline-md": ["Bodoni Moda"], "body-lg": ["Hanken Grotesk"] }, "fontSize": { "label-mono-technical": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }], "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "700" }], "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }], "title-editorial": ["18px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-hero-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "400" }], "display-hero": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }] } } } };</script><style>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    name="viewport">
+  <meta content="mobile_stack" name="shell-type">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    @layer base {
+
+      html,
+      body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #171210;
+      }
+
+      body {
+        overscroll-behavior-y: none;
+      }
+
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#40000f", "on-surface": "#eae0dd", "on-secondary-fixed-variant": "#4b463b", "on-background": "#eae0dd", "on-secondary": "#343025", "on-secondary-container": "#bfb8a9", "tertiary-container": "#c28425", "outline": "#ae8789", "primary-fixed": "#ffdadb", "primary-container": "#ff506e", "on-primary-container": "#5b0018", "error-container": "#93000a", "inverse-surface": "#eae0dd", "secondary-fixed": "#eae1d2", "secondary-fixed-dim": "#cec6b6", "on-secondary-fixed": "#1f1b12", "error": "#ffb4ab", "primary": "#ffb2b8", "background": "#171210", "surface": "#171210", "surface-container-high": "#2e2927", "surface-container": "#231f1c", "on-tertiary-container": "#3d2500", "surface-container-lowest": "#110d0b", "outline-variant": "#5e3e41", "tertiary-fixed": "#ffddb5", "on-error": "#690005", "surface-variant": "#393431", "inverse-on-surface": "#342f2d", "primary-fixed-dim": "#ffb2b8", "secondary": "#cec6b6", "surface-tint": "#ffb2b8", "tertiary-fixed-dim": "#ffb958", "on-tertiary": "#462b00", "on-primary-fixed-variant": "#91002d", "on-tertiary-fixed-variant": "#643f00", "surface-container-low": "#1f1b18", "inverse-primary": "#be003d", "on-surface-variant": "#e8bcbe", "on-primary": "#67001d", "on-error-container": "#ffdad6", "on-tertiary-fixed": "#2a1800", "tertiary": "#ffb958", "surface-dim": "#171210", "surface-container-highest": "#393431", "secondary-container": "#4e493d", "surface-bright": "#3d3836" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "6rem", "gutter-lg": "2.5rem", "gutter": "1.5rem", "gutter-sm": "1rem", "space-xs": "0.25rem", "space-xl": "3.5rem", "space-sm": "0.5rem", "margin-lg": "5rem", "space-md": "1rem", "space-lg": "2rem", "margin": "1.5rem", "margin-md": "3rem" }, "fontFamily": { "label-mono-technical": ["Hanken Grotesk"], "label-caps": ["Hanken Grotesk"], "headline-lg": ["Bodoni Moda"], "body-md": ["Hanken Grotesk"], "title-editorial": ["Bodoni Moda"], "display-hero-mobile": ["Bodoni Moda"], "body-sm": ["Hanken Grotesk"], "display-hero": ["Bodoni Moda"], "headline-lg-mobile": ["Bodoni Moda"], "headline-sm": ["Bodoni Moda"], "headline-md": ["Bodoni Moda"], "body-lg": ["Hanken Grotesk"] }, "fontSize": { "label-mono-technical": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }], "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "700" }], "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }], "title-editorial": ["18px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-hero-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "400" }], "display-hero": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }] } } } };</script>
+  <style>
     body {
       min-height: max(884px, 100dvh);
     }
   </style>
-  </head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col relative selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Back" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-title-editorial text-title-editorial text-on-surface truncate max-w-[180px]">Film Detail</h1></div><div class="flex items-center gap-space-sm"><button aria-label="Share Content" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">share</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full text-on-surface">
-<!-- Hero Media Canvas -->
-<div class="relative w-full aspect-[16/11] bg-surface-container-lowest">
-<img class="w-full h-full object-cover" data-alt="Cinematic wide shot of traditional wooden pirogues navigating the tranquil waters of Ganvie stilt village on Lake Nokoue at golden sunset. Warm amber highlights bounce on the water, silhouetted fishermen casting handwoven nets against deep volcanic earth tones, mist rising gently in documentary realism film style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIYpGQq6KSz9lPD-c_5awNq-hFAu47QnN-AXfsmeBLZM0k3JHODRPpGWObmFb6jlW_thDzXVMuwRxISzDZZBoPHblf8AHIrMA-proM98XJ11zSyafatvGC616hZ7-BHI3xzwfvILwAMts4cB1zYE5WTLtYZtXKrkjUIHi5hvyuNHBqLmEiERszQRgEgputYyNbiTEsjOJIvpNbv6kSXzXOXf6CDfi21nslpHFlG3BK7JdQ_MPQYkiO6g"/>
-<!-- Flat Tone Stepped Fade Scrim (No Gradients) -->
-<div class="absolute inset-x-0 bottom-0 h-16 bg-surface/40 pointer-events-none"></div>
-<div class="absolute inset-x-0 bottom-0 h-8 bg-surface pointer-events-none"></div>
-<!-- Quick Floating Indicator -->
-<div class="absolute bottom-4 left-gutter flex items-center gap-space-xs">
-<span class="bg-primary-container text-on-surface font-label-caps text-label-caps px-2 py-0.5 uppercase tracking-widest">Master 4K</span>
-<span class="bg-surface-container-high text-secondary font-label-caps text-label-caps px-2 py-0.5 tracking-wider">Dolby Atmos</span>
-</div>
-</div>
-<!-- Content Specification Header -->
-<div class="px-gutter pt-space-md flex flex-col gap-space-xs">
-<div class="flex items-center gap-space-sm">
-<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest">Documentaire</span>
-<span class="text-secondary opacity-40 font-label-mono-technical">•</span>
-<span class="font-label-caps text-label-caps text-secondary uppercase">Saison 1</span>
-</div>
-<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight leading-tight">
-      Les Gardiens de Ganvié
-    </h1>
-<div class="flex items-center flex-wrap gap-x-2 gap-y-1 pt-1 font-body-sm text-body-sm text-secondary">
-<span>2024</span>
-<span class="opacity-40">•</span>
-<span>3 Épisodes</span>
-<span class="opacity-40">•</span>
-<span>Production locale</span>
-<span class="opacity-40">•</span>
-<span class="bg-surface-container text-tertiary px-1.5 py-0.5 font-label-caps text-label-caps tracking-widest uppercase">Gratuit</span>
-</div>
-</div>
-<!-- Primary CTAs -->
-<div class="px-gutter pt-space-lg flex flex-col gap-space-sm">
-<button class="w-full h-12 bg-primary-container hover:bg-tertiary-container text-on-surface font-label-caps text-label-caps tracking-widest uppercase flex items-center justify-center gap-space-sm transition-colors duration-100" type="button">
-<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-<span>Regarder l'épisode 1</span>
-</button>
-<div class="grid grid-cols-2 gap-space-sm">
-<button class="h-11 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps tracking-wider uppercase flex items-center justify-center gap-space-xs transition-colors duration-100" id="btn-watchlist" onclick="toggleWatchlist()" type="button">
-<span class="material-symbols-outlined text-[18px]" id="watchlist-icon">bookmark_add</span>
-<span id="watchlist-text">Ma liste</span>
-</button>
-<button class="h-11 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps tracking-wider uppercase flex items-center justify-center gap-space-xs transition-colors duration-100" onclick="triggerShareNotice()" type="button">
-<span class="material-symbols-outlined text-[18px]">download</span>
-<span>Hors-ligne</span>
-</button>
-</div>
-</div>
-<!-- Synopsis Block -->
-<div class="px-gutter pt-space-lg flex flex-col gap-space-sm">
-<p class="font-body-md text-body-md text-on-surface/80 leading-relaxed line-clamp-3" id="synopsis-paragraph">
-      Au cœur de la cité lacustre du lac Nokoué, trois générations de pêcheurs toffinous affrontent les mutations environnementales et préservent leurs rituels séculaires face à l'ensablement des chenaux vitaux. Une immersion crépusculaire d'une rare intensité sensorielle et historique.
-    </p>
-<button class="self-start font-label-caps text-label-caps text-tertiary uppercase tracking-wider py-1 underline underline-offset-4 decoration-tertiary" id="synopsis-toggle" onclick="toggleSynopsis()" type="button">
-      Lire la suite
-    </button>
-<!-- Metadata Grid -->
-<div class="mt-space-sm pt-space-sm bg-surface-container-low p-space-md flex flex-col gap-space-xs">
-<div class="flex items-baseline justify-between text-body-sm font-body-sm">
-<span class="text-secondary font-label-mono-technical text-label-mono-technical uppercase">Réalisation</span>
-<span class="text-on-surface font-medium text-right">Kofi Dossa</span>
-</div>
-<div class="flex items-baseline justify-between text-body-sm font-body-sm">
-<span class="text-secondary font-label-mono-technical text-label-mono-technical uppercase">Production</span>
-<span class="text-on-surface font-medium text-right">Jalado Studios Bénin</span>
-</div>
-<div class="flex items-baseline justify-between text-body-sm font-body-sm">
-<span class="text-secondary font-label-mono-technical text-label-mono-technical uppercase">Langues</span>
-<span class="text-on-surface font-medium text-right">Fongbe, Français (Sous-titres FR/EN)</span>
-</div>
-</div>
-</div>
-<!-- Interactive Tabs Segment -->
-<div class="mt-space-xl">
-<div class="flex px-gutter bg-surface-container-lowest">
-<button class="flex-1 py-space-md text-center font-label-caps text-label-caps uppercase tracking-widest text-primary-container relative" id="tab-btn-episodes" onclick="switchContentTab('episodes')" type="button">
-<span>Épisodes (3)</span>
-<div class="absolute bottom-0 inset-x-0 h-0.5 bg-primary-container" id="tab-line-episodes"></div>
-</button>
-<button class="flex-1 py-space-md text-center font-label-caps text-label-caps uppercase tracking-widest text-secondary relative" id="tab-btn-extraits" onclick="switchContentTab('extraits')" type="button">
-<span>Extraits</span>
-<div class="hidden absolute bottom-0 inset-x-0 h-0.5 bg-primary-container" id="tab-line-extraits"></div>
-</button>
-<button class="flex-1 py-space-md text-center font-label-caps text-label-caps uppercase tracking-widest text-secondary relative" id="tab-btn-recommandations" onclick="switchContentTab('recommandations')" type="button">
-<span>Détails &amp; Presse</span>
-<div class="hidden absolute bottom-0 inset-x-0 h-0.5 bg-primary-container" id="tab-line-recommandations"></div>
-</button>
-</div>
-<!-- Tab 1: Episodes Content -->
-<div class="px-gutter pt-space-md flex flex-col gap-space-md" id="tab-content-episodes">
-<!-- Episode 1 (In Progress) -->
-<article class="bg-surface-container p-space-sm flex flex-col gap-space-sm">
-<div class="flex gap-space-sm">
-<div class="relative w-36 aspect-video flex-shrink-0 bg-surface-container-highest">
-<img class="w-full h-full object-cover" data-alt="Documentary video still of Ganvie stilt houses reflected in calm blue dawn water with solitary pirogue gliding by, atmospheric mist and warm lantern glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPJJmN5Ou1WkQw2m2VzxL3aNTfSwTfPMVaWjYX38cJmAVxWIssm9seBFvbTsPxDWPH3m3sCTjjNOaD6T0r2Dp_49FaihZhDcew_nK38sYZ000mXmtbuTg2VgOEol3cMNtcw6Q6S-n_4A7s07wLVAu7Wy0NZlLjm_xHGBBQGmowKom97T8Fg1kRgMCKP2nodAGo7KBn9bTCF6DTMw8gQd7PicJP4Bp8SlJ7TE1IC_C1xJgX1nXo9MHYhw"/>
-<div class="absolute inset-0 bg-surface-container-lowest/30 flex items-center justify-center">
-<div class="w-8 h-8 bg-surface-container/90 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary-container text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-</div>
-</div>
-<!-- Progress Bar Tracker -->
-<div class="absolute bottom-0 inset-x-0 h-1 bg-surface-container-highest">
-<div class="h-full bg-primary-container w-[65%]"></div>
-</div>
-</div>
-<div class="flex flex-col justify-between py-0.5 min-w-0">
-<div>
-<span class="font-label-mono-technical text-label-mono-technical text-tertiary">ÉPISODE 1 • 38 MIN</span>
-<h2 class="font-title-editorial text-title-editorial text-on-surface leading-snug truncate pt-0.5">Les Enfants de l'Eau</h2>
-</div>
-<span class="font-body-sm text-body-sm text-secondary">Reste 13 min</span>
-</div>
-</div>
-<p class="font-body-sm text-body-sm text-secondary line-clamp-2 leading-relaxed">
-          Introduction aux clans lacustres de Ganvié. Kodjo, doyen de 74 ans, initie son petit-fils aux cartographies aquatiques invisibles tracées sous la brume matinale.
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet">
+  <style id="recolor-theme-override">
+    :root,
+    html,
+    body,
+    main,
+    header {
+      background-color: #07130E !important;
+      color: #EDEDED !important;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .font-title-editorial,
+    .font-headline-lg-mobile,
+    .font-headline-sm,
+    .font-headline-lg,
+    .font-headline-xl {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+      font-weight: 700 !important;
+      color: #EDEDED !important;
+    }
+
+    /* Header bar */
+    header {
+      background-color: rgba(7, 19, 14, 0.88) !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+
+    header button,
+    header h1,
+    header span {
+      color: #EDEDED !important;
+    }
+
+    header .bg-primary {
+      background-color: #1FA463 !important;
+    }
+
+    header .text-on-primary {
+      color: #07130E !important;
+    }
+
+    /* Badges & Pills */
+    .bg-primary-container {
+      background-color: #0E2A1D !important;
+      color: #EDEDED !important;
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    }
+
+    .bg-surface-container-high,
+    .bg-surface-container {
+      background-color: #0E2A1D !important;
+      color: #EDEDED !important;
+    }
+
+    /* Primary CTA Button */
+    .bg-primary-container.text-on-surface[type="button"],
+    button.w-full.h-12 {
+      background-color: #EDEDED !important;
+      color: #07130E !important;
+      font-weight: 800 !important;
+      border: none !important;
+    }
+
+    button.w-full.h-12:hover {
+      background-color: #ffffff !important;
+    }
+
+    button.w-full.h-12 span {
+      color: #07130E !important;
+    }
+
+    /* Secondary Action Buttons (Ma liste, Hors-ligne) */
+    #btn-watchlist,
+    button[onclick="triggerShareNotice()"] {
+      background-color: #0E2A1D !important;
+      color: #EDEDED !important;
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    }
+
+    #btn-watchlist:hover,
+    button[onclick="triggerShareNotice()"]:hover {
+      background-color: #143827 !important;
+    }
+
+    /* Metadata Grid & Containers */
+    .bg-surface-container-low,
+    article.bg-surface-container,
+    div.bg-surface-container {
+      background-color: #0E2A1D !important;
+      border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    }
+
+    .text-secondary,
+    .text-tertiary,
+    .text-on-surface\/80 {
+      color: #EDEDED !important;
+      opacity: 0.8 !important;
+    }
+
+    /* Tabs Section */
+    .bg-surface-container-lowest {
+      background-color: #07130E !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+
+    #tab-btn-episodes,
+    .text-primary-container {
+      color: #1FA463 !important;
+    }
+
+    #tab-line-episodes,
+    #tab-line-extraits,
+    #tab-line-recommandations,
+    .bg-primary-container.w-\[65\%\] {
+      background-color: #1FA463 !important;
+    }
+
+    /* Episode cards & progress */
+    article.bg-surface-container {
+      border-radius: 0.25rem;
+    }
+
+    .bg-surface-container\/90 span.text-primary-container {
+      color: #1FA463 !important;
+    }
+
+    /* Synopsis link */
+    #synopsis-toggle {
+      color: #1FA463 !important;
+      text-decoration-color: #1FA463 !important;
+    }
+
+    /* Rencontre en direct banner (formerly beige secondary-fixed) */
+    section.bg-secondary-fixed {
+      background-color: #0E2A1D !important;
+      color: #EDEDED !important;
+      border: 1px solid rgba(31, 164, 99, 0.25) !important;
+    }
+
+    section.bg-secondary-fixed h2,
+    section.bg-secondary-fixed p {
+      color: #EDEDED !important;
+    }
+
+    section.bg-secondary-fixed span.w-2.h-2 {
+      background-color: #1FA463 !important;
+    }
+
+    section.bg-secondary-fixed span.text-on-secondary-fixed-variant {
+      color: #EDEDED !important;
+      opacity: 0.9 !important;
+    }
+
+    section.bg-secondary-fixed button {
+      background-color: #EDEDED !important;
+      color: #07130E !important;
+      font-weight: 700 !important;
+    }
+
+    section.bg-secondary-fixed button:hover {
+      background-color: #ffffff !important;
+    }
+
+    /* A voir aussi Section Rail */
+    span.bg-tertiary {
+      background-color: #1FA463 !important;
+    }
+
+    a[href="#catalogue"] {
+      color: #1FA463 !important;
+    }
+
+    /* Badges on posters */
+    span.bg-primary-container.text-on-surface {
+      background-color: #C9A227 !important;
+      color: #07130E !important;
+      font-weight: 700 !important;
+      border: none !important;
+    }
+
+    /* Scrim overrides */
+    .bg-surface\/40 {
+      background-color: rgba(7, 19, 14, 0.5) !important;
+    }
+
+    .bg-surface {
+      background-color: #07130E !important;
+    }
+
+    /* Toast notification */
+    #toast-notification .bg-surface-container-highest {
+      background-color: #0E2A1D !important;
+      color: #EDEDED !important;
+      border: 1px solid #1FA463 !important;
+    }
+
+    #toast-notification span.material-symbols-outlined {
+      color: #1FA463 !important;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col relative selection:bg-primary-container selection:text-on-primary-container">
+  <header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-16 px-gutter flex items-center justify-between">
+      <div class="flex items-center gap-space-sm"><button aria-label="Back"
+          class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors"
+          onclick="history.back()" type="button"><span
+            class="material-symbols-outlined text-[24px]">arrow_back</span></button>
+        <h1 class="font-title-editorial text-title-editorial text-on-surface truncate max-w-[180px]">Film Detail</h1>
+      </div>
+      <div class="flex items-center gap-space-sm"><button aria-label="Share Content"
+          class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors"
+          type="button"><span class="material-symbols-outlined text-[20px]">share</span></button>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span
+            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface">
+    <div class="flex flex-col w-full text-on-surface">
+      <!-- Hero Media Canvas -->
+      <div class="relative w-full aspect-[16/11] bg-surface-container-lowest">
+        <img class="w-full h-full object-cover"
+          data-alt="Cinematic wide shot of traditional wooden pirogues navigating the tranquil waters of Ganvie stilt village on Lake Nokoue at golden sunset. Warm amber highlights bounce on the water, silhouetted fishermen casting handwoven nets against deep volcanic earth tones, mist rising gently in documentary realism film style."
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIYpGQq6KSz9lPD-c_5awNq-hFAu47QnN-AXfsmeBLZM0k3JHODRPpGWObmFb6jlW_thDzXVMuwRxISzDZZBoPHblf8AHIrMA-proM98XJ11zSyafatvGC616hZ7-BHI3xzwfvILwAMts4cB1zYE5WTLtYZtXKrkjUIHi5hvyuNHBqLmEiERszQRgEgputYyNbiTEsjOJIvpNbv6kSXzXOXf6CDfi21nslpHFlG3BK7JdQ_MPQYkiO6g">
+        <!-- Flat Tone Stepped Fade Scrim (No Gradients) -->
+        <div class="absolute inset-x-0 bottom-0 h-16 bg-surface/40 pointer-events-none"></div>
+        <div class="absolute inset-x-0 bottom-0 h-8 bg-surface pointer-events-none"></div>
+        <!-- Quick Floating Indicator -->
+        <div class="absolute bottom-4 left-gutter flex items-center gap-space-xs">
+          <span
+            class="bg-primary-container text-on-surface font-label-caps text-label-caps px-2 py-0.5 uppercase tracking-widest">Master
+            4K</span>
+          <span
+            class="bg-surface-container-high text-secondary font-label-caps text-label-caps px-2 py-0.5 tracking-wider">Dolby
+            Atmos</span>
+        </div>
+      </div>
+      <!-- Content Specification Header -->
+      <div class="px-gutter pt-space-md flex flex-col gap-space-xs">
+        <div class="flex items-center gap-space-sm">
+          <span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest">Documentaire</span>
+          <span class="text-secondary opacity-40 font-label-mono-technical">•</span>
+          <span class="font-label-caps text-label-caps text-secondary uppercase">Saison 1</span>
+        </div>
+        <h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight leading-tight">
+          Les Gardiens de Ganvié
+        </h1>
+        <div class="flex items-center flex-wrap gap-x-2 gap-y-1 pt-1 font-body-sm text-body-sm text-secondary">
+          <span>2024</span>
+          <span class="opacity-40">•</span>
+          <span>3 Épisodes</span>
+          <span class="opacity-40">•</span>
+          <span>Production locale</span>
+          <span class="opacity-40">•</span>
+          <span
+            class="bg-surface-container text-tertiary px-1.5 py-0.5 font-label-caps text-label-caps tracking-widest uppercase">Gratuit</span>
+        </div>
+      </div>
+      <!-- Primary CTAs -->
+      <div class="px-gutter pt-space-lg flex flex-col gap-space-sm">
+        <button
+          class="w-full h-12 bg-primary-container hover:bg-tertiary-container text-on-surface font-label-caps text-label-caps tracking-widest uppercase flex items-center justify-center gap-space-sm transition-colors duration-100"
+          type="button">
+          <span class="material-symbols-outlined text-[20px]"
+            style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+          <span>Regarder l'épisode 1</span>
+        </button>
+        <div class="grid grid-cols-2 gap-space-sm">
+          <button
+            class="h-11 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps tracking-wider uppercase flex items-center justify-center gap-space-xs transition-colors duration-100"
+            id="btn-watchlist" onclick="toggleWatchlist()" type="button">
+            <span class="material-symbols-outlined text-[18px]" id="watchlist-icon">bookmark_add</span>
+            <span id="watchlist-text">Ma liste</span>
+          </button>
+          <button
+            class="h-11 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps tracking-wider uppercase flex items-center justify-center gap-space-xs transition-colors duration-100"
+            onclick="triggerShareNotice()" type="button">
+            <span class="material-symbols-outlined text-[18px]">download</span>
+            <span>Hors-ligne</span>
+          </button>
+        </div>
+      </div>
+      <!-- Synopsis Block -->
+      <div class="px-gutter pt-space-lg flex flex-col gap-space-sm">
+        <p class="font-body-md text-body-md text-on-surface/80 leading-relaxed line-clamp-3" id="synopsis-paragraph">
+          Au cœur de la cité lacustre du lac Nokoué, trois générations de pêcheurs toffinous affrontent les mutations
+          environnementales et préservent leurs rituels séculaires face à l'ensablement des chenaux vitaux. Une
+          immersion crépusculaire d'une rare intensité sensorielle et historique.
         </p>
-</article>
-<!-- Episode 2 -->
-<article class="bg-surface-container p-space-sm flex flex-col gap-space-sm">
-<div class="flex gap-space-sm">
-<div class="relative w-36 aspect-video flex-shrink-0 bg-surface-container-highest">
-<img class="w-full h-full object-cover" data-alt="Intense close up of artisan hands mending woven artisanal fishing nets with wooden needles inside a wooden stilt workshop in West Africa, warm natural indoor daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJsudnFNrvi4SstjVD8LR3Y6Bdz0wLTePwORrP9Mwebccvr-qoLA8x5g3rVD0LwCmlIIVWMSZAA3URk4fCNd3pG2Mc9Q8j1jH47egbBLsLx2BF6yzkIUZQ_hZbjOgMFO0KMVgSlnVVv7jcONUtgSlQAefd1rvj7bNjtqo0CEvOW1Guoin0g3XdRONNm_FcDO8aMZueQb0rSYFhVbsv4N0jSxzU6un0xj3xA5efmBwY47j03pVBXEB6lw"/>
-<div class="absolute inset-0 bg-surface-container-lowest/30 flex items-center justify-center">
-<div class="w-8 h-8 bg-surface-container/90 flex items-center justify-center">
-<span class="material-symbols-outlined text-on-surface text-[20px]">play_arrow</span>
-</div>
-</div>
-</div>
-<div class="flex flex-col justify-between py-0.5 min-w-0">
-<div>
-<span class="font-label-mono-technical text-label-mono-technical text-secondary">ÉPISODE 2 • 42 MIN</span>
-<h2 class="font-title-editorial text-title-editorial text-on-surface leading-snug truncate pt-0.5">Le Rituel des Filets</h2>
-</div>
-<span class="font-body-sm text-body-sm text-secondary">Complet</span>
-</div>
-</div>
-<p class="font-body-sm text-body-sm text-secondary line-clamp-2 leading-relaxed">
-          Avant la grande marée lunaire, les confréries de pêcheurs s'unissent pour réparer les pièges traditionnels 'acadjas' menacés par la prolifération des jacinthes d'eau.
-        </p>
-</article>
-<!-- Episode 3 -->
-<article class="bg-surface-container p-space-sm flex flex-col gap-space-sm">
-<div class="flex gap-space-sm">
-<div class="relative w-36 aspect-video flex-shrink-0 bg-surface-container-highest">
-<img class="w-full h-full object-cover" data-alt="Night cinematography on lake Nokoue with small kerosene lamps lighting water surfaces, dark silhouettes of pirogues under a starry dark tropical sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzCs9VnI7ErnBAW_FYNbyOEsLQDK6dGu3EnA0P2UoKOoQtAV1X9V5hLL8QcYOPhoTVqWKooHhRmK61vebbwcn4Fthr_qCgBJAspBs3nkFOyqZKydIQ1Qyv7a6NB6_BciGByoGcH3cuBd93tOH7rDv6ZQ2NT3bfE6Q5i3nxpU5U3FLj6MF_r8WsmWwYk-JSohdKh30hrM5a-Ew47HRdicKNexbeMTlsbwzbgG4Mx7tSaDQzR8Yfm4VbLw"/>
-<div class="absolute inset-0 bg-surface-container-lowest/30 flex items-center justify-center">
-<div class="w-8 h-8 bg-surface-container/90 flex items-center justify-center">
-<span class="material-symbols-outlined text-on-surface text-[20px]">play_arrow</span>
-</div>
-</div>
-</div>
-<div class="flex flex-col justify-between py-0.5 min-w-0">
-<div>
-<span class="font-label-mono-technical text-label-mono-technical text-secondary">ÉPISODE 3 • 45 MIN</span>
-<h2 class="font-title-editorial text-title-editorial text-on-surface leading-snug truncate pt-0.5">Sentinelles Nocturnes</h2>
-</div>
-<span class="font-body-sm text-body-sm text-secondary">Complet</span>
-</div>
-</div>
-<p class="font-body-sm text-body-sm text-secondary line-clamp-2 leading-relaxed">
-          À la lueur des lampes tempête, la garde fluviale veille sur le sanctuaire des oiseaux migrateurs tandis que les rituels sonores du culte Tohossou résonnent dans la nuit.
-        </p>
-</article>
-</div>
-<!-- Tab 2: Extraits Content (Initially Hidden) -->
-<div class="hidden px-gutter pt-space-md flex-col gap-space-md" id="tab-content-extraits">
-<div class="bg-surface-container p-space-sm flex flex-col gap-space-xs">
-<div class="relative w-full aspect-video bg-surface-container-highest">
-<img class="w-full h-full object-cover" data-alt="Official documentary film trailer thumbnail showing a montage of vibrant cultural celebrations, masked figures, and aerial perspective of water village canals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8XjHSX7hJw1GjTAwwQ5E0YXQPJwnmzM79tMkMMKOT08SOY-eNBXBgEufKv-_uGGMFGKe7SybFMNd6HAhgZ6stxOeYQRyo01SScIR-mCDiE2GQWg-zZWsxfJPiNfAZBNOVKlqu95vgC1zPMPgZoYLIvHnhSj9gGNLUJUjxDOV0_DVngnDJbMxamsUGiC0EBJ2bOjM0qcLlrv-oHcfEAp_hgk0c_RHC3GC1sFc046F9RnzmhTDM7feysQ"/>
-<div class="absolute inset-0 bg-surface-container-lowest/40 flex items-center justify-center">
-<div class="w-12 h-12 bg-primary-container text-on-surface flex items-center justify-center">
-<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-</div>
-</div>
-<span class="absolute bottom-2 right-2 bg-surface-container-lowest px-1.5 py-0.5 font-label-mono-technical text-label-mono-technical text-on-surface">02:14</span>
-</div>
-<div class="pt-space-xs">
-<span class="font-label-mono-technical text-label-mono-technical text-tertiary uppercase">Bande-Annonce Officielle</span>
-<h3 class="font-title-editorial text-title-editorial text-on-surface">Immersion dans la Cité Palafitte</h3>
-</div>
-</div>
-<div class="bg-surface-container p-space-sm flex flex-col gap-space-xs">
-<div class="relative w-full aspect-video bg-surface-container-highest">
-<img class="w-full h-full object-cover" data-alt="Behind the scenes documentary production crew filming on a small motorized boat with high-end cinema cameras and sound booms over sparkling lake water." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQqLOerRy7DANaPyU4pdttJ74eQ-LgKvQwMZhhZ3ZdnfWv0zI8rqwYR9nNRB_LHYdpu0dHEwvxbbRei5j7fo4wQ8J9HM3jeuzmAFnq0-pqbRmPjDI13kRJ9eZtJVCy3hjJA31XeVwR9QUefYgpdoMHcdn6Zu8NDczp1L2FRlkUBIlwMCHQov2wk7j5vIObF36O4QxEPyAtqBb9O9VcVcdvwHuix36JEacwePsTbroq2Y_FXERlgllKvg"/>
-<div class="absolute inset-0 bg-surface-container-lowest/40 flex items-center justify-center">
-<div class="w-12 h-12 bg-surface-container text-on-surface flex items-center justify-center">
-<span class="material-symbols-outlined text-[28px]">play_arrow</span>
-</div>
-</div>
-<span class="absolute bottom-2 right-2 bg-surface-container-lowest px-1.5 py-0.5 font-label-mono-technical text-label-mono-technical text-on-surface">04:50</span>
-</div>
-<div class="pt-space-xs">
-<span class="font-label-mono-technical text-label-mono-technical text-tertiary uppercase">Dans Les Coulisses</span>
-<h3 class="font-title-editorial text-title-editorial text-on-surface">Le Défi Flottant : 90 Jours sur l'Eau</h3>
-</div>
-</div>
-</div>
-<!-- Tab 3: Recommandations/Détails (Initially Hidden) -->
-<div class="hidden px-gutter pt-space-md flex-col gap-space-md" id="tab-content-recommandations">
-<div class="bg-surface-container p-space-md flex flex-col gap-space-sm">
-<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest">Revue Critique</span>
-<blockquote class="font-title-editorial text-headline-sm text-on-surface italic leading-snug">
-          "Un poème visuel d'une dignité magistrale qui transcende l'ethnographie pour toucher au sacré."
-        </blockquote>
-<div class="flex items-center justify-between pt-2">
-<span class="font-label-mono-technical text-label-mono-technical text-secondary uppercase">Cahiers du Cinéma d'Afrique</span>
-<span class="font-label-caps text-label-caps text-primary-container">★★★★★</span>
-</div>
-</div>
-<div class="bg-surface-container p-space-md flex flex-col gap-space-xs font-body-sm text-body-sm text-secondary">
-<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest pb-1">Spécifications de Diffusion</span>
-<p>• Codec Master : 4K UHD Pro-Res 422 HQ</p>
-<p>• Sonorisation : Mixage binaural 5.1 &amp; Archives sonores restaurées</p>
-<p>• Restauration patrimoniale soutenue par le Ministère du Tourisme et des Arts</p>
-</div>
-</div>
-</div>
-<!-- Editorial Contrast Band (Breather Section) -->
-<section class="mt-space-xl bg-secondary-fixed text-on-secondary-fixed p-gutter flex flex-col gap-space-sm">
-<div class="flex items-center gap-space-xs">
-<span class="w-2 h-2 bg-primary-container"></span>
-<span class="font-label-caps text-label-caps text-on-secondary-fixed-variant tracking-widest uppercase">Événement Jalado Culture</span>
-</div>
-<h2 class="font-headline-sm text-headline-sm text-on-secondary-fixed leading-tight">
-      Rencontre en direct avec Kofi Dossa
-    </h2>
-<p class="font-body-md text-body-md text-on-secondary-fixed-variant leading-relaxed">
-      Jeudi 24 Octobre à 20h00 GMT. Discussion ouverte sur la préservation sonore des dialectes de l'Ouémé et masterclass de cinéma documentaire.
-    </p>
-<button class="mt-space-xs self-start bg-on-secondary-fixed text-secondary-fixed font-label-caps text-label-caps px-space-md py-space-sm uppercase tracking-widest hover:bg-primary-container hover:text-on-surface transition-colors duration-100" type="button">
-      Régler un rappel
-    </button>
-</section>
-<!-- Content Rail: À Voir Aussi -->
-<section class="mt-space-xl pb-space-2xl flex flex-col gap-space-md">
-<div class="px-gutter flex items-center justify-between">
-<div class="flex items-center gap-space-sm">
-<span class="w-1.5 h-4 bg-tertiary"></span>
-<h2 class="font-label-caps text-label-caps tracking-widest text-on-surface uppercase">
-          À voir aussi
+        <button
+          class="self-start font-label-caps text-label-caps text-tertiary uppercase tracking-wider py-1 underline underline-offset-4 decoration-tertiary"
+          id="synopsis-toggle" onclick="toggleSynopsis()" type="button">
+          Lire la suite
+        </button>
+        <!-- Metadata Grid -->
+        <div class="mt-space-sm pt-space-sm bg-surface-container-low p-space-md flex flex-col gap-space-xs">
+          <div class="flex items-baseline justify-between text-body-sm font-body-sm">
+            <span
+              class="text-secondary font-label-mono-technical text-label-mono-technical uppercase">Réalisation</span>
+            <span class="text-on-surface font-medium text-right">Kofi Dossa</span>
+          </div>
+          <div class="flex items-baseline justify-between text-body-sm font-body-sm">
+            <span class="text-secondary font-label-mono-technical text-label-mono-technical uppercase">Production</span>
+            <span class="text-on-surface font-medium text-right">Jalado Studios Bénin</span>
+          </div>
+          <div class="flex items-baseline justify-between text-body-sm font-body-sm">
+            <span class="text-secondary font-label-mono-technical text-label-mono-technical uppercase">Langues</span>
+            <span class="text-on-surface font-medium text-right">Fongbe, Français (Sous-titres FR/EN)</span>
+          </div>
+        </div>
+      </div>
+      <!-- Interactive Tabs Segment -->
+      <div class="mt-space-xl">
+        <div class="flex px-gutter bg-surface-container-lowest">
+          <button
+            class="flex-1 py-space-md text-center font-label-caps text-label-caps uppercase tracking-widest text-primary-container relative"
+            id="tab-btn-episodes" onclick="switchContentTab('episodes')" type="button">
+            <span>Épisodes (3)</span>
+            <div class="absolute bottom-0 inset-x-0 h-0.5 bg-primary-container" id="tab-line-episodes"></div>
+          </button>
+          <button
+            class="flex-1 py-space-md text-center font-label-caps text-label-caps uppercase tracking-widest text-secondary relative"
+            id="tab-btn-extraits" onclick="switchContentTab('extraits')" type="button">
+            <span>Extraits</span>
+            <div class="hidden absolute bottom-0 inset-x-0 h-0.5 bg-primary-container" id="tab-line-extraits"></div>
+          </button>
+          <button
+            class="flex-1 py-space-md text-center font-label-caps text-label-caps uppercase tracking-widest text-secondary relative"
+            id="tab-btn-recommandations" onclick="switchContentTab('recommandations')" type="button">
+            <span>Détails &amp; Presse</span>
+            <div class="hidden absolute bottom-0 inset-x-0 h-0.5 bg-primary-container" id="tab-line-recommandations">
+            </div>
+          </button>
+        </div>
+        <!-- Tab 1: Episodes Content -->
+        <div class="px-gutter pt-space-md flex flex-col gap-space-md" id="tab-content-episodes">
+          <!-- Episode 1 (In Progress) -->
+          <article class="bg-surface-container p-space-sm flex flex-col gap-space-sm">
+            <div class="flex gap-space-sm">
+              <div class="relative w-36 aspect-video flex-shrink-0 bg-surface-container-highest">
+                <img class="w-full h-full object-cover"
+                  data-alt="Documentary video still of Ganvie stilt houses reflected in calm blue dawn water with solitary pirogue gliding by, atmospheric mist and warm lantern glow."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPJJmN5Ou1WkQw2m2VzxL3aNTfSwTfPMVaWjYX38cJmAVxWIssm9seBFvbTsPxDWPH3m3sCTjjNOaD6T0r2Dp_49FaihZhDcew_nK38sYZ000mXmtbuTg2VgOEol3cMNtcw6Q6S-n_4A7s07wLVAu7Wy0NZlLjm_xHGBBQGmowKom97T8Fg1kRgMCKP2nodAGo7KBn9bTCF6DTMw8gQd7PicJP4Bp8SlJ7TE1IC_C1xJgX1nXo9MHYhw">
+                <div class="absolute inset-0 bg-surface-container-lowest/30 flex items-center justify-center">
+                  <div class="w-8 h-8 bg-surface-container/90 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-primary-container text-[20px]"
+                      style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                  </div>
+                </div>
+                <!-- Progress Bar Tracker -->
+                <div class="absolute bottom-0 inset-x-0 h-1 bg-surface-container-highest">
+                  <div class="h-full bg-primary-container w-[65%]" style="background-color: #1FA463;"></div>
+                </div>
+              </div>
+              <div class="flex flex-col justify-between py-0.5 min-w-0">
+                <div>
+                  <span class="font-label-mono-technical text-label-mono-technical text-tertiary">ÉPISODE 1 • 38
+                    MIN</span>
+                  <h2 class="font-title-editorial text-title-editorial text-on-surface leading-snug truncate pt-0.5">Les
+                    Enfants de l'Eau</h2>
+                </div>
+                <span class="font-body-sm text-body-sm text-secondary">Reste 13 min</span>
+              </div>
+            </div>
+            <p class="font-body-sm text-body-sm text-secondary line-clamp-2 leading-relaxed">
+              Introduction aux clans lacustres de Ganvié. Kodjo, doyen de 74 ans, initie son petit-fils aux
+              cartographies aquatiques invisibles tracées sous la brume matinale.
+            </p>
+          </article>
+          <!-- Episode 2 -->
+          <article class="bg-surface-container p-space-sm flex flex-col gap-space-sm">
+            <div class="flex gap-space-sm">
+              <div class="relative w-36 aspect-video flex-shrink-0 bg-surface-container-highest">
+                <img class="w-full h-full object-cover"
+                  data-alt="Intense close up of artisan hands mending woven artisanal fishing nets with wooden needles inside a wooden stilt workshop in West Africa, warm natural indoor daylight."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJsudnFNrvi4SstjVD8LR3Y6Bdz0wLTePwORrP9Mwebccvr-qoLA8x5g3rVD0LwCmlIIVWMSZAA3URk4fCNd3pG2Mc9Q8j1jH47egbBLsLx2BF6yzkIUZQ_hZbjOgMFO0KMVgSlnVVv7jcONUtgSlQAefd1rvj7bNjtqo0CEvOW1Guoin0g3XdRONNm_FcDO8aMZueQb0rSYFhVbsv4N0jSxzU6un0xj3xA5efmBwY47j03pVBXEB6lw">
+                <div class="absolute inset-0 bg-surface-container-lowest/30 flex items-center justify-center">
+                  <div class="w-8 h-8 bg-surface-container/90 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-on-surface text-[20px]">play_arrow</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col justify-between py-0.5 min-w-0">
+                <div>
+                  <span class="font-label-mono-technical text-label-mono-technical text-secondary">ÉPISODE 2 • 42
+                    MIN</span>
+                  <h2 class="font-title-editorial text-title-editorial text-on-surface leading-snug truncate pt-0.5">Le
+                    Rituel des Filets</h2>
+                </div>
+                <span class="font-body-sm text-body-sm text-secondary">Complet</span>
+              </div>
+            </div>
+            <p class="font-body-sm text-body-sm text-secondary line-clamp-2 leading-relaxed">
+              Avant la grande marée lunaire, les confréries de pêcheurs s'unissent pour réparer les pièges traditionnels
+              'acadjas' menacés par la prolifération des jacinthes d'eau.
+            </p>
+          </article>
+          <!-- Episode 3 -->
+          <article class="bg-surface-container p-space-sm flex flex-col gap-space-sm">
+            <div class="flex gap-space-sm">
+              <div class="relative w-36 aspect-video flex-shrink-0 bg-surface-container-highest">
+                <img class="w-full h-full object-cover"
+                  data-alt="Night cinematography on lake Nokoue with small kerosene lamps lighting water surfaces, dark silhouettes of pirogues under a starry dark tropical sky."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzCs9VnI7ErnBAW_FYNbyOEsLQDK6dGu3EnA0P2UoKOoQtAV1X9V5hLL8QcYOPhoTVqWKooHhRmK61vebbwcn4Fthr_qCgBJAspBs3nkFOyqZKydIQ1Qyv7a6NB6_BciGByoGcH3cuBd93tOH7rDv6ZQ2NT3bfE6Q5i3nxpU5U3FLj6MF_r8WsmWwYk-JSohdKh30hrM5a-Ew47HRdicKNexbeMTlsbwzbgG4Mx7tSaDQzR8Yfm4VbLw">
+                <div class="absolute inset-0 bg-surface-container-lowest/30 flex items-center justify-center">
+                  <div class="w-8 h-8 bg-surface-container/90 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-on-surface text-[20px]">play_arrow</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col justify-between py-0.5 min-w-0">
+                <div>
+                  <span class="font-label-mono-technical text-label-mono-technical text-secondary">ÉPISODE 3 • 45
+                    MIN</span>
+                  <h2 class="font-title-editorial text-title-editorial text-on-surface leading-snug truncate pt-0.5">
+                    Sentinelles Nocturnes</h2>
+                </div>
+                <span class="font-body-sm text-body-sm text-secondary">Complet</span>
+              </div>
+            </div>
+            <p class="font-body-sm text-body-sm text-secondary line-clamp-2 leading-relaxed">
+              À la lueur des lampes tempête, la garde fluviale veille sur le sanctuaire des oiseaux migrateurs tandis
+              que les rituels sonores du culte Tohossou résonnent dans la nuit.
+            </p>
+          </article>
+        </div>
+        <!-- Tab 2: Extraits Content (Initially Hidden) -->
+        <div class="hidden px-gutter pt-space-md flex-col gap-space-md" id="tab-content-extraits">
+          <div class="bg-surface-container p-space-sm flex flex-col gap-space-xs">
+            <div class="relative w-full aspect-video bg-surface-container-highest">
+              <img class="w-full h-full object-cover"
+                data-alt="Official documentary film trailer thumbnail showing a montage of vibrant cultural celebrations, masked figures, and aerial perspective of water village canals."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8XjHSX7hJw1GjTAwwQ5E0YXQPJwnmzM79tMkMMKOT08SOY-eNBXBgEufKv-_uGGMFGKe7SybFMNd6HAhgZ6stxOeYQRyo01SScIR-mCDiE2GQWg-zZWsxfJPiNfAZBNOVKlqu95vgC1zPMPgZoYLIvHnhSj9gGNLUJUjxDOV0_DVngnDJbMxamsUGiC0EBJ2bOjM0qcLlrv-oHcfEAp_hgk0c_RHC3GC1sFc046F9RnzmhTDM7feysQ">
+              <div class="absolute inset-0 bg-surface-container-lowest/40 flex items-center justify-center">
+                <div class="w-12 h-12 bg-primary-container text-on-surface flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[28px]"
+                    style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                </div>
+              </div>
+              <span
+                class="absolute bottom-2 right-2 bg-surface-container-lowest px-1.5 py-0.5 font-label-mono-technical text-label-mono-technical text-on-surface">02:14</span>
+            </div>
+            <div class="pt-space-xs">
+              <span class="font-label-mono-technical text-label-mono-technical text-tertiary uppercase">Bande-Annonce
+                Officielle</span>
+              <h3 class="font-title-editorial text-title-editorial text-on-surface">Immersion dans la Cité Palafitte
+              </h3>
+            </div>
+          </div>
+          <div class="bg-surface-container p-space-sm flex flex-col gap-space-xs">
+            <div class="relative w-full aspect-video bg-surface-container-highest">
+              <img class="w-full h-full object-cover"
+                data-alt="Behind the scenes documentary production crew filming on a small motorized boat with high-end cinema cameras and sound booms over sparkling lake water."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQqLOerRy7DANaPyU4pdttJ74eQ-LgKvQwMZhhZ3ZdnfWv0zI8rqwYR9nNRB_LHYdpu0dHEwvxbbRei5j7fo4wQ8J9HM3jeuzmAFnq0-pqbRmPjDI13kRJ9eZtJVCy3hjJA31XeVwR9QUefYgpdoMHcdn6Zu8NDczp1L2FRlkUBIlwMCHQov2wk7j5vIObF36O4QxEPyAtqBb9O9VcVcdvwHuix36JEacwePsTbroq2Y_FXERlgllKvg">
+              <div class="absolute inset-0 bg-surface-container-lowest/40 flex items-center justify-center">
+                <div class="w-12 h-12 bg-surface-container text-on-surface flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[28px]">play_arrow</span>
+                </div>
+              </div>
+              <span
+                class="absolute bottom-2 right-2 bg-surface-container-lowest px-1.5 py-0.5 font-label-mono-technical text-label-mono-technical text-on-surface">04:50</span>
+            </div>
+            <div class="pt-space-xs">
+              <span class="font-label-mono-technical text-label-mono-technical text-tertiary uppercase">Dans Les
+                Coulisses</span>
+              <h3 class="font-title-editorial text-title-editorial text-on-surface">Le Défi Flottant : 90 Jours sur
+                l'Eau</h3>
+            </div>
+          </div>
+        </div>
+        <!-- Tab 3: Recommandations/Détails (Initially Hidden) -->
+        <div class="hidden px-gutter pt-space-md flex-col gap-space-md" id="tab-content-recommandations">
+          <div class="bg-surface-container p-space-md flex flex-col gap-space-sm">
+            <span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest">Revue Critique</span>
+            <blockquote class="font-title-editorial text-headline-sm text-on-surface italic leading-snug">
+              "Un poème visuel d'une dignité magistrale qui transcende l'ethnographie pour toucher au sacré."
+            </blockquote>
+            <div class="flex items-center justify-between pt-2">
+              <span class="font-label-mono-technical text-label-mono-technical text-secondary uppercase">Cahiers du
+                Cinéma d'Afrique</span>
+              <span class="font-label-caps text-label-caps text-primary-container">★★★★★</span>
+            </div>
+          </div>
+          <div
+            class="bg-surface-container p-space-md flex flex-col gap-space-xs font-body-sm text-body-sm text-secondary">
+            <span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest pb-1">Spécifications de
+              Diffusion</span>
+            <p>• Codec Master : 4K UHD Pro-Res 422 HQ</p>
+            <p>• Sonorisation : Mixage binaural 5.1 &amp; Archives sonores restaurées</p>
+            <p>• Restauration patrimoniale soutenue par le Ministère du Tourisme et des Arts</p>
+          </div>
+        </div>
+      </div>
+      <!-- Editorial Contrast Band (Breather Section) -->
+      <section class="mt-space-xl bg-secondary-fixed text-on-secondary-fixed p-gutter flex flex-col gap-space-sm"
+        style="background-color: #0E2A1D; color: #EDEDED;">
+        <div class="flex items-center gap-space-xs">
+          <span class="w-2 h-2 bg-primary-container" style="background-color: #E5384B;"></span>
+          <span
+            class="font-label-caps text-label-caps text-on-secondary-fixed-variant tracking-widest uppercase">Événement
+            Jalado Culture</span>
+        </div>
+        <h2 class="font-headline-sm text-headline-sm text-on-secondary-fixed leading-tight">
+          Rencontre en direct avec Kofi Dossa
         </h2>
-</div>
-<a class="font-label-mono-technical text-label-mono-technical text-tertiary hover:underline uppercase" href="#catalogue">Tout explorer</a>
-</div>
-<!-- 2:3 Theatrical Poster Rail Bleeding Edge -->
-<div class="flex overflow-x-auto gap-space-md px-gutter pb-space-sm no-scrollbar">
-<!-- Doc 1 -->
-<div class="flex-shrink-0 w-36 flex flex-col gap-space-xs cursor-pointer group">
-<div class="w-full aspect-[2/3] bg-surface-container relative overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" data-alt="Moody cinematic African theatrical film poster of Vodun rhythms master musicians performing rituals in Ouidah sacred forest under ancient baobab trees at dusk, high contrast deep mahogany and ochre tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd-bJ6QdlNdduSbf--nReg_q_mjN6EA9ANfGQzIw3c2jFdLrJ9VsHUdlEb6S7113sXgW-Ldfo1mOQUZcJ89hEfTrqxrl96nXkITJpETJy1ZnR_lYm031PPLF5NpO_XkO1SkxWIftEwslk4l8FZ-ADXrMgvYQiQMN34zfY3RpQWtsC1wDwgt4_f46aDpZFRv6juECtZkbPsvY2hyBQwuI6ldgwBEou9IFgvrdWK9sCGCbc3m94ExrcTWQ"/>
-<span class="absolute top-2 left-2 bg-surface-container-lowest/80 text-on-surface font-label-caps text-label-caps px-1 py-0.5">Film</span>
-</div>
-<div class="flex flex-col pt-1">
-<span class="font-label-mono-technical text-label-mono-technical text-tertiary truncate">Documentaire</span>
-<h3 class="font-title-editorial text-body-md text-on-surface leading-tight truncate">Symphonie Vodun</h3>
-<span class="font-body-sm text-body-sm text-secondary pt-0.5">1h 32 min</span>
-</div>
-</div>
-<!-- Doc 2 -->
-<div class="flex-shrink-0 w-36 flex flex-col gap-space-xs cursor-pointer group">
-<div class="w-full aspect-[2/3] bg-surface-container relative overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" data-alt="Editorial cinema documentary poster portrait of an elder historian priestess in Ouidah holding historical copper artifacts, soft shadows, warm golden hour light on dark skin." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6yhn8o5NUCt_4e2u0mGf_Ukxg5GYN5DxlWwgF5LiyfpLj0JJKVc4MFnu5tkoHjB_0OyZcRGL56FOSUHkN4zz8ld1dHRbo9P-Maf-G7Ir8TpG9rHVRu9uKLSYqsb-7mdCSIbW4pikogPRRV0tg_L4ezaUU1o2R3LrubUX6nHkJNA6tBzwCs_hFrPgz1fTi1cZw_rjv_-1u8UMBK97Vd8CORLX5U6SOJCzJpiZNek9TfWPX8wvWXPpOuw"/>
-<span class="absolute top-2 left-2 bg-primary-container text-on-surface font-label-caps text-label-caps px-1 py-0.5">Exclusif</span>
-</div>
-<div class="flex flex-col pt-1">
-<span class="font-label-mono-technical text-label-mono-technical text-tertiary truncate">Histoire &amp; Récits</span>
-<h3 class="font-title-editorial text-body-md text-on-surface leading-tight truncate">Ouidah, Voix Secrètes</h3>
-<span class="font-body-sm text-body-sm text-secondary pt-0.5">58 min</span>
-</div>
-</div>
-<!-- Doc 3 -->
-<div class="flex-shrink-0 w-36 flex flex-col gap-space-xs cursor-pointer group">
-<div class="w-full aspect-[2/3] bg-surface-container relative overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" data-alt="Minimalist documentary film poster of modern jazz musicians jamming on a rooftop in Cotonou Haie Vive district at night, warm urban ambient lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC0WR0AAKyRakttAymsQLfFS9RQuSVm4T6qcdyEGbgjpkA4YR9IEMkp10B_FYgmd2AzFAdmSqL8cHIR_2CnBgG7K17oQOzlixioNE4hYVnakA-dyNf4myT4fJKsI9TXq_3QHww_NJ3unoc6B2JEw3NalKlluMdTJJTVYO4DkoRdmVHTRfFtrK7CLR7ZD5hnsT-E2PpNhMe34KA4wx8fPsw42x9xUb8CC_hJvvd_yFH4MAYPQB731rd6Q"/>
-<span class="absolute top-2 left-2 bg-surface-container-lowest/80 text-on-surface font-label-caps text-label-caps px-1 py-0.5">Concert</span>
-</div>
-<div class="flex flex-col pt-1">
-<span class="font-label-mono-technical text-label-mono-technical text-tertiary truncate">Musique Live</span>
-<h3 class="font-title-editorial text-body-md text-on-surface leading-tight truncate">Haie Vive Sessions</h3>
-<span class="font-body-sm text-body-sm text-secondary pt-0.5">1h 14 min</span>
-</div>
-</div>
-<!-- Doc 4 -->
-<div class="flex-shrink-0 w-36 flex flex-col gap-space-xs cursor-pointer group pr-gutter">
-<div class="w-full aspect-[2/3] bg-surface-container relative overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" data-alt="Theatrical portrait poster of Dahomey warrior women brass statues against an architectural concrete gallery wall at dusk." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvqRyfEgcQwyPT-_8Faijp9-6Sw-2vOKSEtoSDPEZV_brenc_gZd9RyRX9rv3r0mb-sSJ_9MAgdeP_F-uWt-sYlEQEzfobg43teD0D2mAoj73mzz3-oGYhAzJY_Naqr22BcFPRJ_wwexuJRDCp1ZWOsIz31WYEkV7yAIlmVigGynGOmYaAHnWNxg-oNT5B8hI4eqgOztS97GOKxwmJe3_ESRNS_cbjWhPTE2x6ECsxQwJr2sb4viXFIQ"/>
-<span class="absolute top-2 left-2 bg-surface-container-lowest/80 text-on-surface font-label-caps text-label-caps px-1 py-0.5">Archives</span>
-</div>
-<div class="flex flex-col pt-1">
-<span class="font-label-mono-technical text-label-mono-technical text-tertiary truncate">Arts Visuels</span>
-<h3 class="font-title-editorial text-body-md text-on-surface leading-tight truncate">Amazones : L'Écho</h3>
-<span class="font-body-sm text-body-sm text-secondary pt-0.5">1h 05 min</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Minimal Feedback Toast Container -->
-<div class="fixed bottom-6 inset-x-6 z-50 pointer-events-none transition-all duration-200 opacity-0 transform translate-y-4" id="toast-notification">
-<div class="bg-surface-container-highest text-on-surface px-space-md py-space-sm flex items-center justify-between">
-<span class="font-body-sm text-body-sm" id="toast-text">Ajouté à votre liste de lecture</span>
-<span class="material-symbols-outlined text-tertiary text-[18px]">check</span>
-</div>
-</div>
-</div>
-<script>
-  function switchContentTab(tabName) {
-    const tabs = ['episodes', 'extraits', 'recommandations'];
-    
-    tabs.forEach(tab => {
-      const contentEl = document.getElementById(`tab-content-${tab}`);
-      const btnEl = document.getElementById(`tab-btn-${tab}`);
-      const lineEl = document.getElementById(`tab-line-${tab}`);
-      
-      if (tab === tabName) {
-        contentEl.classList.remove('hidden');
-        contentEl.classList.add('flex');
-        btnEl.classList.remove('text-secondary');
-        btnEl.classList.add('text-primary-container');
-        lineEl.classList.remove('hidden');
-      } else {
-        contentEl.classList.add('hidden');
-        contentEl.classList.remove('flex');
-        btnEl.classList.remove('text-primary-container');
-        btnEl.classList.add('text-secondary');
-        lineEl.classList.add('hidden');
+        <p class="font-body-md text-body-md text-on-secondary-fixed-variant leading-relaxed">
+          Jeudi 24 Octobre à 20h00 GMT. Discussion ouverte sur la préservation sonore des dialectes de l'Ouémé et
+          masterclass de cinéma documentaire.
+        </p>
+        <button
+          class="mt-space-xs self-start bg-on-secondary-fixed text-secondary-fixed font-label-caps text-label-caps px-space-md py-space-sm uppercase tracking-widest hover:bg-primary-container hover:text-on-surface transition-colors duration-100"
+          type="button">
+          Régler un rappel
+        </button>
+      </section>
+      <!-- Content Rail: À Voir Aussi -->
+      <section class="mt-space-xl pb-space-2xl flex flex-col gap-space-md">
+        <div class="px-gutter flex items-center justify-between">
+          <div class="flex items-center gap-space-sm">
+            <span class="w-1.5 h-4 bg-tertiary"></span>
+            <h2 class="font-label-caps text-label-caps tracking-widest text-on-surface uppercase">
+              À voir aussi
+            </h2>
+          </div>
+          <a class="font-label-mono-technical text-label-mono-technical text-tertiary hover:underline uppercase"
+            href="#catalogue">Tout explorer</a>
+        </div>
+        <!-- 2:3 Theatrical Poster Rail Bleeding Edge -->
+        <div class="flex overflow-x-auto gap-space-md px-gutter pb-space-sm no-scrollbar">
+          <!-- Doc 1 -->
+          <div class="flex-shrink-0 w-36 flex flex-col gap-space-xs cursor-pointer group">
+            <div class="w-full aspect-[2/3] bg-surface-container relative overflow-hidden">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+                data-alt="Moody cinematic African theatrical film poster of Vodun rhythms master musicians performing rituals in Ouidah sacred forest under ancient baobab trees at dusk, high contrast deep mahogany and ochre tones."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd-bJ6QdlNdduSbf--nReg_q_mjN6EA9ANfGQzIw3c2jFdLrJ9VsHUdlEb6S7113sXgW-Ldfo1mOQUZcJ89hEfTrqxrl96nXkITJpETJy1ZnR_lYm031PPLF5NpO_XkO1SkxWIftEwslk4l8FZ-ADXrMgvYQiQMN34zfY3RpQWtsC1wDwgt4_f46aDpZFRv6juECtZkbPsvY2hyBQwuI6ldgwBEou9IFgvrdWK9sCGCbc3m94ExrcTWQ">
+              <span
+                class="absolute top-2 left-2 bg-surface-container-lowest/80 text-on-surface font-label-caps text-label-caps px-1 py-0.5">Film</span>
+            </div>
+            <div class="flex flex-col pt-1">
+              <span
+                class="font-label-mono-technical text-label-mono-technical text-tertiary truncate">Documentaire</span>
+              <h3 class="font-title-editorial text-body-md text-on-surface leading-tight truncate">Symphonie Vodun</h3>
+              <span class="font-body-sm text-body-sm text-secondary pt-0.5">1h 32 min</span>
+            </div>
+          </div>
+          <!-- Doc 2 -->
+          <div class="flex-shrink-0 w-36 flex flex-col gap-space-xs cursor-pointer group">
+            <div class="w-full aspect-[2/3] bg-surface-container relative overflow-hidden">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+                data-alt="Editorial cinema documentary poster portrait of an elder historian priestess in Ouidah holding historical copper artifacts, soft shadows, warm golden hour light on dark skin."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6yhn8o5NUCt_4e2u0mGf_Ukxg5GYN5DxlWwgF5LiyfpLj0JJKVc4MFnu5tkoHjB_0OyZcRGL56FOSUHkN4zz8ld1dHRbo9P-Maf-G7Ir8TpG9rHVRu9uKLSYqsb-7mdCSIbW4pikogPRRV0tg_L4ezaUU1o2R3LrubUX6nHkJNA6tBzwCs_hFrPgz1fTi1cZw_rjv_-1u8UMBK97Vd8CORLX5U6SOJCzJpiZNek9TfWPX8wvWXPpOuw">
+              <span
+                class="absolute top-2 left-2 bg-primary-container text-on-surface font-label-caps text-label-caps px-1 py-0.5"
+                style="background-color: #C9A227; color: #07130E; font-weight: 700;">Exclusif</span>
+            </div>
+            <div class="flex flex-col pt-1">
+              <span class="font-label-mono-technical text-label-mono-technical text-tertiary truncate">Histoire &amp;
+                Récits</span>
+              <h3 class="font-title-editorial text-body-md text-on-surface leading-tight truncate">Ouidah, Voix Secrètes
+              </h3>
+              <span class="font-body-sm text-body-sm text-secondary pt-0.5">58 min</span>
+            </div>
+          </div>
+          <!-- Doc 3 -->
+          <div class="flex-shrink-0 w-36 flex flex-col gap-space-xs cursor-pointer group">
+            <div class="w-full aspect-[2/3] bg-surface-container relative overflow-hidden">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+                data-alt="Minimalist documentary film poster of modern jazz musicians jamming on a rooftop in Cotonou Haie Vive district at night, warm urban ambient lighting."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC0WR0AAKyRakttAymsQLfFS9RQuSVm4T6qcdyEGbgjpkA4YR9IEMkp10B_FYgmd2AzFAdmSqL8cHIR_2CnBgG7K17oQOzlixioNE4hYVnakA-dyNf4myT4fJKsI9TXq_3QHww_NJ3unoc6B2JEw3NalKlluMdTJJTVYO4DkoRdmVHTRfFtrK7CLR7ZD5hnsT-E2PpNhMe34KA4wx8fPsw42x9xUb8CC_hJvvd_yFH4MAYPQB731rd6Q">
+              <span
+                class="absolute top-2 left-2 bg-surface-container-lowest/80 text-on-surface font-label-caps text-label-caps px-1 py-0.5">Concert</span>
+            </div>
+            <div class="flex flex-col pt-1">
+              <span class="font-label-mono-technical text-label-mono-technical text-tertiary truncate">Musique
+                Live</span>
+              <h3 class="font-title-editorial text-body-md text-on-surface leading-tight truncate">Haie Vive Sessions
+              </h3>
+              <span class="font-body-sm text-body-sm text-secondary pt-0.5">1h 14 min</span>
+            </div>
+          </div>
+          <!-- Doc 4 -->
+          <div class="flex-shrink-0 w-36 flex flex-col gap-space-xs cursor-pointer group pr-gutter">
+            <div class="w-full aspect-[2/3] bg-surface-container relative overflow-hidden">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+                data-alt="Theatrical portrait poster of Dahomey warrior women brass statues against an architectural concrete gallery wall at dusk."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvqRyfEgcQwyPT-_8Faijp9-6Sw-2vOKSEtoSDPEZV_brenc_gZd9RyRX9rv3r0mb-sSJ_9MAgdeP_F-uWt-sYlEQEzfobg43teD0D2mAoj73mzz3-oGYhAzJY_Naqr22BcFPRJ_wwexuJRDCp1ZWOsIz31WYEkV7yAIlmVigGynGOmYaAHnWNxg-oNT5B8hI4eqgOztS97GOKxwmJe3_ESRNS_cbjWhPTE2x6ECsxQwJr2sb4viXFIQ">
+              <span
+                class="absolute top-2 left-2 bg-surface-container-lowest/80 text-on-surface font-label-caps text-label-caps px-1 py-0.5">Archives</span>
+            </div>
+            <div class="flex flex-col pt-1">
+              <span class="font-label-mono-technical text-label-mono-technical text-tertiary truncate">Arts
+                Visuels</span>
+              <h3 class="font-title-editorial text-body-md text-on-surface leading-tight truncate">Amazones : L'Écho
+              </h3>
+              <span class="font-body-sm text-body-sm text-secondary pt-0.5">1h 05 min</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Minimal Feedback Toast Container -->
+      <div
+        class="fixed bottom-6 inset-x-6 z-50 pointer-events-none transition-all duration-200 opacity-0 transform translate-y-4"
+        id="toast-notification">
+        <div
+          class="bg-surface-container-highest text-on-surface px-space-md py-space-sm flex items-center justify-between">
+          <span class="font-body-sm text-body-sm" id="toast-text">Ajouté à votre liste de lecture</span>
+          <span class="material-symbols-outlined text-tertiary text-[18px]">check</span>
+        </div>
+      </div>
+    </div>
+    <script>
+      function switchContentTab(tabName) {
+        const tabs = ['episodes', 'extraits', 'recommandations'];
+
+        tabs.forEach(tab => {
+          const contentEl = document.getElementById(`tab-content-${tab}`);
+          const btnEl = document.getElementById(`tab-btn-${tab}`);
+          const lineEl = document.getElementById(`tab-line-${tab}`);
+
+          if (tab === tabName) {
+            contentEl.classList.remove('hidden');
+            contentEl.classList.add('flex');
+            btnEl.classList.remove('text-secondary');
+            btnEl.classList.add('text-primary-container');
+            lineEl.classList.remove('hidden');
+          } else {
+            contentEl.classList.add('hidden');
+            contentEl.classList.remove('flex');
+            btnEl.classList.remove('text-primary-container');
+            btnEl.classList.add('text-secondary');
+            lineEl.classList.add('hidden');
+          }
+        });
       }
-    });
-  }
 
-  let synopsisExpanded = false;
-  function toggleSynopsis() {
-    const textEl = document.getElementById('synopsis-paragraph');
-    const toggleBtn = document.getElementById('synopsis-toggle');
-    
-    synopsisExpanded = !synopsisExpanded;
-    if (synopsisExpanded) {
-      textEl.classList.remove('line-clamp-3');
-      toggleBtn.innerText = 'Réduire';
-    } else {
-      textEl.classList.add('line-clamp-3');
-      toggleBtn.innerText = 'Lire la suite';
-    }
-  }
+      let synopsisExpanded = false;
+      function toggleSynopsis() {
+        const textEl = document.getElementById('synopsis-paragraph');
+        const toggleBtn = document.getElementById('synopsis-toggle');
 
-  let inWatchlist = false;
-  function toggleWatchlist() {
-    inWatchlist = !inWatchlist;
-    const icon = document.getElementById('watchlist-icon');
-    const text = document.getElementById('watchlist-text');
-    
-    if (inWatchlist) {
-      icon.innerText = 'bookmark_added';
-      text.innerText = 'Enregistré';
-      showToast('Ajouté à vos enregistrements');
-    } else {
-      icon.innerText = 'bookmark_add';
-      text.innerText = 'Ma liste';
-      showToast('Retiré de vos enregistrements');
-    }
-  }
+        synopsisExpanded = !synopsisExpanded;
+        if (synopsisExpanded) {
+          textEl.classList.remove('line-clamp-3');
+          toggleBtn.innerText = 'Réduire';
+        } else {
+          textEl.classList.add('line-clamp-3');
+          toggleBtn.innerText = 'Lire la suite';
+        }
+      }
 
-  function triggerShareNotice() {
-    showToast('Téléchargement haute fidélité démarré');
-  }
+      let inWatchlist = false;
+      function toggleWatchlist() {
+        inWatchlist = !inWatchlist;
+        const icon = document.getElementById('watchlist-icon');
+        const text = document.getElementById('watchlist-text');
 
-  function showToast(message) {
-    const toast = document.getElementById('toast-notification');
-    const toastText = document.getElementById('toast-text');
-    toastText.innerText = message;
-    
-    toast.classList.remove('opacity-0', 'translate-y-4');
-    toast.classList.add('opacity-100', 'translate-y-0');
-    
-    setTimeout(() => {
-      toast.classList.remove('opacity-100', 'translate-y-0');
-      toast.classList.add('opacity-0', 'translate-y-4');
-    }, 2400);
-  }
-</script></main></body></html>
+        if (inWatchlist) {
+          icon.innerText = 'bookmark_added';
+          text.innerText = 'Enregistré';
+          showToast('Ajouté à vos enregistrements');
+        } else {
+          icon.innerText = 'bookmark_add';
+          text.innerText = 'Ma liste';
+          showToast('Retiré de vos enregistrements');
+        }
+      }
+
+      function triggerShareNotice() {
+        showToast('Téléchargement haute fidélité démarré');
+      }
+
+      function showToast(message) {
+        const toast = document.getElementById('toast-notification');
+        const toastText = document.getElementById('toast-text');
+        toastText.innerText = message;
+
+        toast.classList.remove('opacity-0', 'translate-y-4');
+        toast.classList.add('opacity-100', 'translate-y-0');
+
+        setTimeout(() => {
+          toast.classList.remove('opacity-100', 'translate-y-0');
+          toast.classList.add('opacity-0', 'translate-y-4');
+        }, 2400);
+      }
+    </script>
+  </main>
+</body>
+
+</html>

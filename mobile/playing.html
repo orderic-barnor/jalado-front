@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+        name="viewport">
+    <meta content="mobile_stack" name="shell-type">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline": "#ae8789", "surface": "#171210", "inverse-primary": "#be003d", "tertiary-fixed": "#ffddb5", "surface-container-highest": "#393431", "surface-bright": "#3d3836", "on-error-container": "#ffdad6", "on-secondary-fixed-variant": "#4b463b", "on-tertiary": "#462b00", "on-tertiary-container": "#3d2500", "on-error": "#690005", "primary-fixed-dim": "#ffb2b8", "on-primary-fixed": "#40000f", "error-container": "#93000a", "secondary": "#cec6b6", "error": "#ffb4ab", "on-surface": "#eae0dd", "primary-container": "#ff506e", "on-surface-variant": "#e8bcbe", "on-background": "#eae0dd", "on-tertiary-fixed": "#2a1800", "surface-variant": "#393431", "surface-container": "#231f1c", "tertiary-container": "#c28425", "inverse-on-surface": "#342f2d", "secondary-fixed": "#eae1d2", "inverse-surface": "#eae0dd", "surface-dim": "#171210", "surface-container-lowest": "#110d0b", "on-secondary-container": "#bfb8a9", "tertiary": "#ffb958", "surface-container-low": "#1f1b18", "on-primary-container": "#5b0018", "on-secondary": "#343025", "outline-variant": "#5e3e41", "secondary-container": "#4e493d", "primary-fixed": "#ffdadb", "on-tertiary-fixed-variant": "#643f00", "secondary-fixed-dim": "#cec6b6", "on-primary": "#67001d", "tertiary-fixed-dim": "#ffb958", "on-primary-fixed-variant": "#91002d", "on-secondary-fixed": "#1f1b12", "background": "#171210", "surface-container-high": "#2e2927", "surface-tint": "#ffb2b8", "primary": "#ffb2b8" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1.5rem", "space-sm": "0.5rem", "gutter": "1.5rem", "margin-lg": "5rem", "space-xl": "3.5rem", "space-lg": "2rem", "space-xs": "0.25rem", "gutter-lg": "2.5rem", "space-2xl": "6rem", "gutter-sm": "1rem", "margin-md": "3rem", "space-md": "1rem" }, "fontFamily": { "headline-lg": ["Bodoni Moda"], "label-caps": ["Hanken Grotesk"], "display-hero-mobile": ["Bodoni Moda"], "headline-md": ["Bodoni Moda"], "label-mono-technical": ["Hanken Grotesk"], "body-lg": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "headline-lg-mobile": ["Bodoni Moda"], "title-editorial": ["Bodoni Moda"], "headline-sm": ["Bodoni Moda"], "body-md": ["Hanken Grotesk"], "display-hero": ["Bodoni Moda"] }, "fontSize": { "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "700" }], "display-hero-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "500" }], "label-mono-technical": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "400" }], "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "0em", "fontWeight": "600" }], "title-editorial": ["18px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-hero": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script>
+    <style>
+        @layer base {
+
+            html,
+            body {
+                width: 100vw;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            .pb-safe {
+                padding-bottom: env(safe-area-inset-bottom, 0px);
+            }
+
+            .pt-safe {
+                padding-top: env(safe-area-inset-top, 0px);
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #07130E;
+            --card-dark: #0E2A1D;
+            --card-hover: #143B28;
+            --text-offwhite: #EDEDED;
+            --text-dim: #9DB8AB;
+            --green-accent: #1FA463;
+            --gold-accent: #C9A227;
+            --red-accent: #E5384B;
+        }
+
+        body,
+        main {
+            background-color: var(--bg-dark) !important;
+            color: var(--text-offwhite) !important;
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-headline-md,
+        .font-headline-sm,
+        .font-title-editorial,
+        .font-display-hero {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-weight: 700 !important;
+        }
+
+        header {
+            background-color: rgba(7, 19, 14, 0.9) !important;
+            backdrop-filter: blur(16px) !important;
+        }
+
+        .bg-surface {
+            background-color: var(--bg-dark) !important;
+        }
+
+        .bg-surface-container {
+            background-color: var(--card-dark) !important;
+        }
+
+        .bg-surface-container:hover {
+            background-color: var(--card-hover) !important;
+        }
+
+        .bg-surface-container-high {
+            background-color: #16422D !important;
+        }
+
+        .bg-surface-container-lowest {
+            background-color: #030806 !important;
+        }
+
+        .text-on-surface {
+            color: var(--text-offwhite) !important;
+        }
+
+        .text-secondary {
+            color: var(--text-dim) !important;
+        }
+
+        .text-secondary\/60 {
+            color: rgba(157, 184, 171, 0.6) !important;
+        }
+
+        .text-tertiary {
+            color: var(--green-accent) !important;
+        }
+
+        .text-primary {
+            color: var(--green-accent) !important;
+        }
+
+        .bg-primary {
+            background-color: var(--green-accent) !important;
+            color: #07130E !important;
+        }
+
+        .text-outline-variant {
+            color: #2A5941 !important;
+        }
+
+        .bg-surface-variant {
+            background-color: #143827 !important;
+        }
+
+        .w-8.h-8.rounded-full.bg-primary {
+            background-color: var(--text-offwhite) !important;
+            color: #07130E !important;
+        }
+
+        .w-8.h-8.rounded-full.bg-primary .material-symbols-outlined {
+            color: #07130E !important;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container">
+    <header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="h-16 px-gutter flex items-center justify-between">
+            <div class="flex items-center space-x-space-sm"><button aria-label="Dismiss"
+                    class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface hover:text-primary transition-colors"
+                    onclick="history.back()"><span
+                        class="material-symbols-outlined text-[24px]">arrow_back</span></button>
+                <div class="flex flex-col"><span
+                        class="font-label-caps text-label-caps tracking-widest text-tertiary uppercase">STREAM</span>
+                    <h1
+                        class="font-title-editorial text-title-editorial tracking-tight text-on-surface truncate max-w-[200px]">
+                        Portrait Player</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-space-xs"><button aria-label="Audio and Subtitles"
+                    class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors"><span
+                        class="material-symbols-outlined text-[22px]">subtitles</span></button>
+                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                        class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+            </div>
+        </div>
+    </header>
+    <main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen">
+        <div class="flex flex-col w-full text-on-surface">
+            <!-- Sticky Video Stage (16:9 ~220px) -->
+            <div class="relative w-full aspect-video bg-surface-container-lowest overflow-hidden select-none"
+                id="player-frame">
+                <div class="w-full h-full bg-cover bg-center"
+                    data-alt="Cinematic wide 16:9 still from West African documentary on Lake Nokoue Ganvie Benin at sunset. Silhouette of wooden dugout pirogue fishing boat with woven nets, calm reflective bronze water, ochre and deep charcoal atmospheric light, ultra sharp 4k film still with no digital noise."
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBUYSzZhpnwP-MWOWeWpx6CtDs-AXQTCe2mgqMPP6mK-ayw5PW2NrsClofp0xFwQBL8DUFNTMtSw9XIViruSZ595AlEHuQpQktTMVaQ5sNNJAENqHOXATDnKP6DrH8XADqerhDJDDyJk3RYiKRZoOeHxjQeow2na-s0ByzviYt5NoVV9UVE4hl3YZx_DlN4upqzYeNuRNr7WzYDyDExrDxJ6mmIpY_W9bxDEp3VlJBeLCsP58FH73HV6Q')">
+                </div>
+                <!-- Minimal Overlay Scrim for readability -->
+                <div class="absolute inset-0 bg-surface-container-lowest/40 flex flex-col justify-between p-space-sm">
+                    <!-- Player Top Bar -->
+                    <div class="flex items-center justify-between w-full">
+                        <button aria-label="Retour"
+                            class="w-10 h-10 flex items-center justify-center text-on-surface hover:text-primary transition-colors"
+                            type="button">
+                            <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+                        </button>
+                        <div class="flex items-center space-x-space-xs">
+                            <button aria-label="Diffuser via AirPlay ou Cast"
+                                class="w-10 h-10 flex items-center justify-center text-on-surface hover:text-primary transition-colors"
+                                type="button">
+                                <span class="material-symbols-outlined text-[20px]">cast</span>
+                            </button>
+                            <button aria-label="Plein écran"
+                                class="w-10 h-10 flex items-center justify-center text-on-surface hover:text-primary transition-colors"
+                                type="button">
+                                <span class="material-symbols-outlined text-[20px]">fullscreen</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Center Playback Cue -->
+                    <div class="self-center flex flex-col items-center">
+                        <button aria-label="Basculer lecture"
+                            class="w-12 h-12 bg-surface-container-lowest/80 flex items-center justify-center text-on-surface active:scale-95 transition-transform"
+                            id="play-toggle-btn" type="button">
+                            <span class="material-symbols-outlined text-[28px]" id="play-icon">play_arrow</span>
+                        </button>
+                        <span
+                            class="font-label-mono-technical text-label-mono-technical text-secondary tracking-widest mt-space-xs bg-surface-container-lowest/90 px-space-xs py-[2px]">
+                            14:32 / 42:00
+                        </span>
+                    </div>
+                    <!-- Bottom Audio / Quality Indicators -->
+                    <div class="flex items-center justify-between px-space-xs pb-[2px]">
+                        <div class="flex items-center space-x-space-xs">
+                            <span class="bg-primary text-on-primary font-label-caps text-label-caps px-[6px] py-[2px]"
+                                style="font-weight: 700; background-color: rgb(31, 164, 99) !important; color: rgb(7, 19, 14) !important;">4K
+                                MASTER</span>
+                            <span
+                                class="text-secondary font-label-mono-technical text-[10px] tracking-wider uppercase">FR
+                                · FON ST</span>
+                        </div>
+                        <span class="font-label-mono-technical text-[11px] text-secondary">AUDIO 5.1</span>
+                    </div>
+                </div>
+                <!-- Scrubber Bar directly under frame -->
+                <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-surface-variant cursor-pointer"
+                    id="scrubber-track">
+                    <div class="h-full bg-primary relative"
+                        style="width: 34.6%; background-color: rgb(31, 164, 99) !important;">
+                        <div class="absolute -right-[2px] -top-[4px] w-[4px] h-[11px] bg-primary"
+                            style="background-color: rgb(31, 164, 99) !important;"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Content Stream Container -->
+            <div class="flex flex-col px-margin pt-space-md space-y-space-lg">
+                <!-- 1. Metadata Block -->
+                <section class="flex flex-col space-y-space-xs">
+                    <div class="flex items-center justify-between">
+                        <span class="font-label-caps text-label-caps tracking-widest text-tertiary uppercase">
+                            DOCUMENTAIRE · SAISON 1
+                        </span>
+                        <span class="font-label-mono-technical text-[11px] text-secondary">
+                            ARCHIVES JALADO
+                        </span>
+                    </div>
+                    <h1 class="font-headline-md text-headline-md text-on-surface tracking-tight mt-space-xs">
+                        Les Gardiens de Ganvié
+                    </h1>
+                    <div
+                        class="flex flex-wrap items-center gap-x-space-sm gap-y-[2px] pt-space-xs text-secondary font-body-sm text-body-sm">
+                        <span class="text-on-surface">Épisode 2</span>
+                        <span class="text-outline-variant">·</span>
+                        <span class="">Le Rituel des Filets</span>
+                        <span class="text-outline-variant">·</span>
+                        <span class="">42 min</span>
+                        <span class="text-outline-variant">·</span>
+                        <span class="text-primary font-label-mono-technical text-label-mono-technical uppercase">Master
+                            4K</span>
+                    </div>
+                </section>
+                <!-- 2. Synopsis -->
+                <section class="flex flex-col bg-surface-container p-space-md">
+                    <p class="font-body-md text-body-md text-secondary leading-relaxed line-clamp-2"
+                        id="synopsis-paragraph">
+                        Avant la grande marée lunaire, les confréries de pêcheurs toffinous s’unissent pour réparer les
+                        pièges ancestraux et invoquer la clémence de l'eau. Dans l'entrelacs des canaux sur pilotis, les
+                        anciens transmettent les chants secrets d'appel aux esprits gardiens du lac Nokoué.
+                    </p>
+                    <button
+                        class="self-start mt-space-sm font-label-caps text-label-caps uppercase text-tertiary hover:underline tracking-wider"
+                        id="synopsis-toggle" type="button" style="color: rgb(31, 164, 99) !important;">
+                        Lire la suite
+                    </button>
+                </section>
+                <!-- 3. Primary Actions Grid -->
+                <section aria-label="Options de lecture" class="grid grid-cols-4 gap-space-xs">
+                    <button
+                        class="flex flex-col items-center justify-center p-space-sm bg-surface-container hover:bg-surface-container-high transition-colors text-center group"
+                        type="button">
+                        <span
+                            class="material-symbols-outlined text-[20px] text-on-surface group-hover:text-primary transition-colors">bookmark_add</span>
+                        <span
+                            class="font-label-caps text-[10px] tracking-wider text-secondary mt-space-xs uppercase group-hover:text-on-surface">Ma
+                            liste</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center p-space-sm bg-surface-container hover:bg-surface-container-high transition-colors text-center group"
+                        type="button">
+                        <span
+                            class="material-symbols-outlined text-[20px] text-on-surface group-hover:text-primary transition-colors">share</span>
+                        <span
+                            class="font-label-caps text-[10px] tracking-wider text-secondary mt-space-xs uppercase group-hover:text-on-surface">Partager</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center p-space-sm bg-surface-container hover:bg-surface-container-high transition-colors text-center group"
+                        type="button">
+                        <span
+                            class="material-symbols-outlined text-[20px] text-on-surface group-hover:text-primary transition-colors">tune</span>
+                        <span
+                            class="font-label-caps text-[10px] tracking-wider text-secondary mt-space-xs uppercase group-hover:text-on-surface">1080p</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center justify-center p-space-sm bg-surface-container hover:bg-surface-container-high transition-colors text-center group"
+                        type="button">
+                        <span
+                            class="material-symbols-outlined text-[20px] text-on-surface group-hover:text-primary transition-colors">download</span>
+                        <span
+                            class="font-label-caps text-[10px] tracking-wider text-secondary mt-space-xs uppercase group-hover:text-on-surface">Télécharger</span>
+                    </button>
+                </section>
+                <!-- 4. Section: Épisodes -->
+                <section class="flex flex-col space-y-space-md pt-space-xs">
+                    <div class="flex items-center justify-between pb-space-xs">
+                        <h2 class="font-title-editorial text-title-editorial text-on-surface">
+                            Épisodes <span class="text-secondary font-body-sm text-body-sm ml-space-xs">(Saison
+                                1)</span>
+                        </h2>
+                        <span class="font-label-mono-technical text-label-mono-technical text-tertiary">3
+                            DISPONIBLES</span>
+                    </div>
+                    <!-- Episode Cards List -->
+                    <div class="flex flex-col space-y-space-sm">
+                        <!-- Episode 1 (Vu) -->
+                        <article
+                            class="flex bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer group">
+                            <div
+                                class="relative w-32 aspect-video flex-shrink-0 bg-surface-container-lowest overflow-hidden">
+                                <div class="w-full h-full bg-cover bg-center"
+                                    data-alt="Documentary still of traditional stilt village Ganvie morning mist showing children in a small wooden boat going to floating school in Benin, calm river reflections, warm earth tones."
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkA93kJMPEFSCr7aoMo2lgz8jCSIq_iyxaSxNQ7QoqE57VMwRQsKnRb1nDBXcCZSfUvLX8oGsCO0g48NKmZr1hchcfVPnb_SaBVSaCsJaY4ldv4CwioG8tg0t-awzDUS1ox7a6xmXNrMXFSL-VAKQgmdII4d6T6_txOzuVvkRK2QeRcPpsjSIB_zDne0aqB1oNgV-qh1U2MpDYZjPEOlUCS5J8L4p-IV2USZw_TkOZ-_YMOGa088Ml2w')">
+                                </div>
+                                <!-- Watched completion indicator -->
+                                <div
+                                    class="absolute inset-0 bg-surface-container-lowest/60 flex items-center justify-center">
+                                    <span
+                                        class="material-symbols-outlined text-[20px] text-secondary">check_circle</span>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 h-[2px] bg-secondary"></div>
+                            </div>
+                            <div class="flex flex-col justify-center p-space-sm min-w-0">
+                                <div class="flex items-center space-x-space-xs mb-[2px]">
+                                    <span class="font-label-mono-technical text-[10px] text-secondary uppercase">Ép.
+                                        1</span>
+                                    <span class="text-outline-variant text-[10px]">·</span>
+                                    <span class="font-label-mono-technical text-[10px] text-secondary">38 min</span>
+                                </div>
+                                <h3
+                                    class="font-headline-sm text-[16px] leading-[20px] text-on-surface truncate group-hover:text-primary transition-colors">
+                                    Les Enfants de l'Eau
+                                </h3>
+                                <p class="font-body-sm text-body-sm text-secondary truncate mt-[2px]">
+                                    L'éveil matinal sur la lagune et l'initiation aux rames.
+                                </p>
+                            </div>
+                        </article>
+                        <!-- Episode 2 (CURRENT HIGHLIGHTED) -->
+                        <article aria-current="true"
+                            class="flex bg-surface-container-high relative transition-colors cursor-pointer">
+                            <!-- Active pip indicator -->
+                            <div class="absolute left-0 top-0 bottom-0 w-[3px] bg-primary"
+                                style="background-color: rgb(31, 164, 99) !important;"></div>
+                            <div
+                                class="relative w-32 aspect-video flex-shrink-0 bg-surface-container-lowest overflow-hidden ml-[3px]">
+                                <div class="w-full h-full bg-cover bg-center"
+                                    data-alt="Fishermen on wooden boat preparing heavy dark cordage fishing nets under vivid sunset skies over lake Nokoue Benin with deep charcoal silhouettes and copper highlights."
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCR95FgaCZ--jtVxq2Rh3khz9QNNDAZEZpmIdK1uLKIRBqHqt6l_N6HhCW3UI4IsrnucnZaHwN1_4BlSJ93WwHnVGdRhTa6cwbAhGgfCEs-Xo7gL-3TBknS--rsiFG1Ot5N4JaMdwJjYmsl6iQT3mCXg6E3XQm0xu76i5neQAZHhzNHOSh6g407vwoOJXCMTV6DwGwarTaIQlFmLPgloOg5B8zvNuyjJWM1wUbqFASd31juFa-jKRAASw')">
+                                </div>
+                                <div
+                                    class="absolute inset-0 bg-surface-container-lowest/30 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-[22px] text-primary"
+                                        style="font-variation-settings: &quot;FILL&quot; 1; color: rgb(31, 164, 99) !important;">play_circle</span>
+                                </div>
+                                <!-- Progress bar 14/42 min = ~33% -->
+                                <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-surface-variant">
+                                    <div class="h-full bg-primary"
+                                        style="width: 34.6%; background-color: rgb(31, 164, 99) !important;"></div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col justify-center p-space-sm min-w-0">
+                                <div class="flex items-center space-x-space-xs mb-[2px]">
+                                    <span
+                                        class="font-label-mono-technical text-[10px] text-primary uppercase font-bold">EN
+                                        LECTURE · ÉP. 2</span>
+                                    <span class="text-outline-variant text-[10px]">·</span>
+                                    <span class="font-label-mono-technical text-[10px] text-secondary">42 min</span>
+                                </div>
+                                <h3 class="font-headline-sm text-[16px] leading-[20px] text-on-surface truncate">
+                                    Le Rituel des Filets
+                                </h3>
+                                <p class="font-body-sm text-body-sm text-secondary truncate mt-[2px]">
+                                    Restauration des pièges immergés et invocation rituelle.
+                                </p>
+                            </div>
+                        </article>
+                        <!-- Episode 3 (À venir / non lu) -->
+                        <article
+                            class="flex bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer group">
+                            <div
+                                class="relative w-32 aspect-video flex-shrink-0 bg-surface-container-lowest overflow-hidden">
+                                <div class="w-full h-full bg-cover bg-center opacity-80"
+                                    data-alt="Night atmosphere at Ganvie water city Benin with small paraffin lanterns lighting wooden stilt huts reflected in the calm pitch-black lake under starlight."
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA_FF5ib-0aZIeBfZ9Mu508BF-_CxVm9HO5O9_RpwC-LIXCZvM2vypzmbVWnUY2vcdyQOaP-wdcp4pkY-7xFZnyjtwgf__BDM0ZvckQQt4GnapBB1S5Q7c35oCGOZ3lLdN_USPsHlEsokoM3h_v7GufuQ8fTIk2Ur9ZgovTslbt8E2txiAEF6crdfp7Xo5hHJMJH_T8TmRQR906rBmR6s1k9DsWpOcnTTO2mz3oOUTPSmVqtaVb_Ky1YQ')">
+                                </div>
+                                <div
+                                    class="absolute inset-0 bg-surface-container-lowest/40 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity">
+                                    <span
+                                        class="material-symbols-outlined text-[20px] text-on-surface">play_arrow</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col justify-center p-space-sm min-w-0">
+                                <div class="flex items-center space-x-space-xs mb-[2px]">
+                                    <span class="font-label-mono-technical text-[10px] text-secondary uppercase">Ép.
+                                        3</span>
+                                    <span class="text-outline-variant text-[10px]">·</span>
+                                    <span class="font-label-mono-technical text-[10px] text-secondary">45 min</span>
+                                </div>
+                                <h3
+                                    class="font-headline-sm text-[16px] leading-[20px] text-on-surface truncate group-hover:text-primary transition-colors">
+                                    Sentinelles Nocturnes
+                                </h3>
+                                <p class="font-body-sm text-body-sm text-secondary truncate mt-[2px]">
+                                    La garde des parcs à poissons sous le ciel étoilé.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <!-- 5. Section: À voir aussi (Horizontal Rail) -->
+                <section class="flex flex-col space-y-space-md pt-space-xs">
+                    <div class="flex items-center justify-between pb-space-xs">
+                        <h2 class="font-title-editorial text-title-editorial text-on-surface">
+                            À voir aussi
+                        </h2>
+                        <span class="font-label-caps text-label-caps uppercase text-tertiary tracking-widest">
+                            SÉLECTION
+                        </span>
+                    </div>
+                    <!-- Rail bleeding right for touch momentum -->
+                    <div class="flex space-x-space-sm overflow-x-auto pb-space-sm -mr-margin pr-margin scrollbar-none">
+                        <!-- Poster 1: Symphonie Vodun -->
+                        <div class="w-[136px] flex-shrink-0 flex flex-col bg-surface-container cursor-pointer group">
+                            <div class="relative w-full aspect-[2/3] bg-surface-container-lowest overflow-hidden">
+                                <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-200"
+                                    data-alt="Artistic documentary poster vertical format showing sacred rhythmic brass percussion and ritual drums in Ouidah Benin, golden ochre lighting on deep bronze skin, high contrast fine-grain portrait."
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCFWKUd55CRcNQI6cv5Dt2U9bcCVOvLZYCpMhpFy5TEGRtTphijBvqcyG9JK2h9tOvxxkMg6mw-OWs-Xm8oH8JQl-NNUvziEtrfEnzWU9mmNtjRzzUmcB6khT7FPjx6VHsymY5U0i4P-SwrC5NMmCzGXyIeY0xkmLkVpDDV7Y3-gsM00_bhNplKWyNlwIAKBaXyAIl38TQmndl3UBmBn_-Gbm27njo41aeF8cA9DhmmPcGkj2ZZ0l0i-w')">
+                                </div>
+                                <span
+                                    class="absolute top-space-xs left-space-xs bg-primary text-on-primary font-label-caps text-[9px] px-[5px] py-[2px]"
+                                    style="background-color: #C9A227 !important; color: #07130E !important; font-weight: 700;">DOCU</span>
+                            </div>
+                            <div class="p-space-xs flex flex-col">
+                                <span
+                                    class="font-label-mono-technical text-[10px] text-tertiary uppercase truncate">Documentaire</span>
+                                <span
+                                    class="font-headline-sm text-[14px] leading-[18px] text-on-surface truncate mt-[2px]">Symphonie
+                                    Vodun</span>
+                                <span class="font-body-sm text-[11px] text-secondary mt-[2px]">78 min · 2024</span>
+                            </div>
+                        </div>
+                        <!-- Poster 2: Ouidah, Voix Secrètes -->
+                        <div class="w-[136px] flex-shrink-0 flex flex-col bg-surface-container cursor-pointer group">
+                            <div class="relative w-full aspect-[2/3] bg-surface-container-lowest overflow-hidden">
+                                <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-200"
+                                    data-alt="Historic documentary poster showing the Gate of No Return monument at Ouidah coast Benin under dramatic overcast skies, monumental architecture, solemn bronze and charcoal tones."
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXBFOG9wG3opTkcIikdLRecsOZVclzyh-aVrWrvd4VoV7hkvDMCoEPjWL5T-NDsG7T_1Wd-4XfZyrzs93Xq7T6sFHwyJ2A83i64u1BrOeNGtbBSBIfz9WL9o0gC-wuOSHpR3kX7KFRrU6pfj1U4G9qy6JUax690WznSamp5zu0II3w0_Fvz1Iah1rVPJnlYUvhwr76XFQgFeiUZaFDKcflQ7HeqVvB-uTbMT1lWHVKvcJNFvW68AFJmw')">
+                                </div>
+                                <span
+                                    class="absolute top-space-xs left-space-xs bg-surface-container-lowest text-on-surface font-label-caps text-[9px] px-[5px] py-[2px]">HISTOIRE</span>
+                            </div>
+                            <div class="p-space-xs flex flex-col">
+                                <span
+                                    class="font-label-mono-technical text-[10px] text-tertiary uppercase truncate">Patrimoine</span>
+                                <span
+                                    class="font-headline-sm text-[14px] leading-[18px] text-on-surface truncate mt-[2px]">Ouidah,
+                                    Voix Secrètes</span>
+                                <span class="font-body-sm text-[11px] text-secondary mt-[2px]">54 min · Archives</span>
+                            </div>
+                        </div>
+                        <!-- Poster 3: Haie Vive Sessions -->
+                        <div class="w-[136px] flex-shrink-0 flex flex-col bg-surface-container cursor-pointer group">
+                            <div class="relative w-full aspect-[2/3] bg-surface-container-lowest overflow-hidden">
+                                <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-200"
+                                    data-alt="Intimate acoustic live concert in Cotonou Haie Vive neighborhood Benin, warm tungsten indoor bar light, musician playing vintage electric guitar with soul, deep shadows and crisp details."
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXAqXcLJFMwSuOdbfY1dLv-TEqjjb-_mpamxWxiUUecCaqNqdkk8iq92ObGdDQaAIbImrAdLOz6VfnV9WY1gc6k8r1MJFBCG95xd_aDUfn_eAZPKrCL7LrMTez8drAxBlFF8PuESrNx_DD44rRpOn8S1kUwsoWu5Zn0uA_8F-7c70wQGx2NKJOI-Ufm9u-lvbqRWBHsecrZhaPKhbp-SgoAFwIpZ4VKNQ6so-vKVtN20FKzjVZy3ZVFA')">
+                                </div>
+                                <span
+                                    class="absolute top-space-xs left-space-xs bg-tertiary-container text-on-tertiary font-label-caps text-[9px] px-[5px] py-[2px]"
+                                    style="font-weight: 700; background-color: rgb(229, 56, 75) !important; color: rgb(255, 255, 255) !important;">LIVE</span>
+                            </div>
+                            <div class="p-space-xs flex flex-col">
+                                <span
+                                    class="font-label-mono-technical text-[10px] text-tertiary uppercase font-medium truncate">Musique</span>
+                                <span
+                                    class="font-headline-sm text-[14px] leading-[18px] text-on-surface truncate mt-[2px]">Haie
+                                    Vive Sessions</span>
+                                <span class="font-body-sm text-[11px] text-secondary mt-[2px]">Saison 2 · 6 Ép.</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 6. Subdued Footer -->
+                <footer
+                    class="pt-space-md pb-space-xl flex flex-col items-center justify-center space-y-space-xs text-center border-t-0">
+                    <div class="flex items-center space-x-space-xs">
+                        <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase"
+                            style="font-weight: 800; color: rgb(31, 164, 99) !important; font-family: &quot;Plus Jakarta Sans&quot;, sans-serif !important;">JALADO</span>
+                        <span class="text-secondary text-[10px]">·</span>
+                        <span
+                            class="font-label-caps text-label-caps text-secondary tracking-widest uppercase">BÉNIN</span>
+                    </div>
+                    <p class="font-label-mono-technical text-[11px] text-secondary">
+                        Cinémathèque &amp; Archives Numériques Nationales
+                    </p>
+                    <p class="font-label-mono-technical text-[10px] text-secondary/60">
+                        Diffusion Haute Définition réservée aux membres accrédités.
+                    </p>
+                </footer>
+            </div>
+        </div>
+        <script>
+            // Interactive Synopsis Expand / Collapse
+            const synopsisParagraph = document.getElementById('synopsis-paragraph');
+            const synopsisToggle = document.getElementById('synopsis-toggle');
+            let isExpanded = false;
+
+            if (synopsisToggle && synopsisParagraph) {
+                synopsisToggle.addEventListener('click', () => {
+                    isExpanded = !isExpanded;
+                    if (isExpanded) {
+                        synopsisParagraph.classList.remove('line-clamp-2');
+                        synopsisToggle.textContent = 'Réduire';
+                    } else {
+                        synopsisParagraph.classList.add('line-clamp-2');
+                        synopsisToggle.textContent = 'Lire la suite';
+                    }
+                });
+            }
+
+            // Play / Pause micro-interaction
+            const playToggleBtn = document.getElementById('play-toggle-btn');
+            const playIcon = document.getElementById('play-icon');
+            let isPlaying = false;
+
+            if (playToggleBtn && playIcon) {
+                playToggleBtn.addEventListener('click', () => {
+                    isPlaying = !isPlaying;
+                    playIcon.textContent = isPlaying ? 'pause' : 'play_arrow';
+                });
+            }
+        </script>
+    </main>
+
+</body>
+
+</html>

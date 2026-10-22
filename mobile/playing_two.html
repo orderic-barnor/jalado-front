@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+        name="viewport">
+    <meta content="mobile_blank" name="shell-type">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline": "#ae8789", "surface": "#171210", "inverse-primary": "#be003d", "tertiary-fixed": "#ffddb5", "surface-container-highest": "#393431", "surface-bright": "#3d3836", "on-error-container": "#ffdad6", "on-secondary-fixed-variant": "#4b463b", "on-tertiary": "#462b00", "on-tertiary-container": "#3d2500", "on-error": "#690005", "primary-fixed-dim": "#ffb2b8", "on-primary-fixed": "#40000f", "error-container": "#93000a", "secondary": "#cec6b6", "error": "#ffb4ab", "on-surface": "#eae0dd", "primary-container": "#ff506e", "on-surface-variant": "#e8bcbe", "on-background": "#eae0dd", "on-tertiary-fixed": "#2a1800", "surface-variant": "#393431", "surface-container": "#231f1c", "tertiary-container": "#c28425", "inverse-on-surface": "#342f2d", "secondary-fixed": "#eae1d2", "inverse-surface": "#eae0dd", "surface-dim": "#171210", "surface-container-lowest": "#110d0b", "on-secondary-container": "#bfb8a9", "tertiary": "#ffb958", "surface-container-low": "#1f1b18", "on-primary-container": "#5b0018", "on-secondary": "#343025", "outline-variant": "#5e3e41", "secondary-container": "#4e493d", "primary-fixed": "#ffdadb", "on-tertiary-fixed-variant": "#643f00", "secondary-fixed-dim": "#cec6b6", "on-primary": "#67001d", "tertiary-fixed-dim": "#ffb958", "on-primary-fixed-variant": "#91002d", "on-secondary-fixed": "#1f1b12", "background": "#171210", "surface-container-high": "#2e2927", "surface-tint": "#ffb2b8", "primary": "#ffb2b8" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1.5rem", "space-sm": "0.5rem", "gutter": "1.5rem", "margin-lg": "5rem", "space-xl": "3.5rem", "space-lg": "2rem", "space-xs": "0.25rem", "gutter-lg": "2.5rem", "space-2xl": "6rem", "gutter-sm": "1rem", "margin-md": "3rem", "space-md": "1rem" }, "fontFamily": { "headline-lg": ["Bodoni Moda"], "label-caps": ["Hanken Grotesk"], "display-hero-mobile": ["Bodoni Moda"], "headline-md": ["Bodoni Moda"], "label-mono-technical": ["Hanken Grotesk"], "body-lg": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "headline-lg-mobile": ["Bodoni Moda"], "title-editorial": ["Bodoni Moda"], "headline-sm": ["Bodoni Moda"], "body-md": ["Hanken Grotesk"], "display-hero": ["Bodoni Moda"] }, "fontSize": { "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "700" }], "display-hero-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "500" }], "label-mono-technical": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "400" }], "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "0em", "fontWeight": "600" }], "title-editorial": ["18px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-hero": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script>
+    <style>
+        @layer base {
+
+            html,
+            body {
+                width: 100vw;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            .pb-safe {
+                padding-bottom: env(safe-area-inset-bottom, 0px);
+            }
+
+            .pt-safe {
+                padding-top: env(safe-area-inset-top, 0px);
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-surface-container-lowest text-on-surface font-body-md text-body-md flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"
+    style="background-color: rgb(7, 19, 14); color: rgb(237, 237, 237); min-height: max(884px, 100dvh);">
+    <main class="flex flex-col relative w-full h-screen bg-surface-container-lowest overflow-hidden"
+        style="background-color: rgb(7, 19, 14);">
+        <div class="flex flex-col w-full relative select-none overflow-hidden bg-surface-container-lowest"
+            id="player-root">
+            <!-- Widescreen Cinematic Player Container (16:9 Aspect Frame) -->
+            <div class="relative w-full aspect-video bg-surface-dim overflow-hidden flex flex-col justify-between">
+                <!-- Background Cinematic Video Image -->
+                <img class="absolute inset-0 w-full h-full object-cover z-0"
+                    data-alt="Cinematic still from West African documentary on Lake Nokoué Ganvié stilt village at deep amber twilight. Local fishermen in traditional pirogue boats casting woven casting nets across glassy reflective water under a glowing dusk sky with subtle warm ochre and deep earth tones, 35mm film still high production aesthetic."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSEJEICjKYK32j4ehycZLkaRz3r7qhi4SVgfnExDL6rhDQ8cDAkRLPja14IR8mFNngDY-81JmOnA6a_3GhOzn0VU3nrRjxVXCJhdNYa7CMrUea_N-H98sFkSUoAIDUtiwrRWUzEFZvN889CFO0gCgCUUqxplTvKyVi9M_tor_Jz9JrT6z7WzzwhRrrkdGXnJqr7VR_XRXZbV0CTQvDPyw8uCgZ64eRDoagDAymckg-fX1VBxMNo8tnWQ">
+                <!-- Controlled Dark Tint Overlay for Optimal Legibility (Zero gradients, strict flat tint) -->
+                <div class="absolute inset-0 bg-surface-dim/75 z-10"></div>
+                <!-- Top Floating Transport Bar -->
+                <div
+                    class="relative z-20 w-full flex items-center justify-between px-margin py-space-sm text-on-surface">
+                    <!-- Back & Episode Metadata -->
+                    <div class="flex items-center space-x-space-sm min-w-0">
+                        <button aria-label="Retour"
+                            class="flex items-center justify-center p-space-xs text-on-surface hover:text-primary transition-colors"
+                            type="button">
+                            <span class="material-symbols-outlined text-[24px]"
+                                style="color: rgb(7, 19, 14);">arrow_back</span>
+                        </button>
+                        <div class="flex items-center space-x-space-xs truncate">
+                            <span
+                                class="font-headline-sm text-headline-sm font-medium tracking-tight text-on-surface truncate"
+                                style="font-family: &quot;Plus Jakarta Sans&quot;, sans-serif; font-weight: 700; color: rgb(237, 237, 237);">Les
+                                Gardiens de Ganvié</span>
+                            <span class="text-outline text-[12px] px-1 font-body-sm">·</span>
+                            <span class="font-body-sm text-body-sm text-secondary truncate">Ép. 2 · Le Rituel des
+                                Filets</span>
+                        </div>
+                    </div>
+                    <!-- Top Right Technical & Cast Utility -->
+                    <div class="flex items-center space-x-space-md shrink-0">
+                        <!-- Audio & Subtitles Badge -->
+                        <button
+                            class="flex items-center space-x-space-xs bg-surface-container-highest px-3 py-1 hover:bg-surface-bright transition-colors"
+                            type="button"
+                            style="background-color: rgb(14, 42, 29); color: rgb(237, 237, 237); border: 1px solid rgba(255, 255, 255, 0.08);">
+                            <span class="material-symbols-outlined text-[16px] text-primary"
+                                style="color: rgb(31, 164, 99);">translate</span>
+                            <span
+                                class="font-label-caps text-label-caps uppercase text-on-surface tracking-wider">Audio:
+                                Fongbe (Sous-titres FR)</span>
+                        </button>
+                        <!-- AirPlay / Cast Button -->
+                        <button aria-label="Diffuser"
+                            class="flex items-center justify-center text-on-surface hover:text-primary transition-colors"
+                            type="button">
+                            <span class="material-symbols-outlined text-[20px]">airplay</span>
+                        </button>
+                        <!-- Lock Screen Button -->
+                        <button aria-label="Verrouiller l'écran"
+                            class="flex items-center justify-center text-on-surface hover:text-primary transition-colors"
+                            type="button">
+                            <span class="material-symbols-outlined text-[20px]"
+                                style="color: rgb(201, 162, 39);">lock_open</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Center Playback Gestural Controls -->
+                <div class="relative z-20 w-full flex items-center justify-center space-x-space-xl my-auto">
+                    <!-- Rewind 10 Seconds -->
+                    <button aria-label="Reculer de 10 secondes"
+                        class="flex flex-col items-center justify-center text-on-surface hover:text-primary transition-colors active:scale-95"
+                        type="button">
+                        <span class="material-symbols-outlined text-[36px]">replay_10</span>
+                        <span
+                            class="font-label-mono-technical text-label-mono-technical mt-0.5 text-secondary">-10s</span>
+                    </button>
+                    <!-- Huge Central Play / Pause Button -->
+                    <button aria-label="Lecture ou Pause"
+                        class="w-16 h-16 flex items-center justify-center bg-primary-container text-on-primary-container hover:bg-tertiary-container hover:text-on-tertiary transition-colors active:scale-95"
+                        id="play-toggle-btn" type="button"
+                        style="background-color: rgb(237, 237, 237); color: rgb(7, 19, 14);">
+                        <span class="material-symbols-outlined text-[38px] leading-none"
+                            id="play-toggle-icon">pause</span>
+                    </button>
+                    <!-- Forward 10 Seconds -->
+                    <button aria-label="Avancer de 10 secondes"
+                        class="flex flex-col items-center justify-center text-on-surface hover:text-primary transition-colors active:scale-95"
+                        type="button">
+                        <span class="material-symbols-outlined text-[36px]">forward_10</span>
+                        <span
+                            class="font-label-mono-technical text-label-mono-technical mt-0.5 text-secondary">+10s</span>
+                    </button>
+                </div>
+                <!-- Bottom Scrubber & Tactical Controls -->
+                <div class="relative z-20 w-full flex flex-col px-margin pb-space-sm space-y-space-xs">
+                    <!-- Scrubber Line and Timestamps -->
+                    <div class="flex items-center space-x-space-sm w-full">
+                        <span
+                            class="font-label-mono-technical text-label-mono-technical text-on-surface shrink-0 w-12 text-left">14:32</span>
+                        <!-- Scrubber Track Component -->
+                        <div class="relative flex-1 h-3 flex items-center cursor-pointer group py-1">
+                            <!-- Background Base Track -->
+                            <div class="w-full h-[3px] bg-surface-container-highest relative">
+                                <!-- Loaded Buffer Track (58%) -->
+                                <div class="absolute left-0 top-0 h-full bg-surface-bright w-[58%]"></div>
+                                <!-- Active Playhead Track (35%) -->
+                                <div class="absolute left-0 top-0 h-full bg-primary-container w-[35%]"
+                                    style="background-color: rgb(31, 164, 99);"></div>
+                            </div>
+                            <!-- Tactile Sharp Scrubber Pip (No curves, rigorous architectural shape) -->
+                            <div class="absolute left-[35%] w-3 h-5 -ml-1.5 bg-on-surface group-hover:scale-110 transition-transform flex items-center justify-center"
+                                style="background-color: rgb(237, 237, 237);">
+                                <div class="w-1 h-2.5 bg-primary-container" style="background-color: rgb(31, 164, 99);">
+                                </div>
+                            </div>
+                        </div>
+                        <span
+                            class="font-label-mono-technical text-label-mono-technical text-secondary shrink-0 w-14 text-right">-27:28</span>
+                    </div>
+                    <!-- Action Utilities Bar Under Scrubber -->
+                    <div class="flex items-center justify-between pt-space-xs">
+                        <!-- Left Tray: Audio/Stream Toggles -->
+                        <div class="flex items-center space-x-space-md">
+                            <!-- CC / Subtitles Toggle -->
+                            <button
+                                class="flex items-center space-x-1 text-on-surface hover:text-primary transition-colors"
+                                type="button">
+                                <span class="material-symbols-outlined text-[18px]">closed_caption</span>
+                                <span class="font-label-caps text-label-caps uppercase text-on-surface">FR</span>
+                            </button>
+                            <!-- Stream Quality Badge -->
+                            <button
+                                class="flex items-center space-x-1 text-on-surface hover:text-primary transition-colors"
+                                type="button">
+                                <span class="material-symbols-outlined text-[18px]">hd</span>
+                                <span class="font-label-mono-technical text-label-mono-technical text-secondary">Auto ·
+                                    4K</span>
+                            </button>
+                            <!-- Episodes Drawer Button -->
+                            <button
+                                class="flex items-center space-x-1.5 text-on-surface hover:text-primary transition-colors"
+                                type="button">
+                                <span class="material-symbols-outlined text-[18px]">format_list_bulleted</span>
+                                <span class="font-label-caps text-label-caps uppercase">Épisodes</span>
+                            </button>
+                            <!-- Frame Aspect Ratio -->
+                            <button
+                                class="flex items-center space-x-1 text-on-surface hover:text-primary transition-colors"
+                                type="button">
+                                <span class="material-symbols-outlined text-[18px]">aspect_ratio</span>
+                                <span
+                                    class="font-label-mono-technical text-label-mono-technical text-secondary">16:9</span>
+                            </button>
+                        </div>
+                        <!-- Right Tray: Next Episode Prompt Button -->
+                        <div class="flex items-center space-x-space-sm">
+                            <button
+                                class="flex items-center bg-primary-container hover:bg-tertiary-container px-3 py-1.5 text-on-primary-container transition-colors"
+                                type="button" style="background-color: rgb(237, 237, 237); color: rgb(7, 19, 14);">
+                                <div class="flex flex-col text-left mr-space-sm">
+                                    <span
+                                        class="font-label-caps text-label-caps uppercase leading-none text-on-primary-container"
+                                        style="color: rgb(7, 19, 14); font-family: &quot;Plus Jakarta Sans&quot;, sans-serif; font-weight: 700;">Épisode
+                                        suivant</span>
+                                    <span
+                                        class="font-label-mono-technical text-[10px] text-on-primary-container/80 mt-0.5"
+                                        style="color: rgb(7, 19, 14); opacity: 0.85;">Ép. 3 dans 15s</span>
+                                </div>
+                                <span class="material-symbols-outlined text-[18px]"
+                                    style="color: rgb(7, 19, 14);">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Editorial Info Sheet Drawer Flush Directly Beneath Player -->
+            <div class="w-full bg-surface-container-low px-margin py-space-md flex flex-col space-y-space-sm"
+                style="background-color: rgb(14, 42, 29); border-top: 1px solid rgba(255, 255, 255, 0.06);">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-space-xs">
+                        <span
+                            class="bg-primary-container px-2 py-0.5 font-label-caps text-label-caps text-on-primary-container uppercase"
+                            style="background-color: rgb(7, 19, 14); color: rgb(31, 164, 99); border: 1px solid rgb(31, 164, 99); font-family: &quot;Plus Jakarta Sans&quot;, sans-serif; font-weight: 700;">Archive
+                            Master</span>
+                        <span
+                            class="bg-surface-container px-2 py-0.5 font-label-caps text-label-caps text-secondary uppercase"
+                            style="background-color: rgb(7, 19, 14); color: rgb(237, 237, 237); border: 1px solid rgba(255, 255, 255, 0.1);">Stéréo
+                            5.1</span>
+                        <span
+                            class="bg-surface-container px-2 py-0.5 font-label-caps text-label-caps text-secondary uppercase"
+                            style="background-color: rgb(7, 19, 14); color: rgb(237, 237, 237); border: 1px solid rgba(255, 255, 255, 0.1);">Bénin
+                            · 2024</span>
+                    </div>
+                    <div class="flex items-center space-x-space-md text-secondary">
+                        <button aria-label="Favoris"
+                            class="hover:text-primary transition-colors flex items-center space-x-1" type="button">
+                            <span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+                            <span class="font-label-caps text-label-caps uppercase">Enregistrer</span>
+                        </button>
+                        <button aria-label="Partager"
+                            class="hover:text-primary transition-colors flex items-center space-x-1" type="button">
+                            <span class="material-symbols-outlined text-[18px]">share</span>
+                            <span class="font-label-caps text-label-caps uppercase">Partager</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Editorial Synopsis -->
+                <div class="flex flex-col space-y-1">
+                    <h2 class="font-headline-sm text-headline-sm text-on-surface"
+                        style="font-family: &quot;Plus Jakarta Sans&quot;, sans-serif; font-weight: 700; color: rgb(237, 237, 237); letter-spacing: -0.01em;">
+                        Épisode 2 : Le Rituel des Filets</h2>
+                    <p class="font-body-sm text-body-sm text-secondary leading-relaxed line-clamp-2"
+                        style="color: rgba(237, 237, 237, 0.75); font-family: &quot;Plus Jakarta Sans&quot;, sans-serif;">
+                        À l’aube sur la lagune de Ganvié, le maître-pêcheur Dossou initie la jeune garde aux géométries
+                        sacrées des barrages de branchages « Acadja ». Une immersion contemplative dans l'équilibre
+                        millénaire entre l'homme et l'estuaire.
+                    </p>
+                </div>
+            </div>
+            <!-- Interactive Client Micro-Behavior -->
+            <script>
+                (function () {
+                    const playBtn = document.getElementById('play-toggle-btn');
+                    const playIcon = document.getElementById('play-toggle-icon');
+                    let isPlaying = true;
+
+                    if (playBtn && playIcon) {
+                        playBtn.addEventListener('click', function () {
+                            isPlaying = !isPlaying;
+                            playIcon.textContent = isPlaying ? 'pause' : 'play_arrow';
+                        });
+                    }
+                })();
+            </script>
+        </div>
+    </main>
+
+</body>
+
+</html>

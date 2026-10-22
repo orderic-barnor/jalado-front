@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+        name="viewport" />
+    <meta content="mobile_tab" name="shell-type" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,700;1,800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface": "#07130E",
+                        "background": "#07130E",
+                        "surface-container-lowest": "#050d09",
+                        "surface-container-low": "#0A2016",
+                        "surface-container": "#0E2A1D",
+                        "surface-container-high": "#133827",
+                        "surface-container-highest": "#1A4632",
+                        "on-surface": "#EDEDED",
+                        "on-surface-variant": "#95AA9E",
+                        "primary": "#1FA463",
+                        "primary-container": "#1FA463",
+                        "on-primary": "#07130E",
+                        "on-primary-container": "#07130E",
+                        "secondary": "#95AA9E",
+                        "on-secondary": "#EDEDED",
+                        "tertiary": "#1FA463",
+                        "gold": "#C9A227",
+                        "live": "#E5384B",
+                        "outline": "#1C4A34",
+                        "outline-variant": "#153625"
+                    },
+                    fontFamily: {
+                        "sans": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "mono": ["Plus Jakarta Sans", "monospace"]
+                    }
+                }
+            }
+        };</script>
+    <style>
+        @layer base {
+
+            html,
+            body {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                min-height: 100%;
+                background-color: #07130E;
+                color: #EDEDED;
+                font-family: 'Plus Jakarta Sans', sans-serif;
+            }
+
+            .pb-safe {
+                padding-bottom: env(safe-area-inset-bottom, 0px);
+            }
+
+            .pt-safe {
+                padding-top: env(safe-area-inset-top, 0px);
+            }
+
+            main> :first-child {
+                margin-top: 0 !important;
+            }
+
+            main> :last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-[#07130E] text-[#EDEDED] flex flex-col min-h-screen selection:bg-[#1FA463] selection:text-[#07130E] font-sans">
+    <header class="fixed top-0 w-full z-50 bg-[#07130E]/95 backdrop-blur-xl pt-safe border-b border-[#153625]">
+        <div class="h-16 px-4 flex items-center justify-between">
+            <div class="flex items-center gap-2"><span
+                    class="font-extrabold tracking-widest text-lg uppercase text-[#EDEDED] flex items-center gap-1.5">JALADO
+                    <span class="w-2 h-2 rounded-full inline-block bg-[#1FA463]"></span></span></div>
+            <div class="flex items-center gap-3"><a
+                    class="text-xs font-bold text-[#1FA463] uppercase tracking-wider transition-colors hover:text-[#EDEDED] min-h-[44px] inline-flex items-center"
+                    data-path="connexion" href="#">Se Connecter</a>
+                <div class="w-8 h-8 rounded-full bg-[#0E2A1D] border border-[#1FA463] flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[#EDEDED] text-[18px]">person</span></div>
+            </div>
+        </div>
+    </header>
+    <main class="flex-1 flex flex-col w-full bg-[#07130E] pt-16 pb-36">
+        <div class="flex flex-col w-full text-[#EDEDED] overflow-x-hidden">
+            <!-- MOTION SPECIFICATION NOTATIONS (TECHNICAL PROTOCOL CHIPS) -->
+            <section class="px-4 pt-3 pb-2 bg-[#050D09] border-b border-[#153625]">
+                <div class="flex items-center justify-between mb-1">
+                    <span class="text-[10px] font-bold text-[#1FA463] uppercase tracking-widest">PROD. PROTOCOLE //
+                        V1.0</span>
+                    <span class="text-[10px] font-medium text-[#95AA9E] opacity-70">COT-SYS-884</span>
+                </div>
+                <div class="space-y-1">
+                    <div
+                        class="px-2 py-0.5 bg-[#0E2A1D] border border-[#153625] text-[#1FA463] text-[10px] leading-tight uppercase flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 bg-[#1FA463] inline-block"></span>
+                        <span>[MOTION: Needle snaps with haptic inertia between 88.4, 92.1, 98.6, 104.2 MHz]</span>
+                    </div>
+                    <div
+                        class="px-2 py-0.5 bg-[#0E2A1D] border border-[#153625] text-[#95AA9E] text-[10px] leading-tight uppercase flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 bg-[#1FA463] inline-block"></span>
+                        <span>[MOTION: Background crossfade &amp; headline morph on frequency switch]</span>
+                    </div>
+                    <div
+                        class="px-2 py-0.5 bg-[#0E2A1D] border border-[#153625] text-[#95AA9E] text-[10px] leading-tight uppercase flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 bg-[#1FA463] inline-block"></span>
+                        <span>[MOTION: Audio waveform bars pulse dynamically to stream amplitude]</span>
+                    </div>
+                    <div
+                        class="px-2 py-0.5 bg-[#0E2A1D] border border-[#153625] text-[#95AA9E] text-[10px] leading-tight uppercase flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 bg-[#1FA463] inline-block"></span>
+                        <span>[MOTION: Infinite horizontal marquee ticker scrolling left at 24fps]</span>
+                    </div>
+                </div>
+            </section>
+            <!-- SECTION 1: HERO -->
+            <section class="pt-6 pb-8 px-4 relative bg-[#07130E]">
+                <!-- Cultural Hairline Ornament -->
+                <div class="w-full flex items-center gap-2 mb-4 opacity-40">
+                    <svg class="w-full h-1 text-[#1FA463]" fill="none" preserveaspectratio="none" viewbox="0 0 340 4">
+                        <path d="M0 2H120M125 0L129 4M133 0L137 4M141 0L145 4M150 2H340" stroke="currentColor"
+                            stroke-width="1"></path>
+                    </svg>
+                </div>
+                <!-- Bold Sans Headline -->
+                <div class="relative overflow-visible mb-3">
+                    <span class="block text-[11px] font-bold text-[#1FA463] uppercase tracking-widest mb-1.5">Plateforme
+                        Audiovisuelle Béninoise</span>
+                    <h1 class="text-[34px] leading-[38px] uppercase tracking-tight text-[#EDEDED] font-extrabold">
+                        Le média qui te garde <span class="text-[#1FA463]">connecté.</span>
+                    </h1>
+                </div>
+                <p class="text-[14px] leading-relaxed text-[#95AA9E] mb-6 font-normal">
+                    Documentaires d'investigation, podcasts d'auteurs, création musicale et radio en continu. Raconter
+                    nos réalités et nos avant-gardes depuis Cotonou.
+                </p>
+                <!-- SIGNATURE COMPONENT: THE FREQUENCY DIAL -->
+                <div class="bg-[#0E2A1D] border border-[#153625] p-4 mb-6 relative">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-[11px] font-bold text-[#95AA9E] uppercase tracking-widest">Sélecteur de
+                            Fréquence</span>
+                        <div class="flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-[#1FA463] inline-block animate-pulse"></span>
+                            <span class="text-[11px] font-bold text-[#1FA463] uppercase" id="current-mode-label">88.4
+                                MHz // DOCS</span>
+                        </div>
+                    </div>
+                    <!-- Frequency Ruler Canvas -->
+                    <div
+                        class="relative w-full h-16 bg-[#07130E] border border-[#153625] overflow-hidden flex items-center select-none cursor-ew-resize">
+                        <!-- Ruler Hashmarks -->
+                        <div class="w-full flex justify-between items-end h-8 px-2 opacity-60">
+                            <div class="flex items-end gap-1">
+                                <div class="w-px h-6 bg-[#1FA463]"></div>
+                                <div class="w-px h-3 bg-[#95AA9E]"></div>
+                                <div class="w-px h-3 bg-[#95AA9E]"></div>
+                                <div class="w-px h-4 bg-[#95AA9E]"></div>
+                            </div>
+                            <div class="flex items-end gap-1">
+                                <div class="w-px h-6 bg-[#1FA463]"></div>
+                                <div class="w-px h-3 bg-[#95AA9E]"></div>
+                                <div class="w-px h-3 bg-[#95AA9E]"></div>
+                                <div class="w-px h-4 bg-[#95AA9E]"></div>
+                            </div>
+                            <div class="flex items-end gap-1">
+                                <div class="w-px h-6 bg-[#1FA463]"></div>
+                                <div class="w-px h-3 bg-[#95AA9E]"></div>
+                                <div class="w-px h-3 bg-[#95AA9E]"></div>
+                                <div class="w-px h-4 bg-[#95AA9E]"></div>
+                            </div>
+                            <div class="flex items-end gap-1">
+                                <div class="w-px h-6 bg-[#1FA463]"></div>
+                                <div class="w-px h-3 bg-[#95AA9E]"></div>
+                                <div class="w-px h-3 bg-[#95AA9E]"></div>
+                                <div class="w-px h-4 bg-[#95AA9E]"></div>
+                            </div>
+                            <div class="flex items-end gap-1">
+                                <div class="w-px h-6 bg-[#1FA463]"></div>
+                                <div class="w-px h-3 bg-[#95AA9E]"></div>
+                                <div class="w-px h-3 bg-[#95AA9E]"></div>
+                                <div class="w-px h-4 bg-[#95AA9E]"></div>
+                            </div>
+                        </div>
+                        <!-- Frequency Scale Markers -->
+                        <div
+                            class="absolute inset-x-0 bottom-1 flex justify-between px-2 text-[10px] font-bold text-[#95AA9E]">
+                            <span class="text-[#1FA463]">88.4</span>
+                            <span>92.1</span>
+                            <span>98.6</span>
+                            <span>104.2</span>
+                        </div>
+                        <!-- Active Needle: Bright Green (#1FA463) -->
+                        <div class="absolute left-6 top-0 bottom-0 w-[2px] bg-[#1FA463] transition-all duration-300"
+                            id="dial-needle">
+                            <div class="w-2.5 h-2.5 bg-[#1FA463] -translate-x-[4px] -translate-y-1"></div>
+                        </div>
+                    </div>
+                    <!-- Quick Tuning Tabs -->
+                    <div class="grid grid-cols-4 gap-1.5 mt-3">
+                        <button
+                            class="py-1.5 text-center bg-[#133827] text-[#1FA463] border border-[#1FA463] text-[10px] font-bold uppercase transition-colors"
+                            onclick="setDial(0, '88.4 MHz // DOCS')">88.4 DOC</button>
+                        <button
+                            class="py-1.5 text-center bg-[#07130E] text-[#95AA9E] border border-[#153625] text-[10px] font-bold uppercase hover:text-[#EDEDED] transition-colors"
+                            onclick="setDial(32, '92.1 MHz // PODCASTS')">92.1 POD</button>
+                        <button
+                            class="py-1.5 text-center bg-[#07130E] text-[#95AA9E] border border-[#153625] text-[10px] font-bold uppercase hover:text-[#EDEDED] transition-colors"
+                            onclick="setDial(64, '98.6 MHz // MUSIQUE')">98.6 MUS</button>
+                        <button
+                            class="py-1.5 text-center bg-[#07130E] text-[#95AA9E] border border-[#153625] text-[10px] font-bold uppercase hover:text-[#EDEDED] transition-colors"
+                            onclick="setDial(95, '104.2 MHz // DIRECT')">104.2 RAD</button>
+                    </div>
+                    <p class="text-[11px] text-[#95AA9E] mt-3 uppercase font-medium flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[14px] text-[#1FA463]">tune</span>
+                        Glissez la réglette pour pré-écouter les canaux Jalado.
+                    </p>
+                </div>
+                <!-- Editorial Launch Timer & Email Capture Form -->
+                <div class="bg-[#0E2A1D] border border-[#153625] p-4">
+                    <div class="flex items-baseline justify-between mb-2">
+                        <span class="text-2xl uppercase text-[#EDEDED] font-extrabold tracking-tight">OCT 2025</span>
+                        <span class="text-[11px] font-bold text-[#1FA463] uppercase tracking-widest">Lancement
+                            Officiel</span>
+                    </div>
+                    <p class="text-[13px] text-[#95AA9E] mb-4">
+                        Inscrivez-vous pour obtenir les invitations d'écoute privée et le guide papier des fréquences.
+                    </p>
+                    <form class="flex flex-col gap-2.5"
+                        onsubmit="event.preventDefault(); document.getElementById('notif-sent').classList.remove('hidden');">
+                        <div class="relative">
+                            <input
+                                class="w-full h-12 bg-[#07130E] border border-[#153625] text-[#EDEDED] px-4 font-sans placeholder:text-[#95AA9E]/50 focus:outline-none focus:border-[#1FA463] text-sm"
+                                placeholder="ton.adresse@domaine.bj" required="" type="email" />
+                        </div>
+                        <button
+                            class="w-full h-12 bg-[#EDEDED] text-[#07130E] text-xs font-extrabold uppercase tracking-widest hover:bg-[#1FA463] hover:text-[#07130E] transition-colors flex items-center justify-center gap-2"
+                            type="submit">
+                            <span>Être Prévenu</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </form>
+                    <div class="hidden mt-2 p-2 bg-[#133827] border border-[#1FA463] text-[#EDEDED] text-[11px] uppercase text-center font-bold"
+                        id="notif-sent">
+                        ✦ Signal capté. Invitation envoyée par onde radio &amp; courriel.
+                    </div>
+                </div>
+            </section>
+            <!-- SECTION 2: SCROLLING TICKER TAPE -->
+            <aside aria-label="Programmes à venir"
+                class="w-full bg-[#0E2A1D] border-y border-[#153625] py-2 overflow-hidden whitespace-nowrap">
+                <div
+                    class="inline-block animate-[marquee_20s_linear_infinite] text-[11px] tracking-widest uppercase font-bold text-[#EDEDED]">
+                    <span class="mx-4 text-[#1FA463]">✦ EN TOURNAGE : LES DERNIERS ROIS D'ABOMEY</span>
+                    <span class="mx-4 text-[#EDEDED]">✦ LIVE SESSION : HAIE VIVE AFROBEAT</span>
+                    <span class="mx-4 text-[#1FA463]">✦ ÉPISODE 04 : MÉMOIRES DU LAC NOKOUÉ</span>
+                    <span class="mx-4 text-[#EDEDED]">✦ ARCHIVES : ANTHOLOGIE GÉGÉ VICKY</span>
+                    <span class="mx-4 text-[#1FA463]">✦ FRÉQUENCE COTONOU : 94.2 MHZ</span>
+                </div>
+            </aside>
+            <!-- SECTION 3: RADIO EN DIRECT BIENTÔT -->
+            <section class="bg-[#07130E] text-[#EDEDED] px-4 py-8 relative border-b border-[#153625]">
+                <!-- Section Category Marker -->
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-[11px] font-bold uppercase tracking-widest text-[#95AA9E]">Flux Hivernal
+                        2025</span>
+                    <div
+                        class="flex items-center gap-1.5 px-2 py-0.5 bg-[#133827] text-[#EDEDED] border border-[#153625] text-[10px] font-bold uppercase">
+                        <span class="w-2 h-2 rounded-full inline-block animate-ping bg-[#E5384B]"></span>
+                        <span>Studio Cotonou</span>
+                    </div>
+                </div>
+                <h2 class="text-[28px] leading-tight uppercase font-extrabold text-[#EDEDED] mb-2">
+                    Radio en direct bientôt
+                </h2>
+                <div class="w-12 h-1 bg-[#1FA463] mb-4"></div>
+                <p class="text-base font-semibold text-[#EDEDED] italic mb-3">
+                    "Les Matins de Cotonou : Philosophie Vodun &amp; Avant-gardes Sonores"
+                </p>
+                <p class="text-[14px] text-[#95AA9E] mb-6 leading-relaxed">
+                    Diffusion en direct depuis notre studio de Cadjèhoun. Analyses sans concessions, archives royales
+                    réinterprétées et sets de musique concrète ouest-africaine.
+                </p>
+                <!-- Flat Stylized Sound Waveform Visual in dark green card -->
+                <div class="bg-[#0E2A1D] border border-[#153625] p-4 mb-3 text-[#EDEDED]">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-[11px] uppercase tracking-wider text-[#95AA9E] font-medium">Oscillogramme //
+                            94.2 MHz</span>
+                        <span class="text-[11px] uppercase text-[#1FA463] font-bold">Signal Prêt</span>
+                    </div>
+                    <!-- Flat Bar Waveform: Bright green #1FA463 bars -->
+                    <div class="flex items-end justify-between h-14 gap-1 px-1 mb-3">
+                        <div class="w-full h-3 bg-[#1FA463]"></div>
+                        <div class="w-full h-6 bg-[#133827]"></div>
+                        <div class="w-full h-11 bg-[#133827]"></div>
+                        <div class="w-full h-8 bg-[#1FA463]"></div>
+                        <div class="w-full h-4 bg-[#133827]"></div>
+                        <div class="w-full h-12 bg-[#133827]"></div>
+                        <div class="w-full h-14 bg-[#1FA463]"></div>
+                        <div class="w-full h-7 bg-[#133827]"></div>
+                        <div class="w-full h-5 bg-[#133827]"></div>
+                        <div class="w-full h-10 bg-[#1FA463]"></div>
+                        <div class="w-full h-6 bg-[#133827]"></div>
+                        <div class="w-full h-12 bg-[#133827]"></div>
+                        <div class="w-full h-8 bg-[#1FA463]"></div>
+                        <div class="w-full h-3 bg-[#133827]"></div>
+                    </div>
+                    <!-- West African Textile Linear Motif -->
+                    <svg class="w-full h-3 text-[#1FA463] opacity-60" fill="none" viewbox="0 0 300 12">
+                        <path
+                            d="M0 6L10 0L20 6L30 12L40 6L50 0L60 6L70 12L80 6L90 0L100 6L110 12L120 6L130 0L140 6L150 12L160 6L170 0L180 6L190 12L200 6L210 0L220 6L230 12L240 6L250 0L260 6L270 12L280 6L290 0L300 6"
+                            stroke="currentColor" stroke-width="1.2"></path>
+                    </svg>
+                </div>
+                <!-- Mini Player Card Interface -->
+                <div class="bg-[#0E2A1D] border border-[#153625] p-3 flex items-center justify-between text-[#EDEDED]">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-[#1FA463] flex items-center justify-center text-[#07130E]">
+                            <span class="material-symbols-outlined text-2xl font-bold">volume_up</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[10px] uppercase tracking-wider text-[#95AA9E] font-bold">Écoute
+                                Test</span>
+                            <span class="text-sm font-bold truncate max-w-[170px] text-[#EDEDED]">Étalonnage Fréquence
+                                #01</span>
+                        </div>
+                    </div>
+                    <span class="text-[11px] font-bold text-[#1FA463]">03:42</span>
+                </div>
+            </section>
+            <!-- SECTION 4: AU PROGRAMME -->
+            <section class="bg-[#07130E] py-8 px-4 border-b border-[#153625]">
+                <div class="flex items-baseline justify-between mb-6">
+                    <div>
+                        <span
+                            class="text-[11px] font-bold text-[#1FA463] uppercase tracking-widest block mb-1">Production
+                            Exclusive</span>
+                        <h2 class="text-2xl uppercase font-extrabold text-[#EDEDED]">Au Programme</h2>
+                    </div>
+                    <span class="text-[11px] font-bold text-[#95AA9E]">03 PIÈCES</span>
+                </div>
+                <!-- 3 Tall Cinematic Story Cards -->
+                <div class="space-y-6">
+                    <!-- Story 1: Les Gardiens de Ganvié -->
+                    <article class="bg-[#0E2A1D] border border-[#153625] overflow-hidden">
+                        <div class="relative w-full h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover"
+                                data-alt="High contrast atmospheric documentary cinematic still of traditional wooden pirogues and fishermen cast on the calm dawn waters of Ganvie lake village Benin, deep charcoal shadows, ochre morning sunlight, filmic grain, 35mm film aesthetic, warm earthy colors."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-NvCPSmU8T77t1Vm1RB3ubGB1NJQdAn2FN0h2aIE5-tEBDfFOh91YRGsamP8NN1cyyimC20221E62kK-njr4cn8z-iNVmd9aF9wY86S9HFQCNIHvT9wLt0iC_y-JJjjB7ZRtDpYAxXcjahGv9pR0Q3wav2QPY8ecI2ICQKXrbfgwbfulNaBXgNYgIYlo5Nxnd57QEoSHw1tgsuDtamcV7u3GSX42mUZNafFMEwWnP" />
+                            <div
+                                class="absolute top-3 left-3 bg-[#07130E]/90 px-2.5 py-1 text-[10px] font-bold uppercase text-[#EDEDED] border border-[#153625]">
+                                GRATUIT // EN ACCÈS LIBRE
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 bg-[#0E2A1D]/90 px-2.5 py-1 text-[10px] font-bold text-[#1FA463] border border-[#153625]">
+                                52 MIN
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <span
+                                class="text-[11px] font-bold text-[#1FA463] uppercase tracking-wider block mb-1">Documentaire
+                                d'Investigation</span>
+                            <h3 class="text-xl uppercase font-bold text-[#EDEDED] mb-2">Les Gardiens de Ganvié</h3>
+                            <p class="text-[13px] leading-relaxed text-[#95AA9E] mb-4">
+                                Face à l'ensablement et aux mutations écologiques, trois générations de bateliers
+                                défendent l'autonomie lacustre de la cité sur pilotis.
+                            </p>
+                            <div class="flex items-center justify-between pt-1 border-t border-[#153625]">
+                                <span class="text-[10px] font-semibold text-[#95AA9E]">RÉALISÉ PAR A. DOSSOU</span>
+                                <a class="text-[#1FA463] text-xs font-bold uppercase flex items-center gap-1 hover:text-[#EDEDED] transition-colors"
+                                    href="#">
+                                    Voir la bande-annonce <span
+                                        class="material-symbols-outlined text-sm">north_east</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Story 2: Symphonie Vodun (EXCLUSIF GOLD #C9A227) -->
+                    <article class="bg-[#0E2A1D] border border-[#153625] overflow-hidden">
+                        <div class="relative w-full h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover"
+                                data-alt="Close up archival documentary portrait of master percussionist in Ouidah holding sacred iron bells and hand carved wood drums, dramatic chiaroscuro side lighting, tactile dust particles, regal Benin traditional ceremony, deep warm black tones and rich amber highlights."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPPMHLdl_hObPmcLQeiVRoXqJ6tMPGUy6PU5xAt6nUTZJ1KD1TdjekpBnNNqITw11zn6dAqsnzxA-x8lXPirm595FF3tUgdKjan3zt5nfrxOOOTik6cmHubEfOsfbmevbgVlS51dSV6_MnSbcdoKf4LBp9SpS97oUVrcx5OvkUY9DgFrjo13XeFJ8BkeqaVQ6yST7P_O0LQuL_CaAPcXw7pzzl5Er9AzpxVEsXnhY1" />
+                            <div
+                                class="absolute top-3 left-3 bg-[#C9A227] text-[#07130E] px-2.5 py-1 text-[10px] uppercase font-extrabold flex items-center gap-1">
+                                <span class="material-symbols-outlined text-xs font-bold">lock</span>
+                                <span>EXCLUSIF CONNOISSEUR</span>
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 bg-[#0E2A1D]/90 px-2.5 py-1 text-[10px] font-bold text-[#1FA463] border border-[#153625]">
+                                06 ÉPISODES
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <span
+                                class="text-[11px] font-bold text-[#1FA463] uppercase tracking-wider block mb-1">Podcast
+                                d'Auteur // Restauration Sonore</span>
+                            <h3 class="text-xl uppercase font-bold text-[#EDEDED] mb-2">Symphonie Vodun : Les Fréquences
+                                Sacrées</h3>
+                            <p class="text-[13px] leading-relaxed text-[#95AA9E] mb-4">
+                                Une immersion acoustique binaurale au cœur des couvents de Ouidah et Porto-Novo.
+                                Déchiffrage des signatures polyrythmiques ancestrales.
+                            </p>
+                            <div class="flex items-center justify-between pt-1 border-t border-[#153625]">
+                                <span class="text-[10px] font-semibold text-[#95AA9E]">AUDIO HD 96KHZ</span>
+                                <span class="text-[#C9A227] text-xs font-bold uppercase flex items-center gap-1">
+                                    Accès Réservé Membres
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Story 3: Haie Vive Sessions -->
+                    <article class="bg-[#0E2A1D] border border-[#153625] overflow-hidden">
+                        <div class="relative w-full h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover"
+                                data-alt="Nocturnal street level music performance in Haie Vive Cotonou, brass instruments and electric guitarists under warm tungsten street lamps, crowd silhouette, vibrant West African urban nightlife, rich shadows and vivid red accents."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_9G1-q4MF36fLh6rLgc6BdAtr7rgLPPKcSbAbRKic3ITaRgkGzAHZ12LAQhtJBURdvnoVCFbOvYSH1v1qKaoA9EFd7LgWyoWOfEr5LWhqWzgvnMbKnEazzpVwOjPnBIlvY9D6ydK0ozC3S-Kq5pOPI4n8hFAqDjlBy0r1UrTBVzNDMcYjTCr2D9jjeVkW6ewgVHPfw1RYrLgjh9Zp6jy_h3ig_XkUDwZMENe1jALr" />
+                            <div
+                                class="absolute top-3 left-3 bg-[#07130E]/90 px-2.5 py-1 text-[10px] font-bold uppercase text-[#EDEDED] border border-[#153625]">
+                                GRATUIT // CLIP D'ART
+                            </div>
+                            <div
+                                class="absolute bottom-3 right-3 bg-[#0E2A1D]/90 px-2.5 py-1 text-[10px] font-bold text-[#1FA463] border border-[#153625]">
+                                SESSION 4K
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <span
+                                class="text-[11px] font-bold text-[#1FA463] uppercase tracking-wider block mb-1">Création
+                                Musicale Originale</span>
+                            <h3 class="text-xl uppercase font-bold text-[#EDEDED] mb-2">Haie Vive Sessions</h3>
+                            <p class="text-[13px] leading-relaxed text-[#95AA9E] mb-4">
+                                La nouvelle scène jazz fusion et afro-funk enregistrée sur le vif sur les toits et cours
+                                intérieures de Cotonou.
+                            </p>
+                            <div class="flex items-center justify-between pt-1 border-t border-[#153625]">
+                                <span class="text-[10px] font-semibold text-[#95AA9E]">EN CO-PRODUCTION</span>
+                                <a class="text-[#1FA463] text-xs font-bold uppercase flex items-center gap-1 hover:text-[#EDEDED] transition-colors"
+                                    href="#">
+                                    Extrait vidéo <span class="material-symbols-outlined text-sm">north_east</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!-- SECTION 5: ACCÈS & SOUTIEN (RECOLORED TO FLAT DARK GREEN #0E2A1D) -->
+            <section class="bg-[#07130E] text-[#EDEDED] px-4 py-8 border-b border-[#153625]">
+                <div class="mb-6">
+                    <span class="text-[11px] font-bold uppercase tracking-widest text-[#1FA463] block mb-1">Modèle
+                        Éthique &amp; Indépendant</span>
+                    <h2 class="text-[28px] leading-tight uppercase font-extrabold text-[#EDEDED]">
+                        Accès &amp; Soutien
+                    </h2>
+                    <p class="text-[13px] text-[#95AA9E] mt-1">
+                        Pas d'algorithmes opaques. Un financement direct de la création audiovisuelle béninoise.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <!-- Option 1: Découverte -->
+                    <div class="bg-[#0E2A1D] border border-[#153625] p-4 text-[#EDEDED]">
+                        <div class="flex items-baseline justify-between mb-1">
+                            <h3 class="text-lg font-bold uppercase text-[#EDEDED]">Accès Découverte</h3>
+                            <span class="text-2xl font-extrabold text-[#1FA463]">0 FCFA</span>
+                        </div>
+                        <p class="text-[11px] uppercase text-[#95AA9E] font-medium mb-3">Pour toujours, sans carte
+                            bancaire</p>
+                        <ul class="space-y-2 text-[13px] mb-5">
+                            <li class="flex items-start gap-2">
+                                <span class="text-[#1FA463] font-bold">✦</span>
+                                <span>Flux radio Cotonou en continu 24h/24 (basse consommation)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[#1FA463] font-bold">✦</span>
+                                <span>Sélection mensuelle de 2 documentaires en libre accès</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[#1FA463] font-bold">✦</span>
+                                <span>Podcasts d'actualité culturelle et rétrospectives</span>
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full py-3 bg-[#07130E] text-[#EDEDED] border border-[#1FA463] text-xs font-bold uppercase tracking-widest hover:bg-[#1FA463] hover:text-[#07130E] transition-colors">
+                            Activer l'Accès Libre
+                        </button>
+                    </div>
+                    <!-- Option 2: Soutien Créateurs -->
+                    <div class="bg-[#0E2A1D] border border-[#1FA463] text-[#EDEDED] p-4 relative">
+                        <div class="flex items-center justify-between mb-1">
+                            <span
+                                class="bg-[#C9A227] text-[#07130E] px-2 py-0.5 text-[10px] uppercase font-extrabold">Indispensable</span>
+                            <span class="text-[11px] text-[#1FA463] uppercase font-bold">60% reversés aux
+                                cinéastes</span>
+                        </div>
+                        <div class="flex items-baseline justify-between my-2">
+                            <h3 class="text-lg font-bold uppercase text-[#EDEDED]">Soutien Créateurs</h3>
+                            <div class="text-right">
+                                <span class="text-2xl font-extrabold text-[#EDEDED]">3 000</span>
+                                <span class="text-[11px] text-[#95AA9E] uppercase font-bold ml-1">FCFA / MOIS</span>
+                            </div>
+                        </div>
+                        <p class="text-[11px] uppercase text-[#95AA9E] font-medium mb-3">Paiement Mobile Money (MTN /
+                            Moov / Celtiis)</p>
+                        <ul class="space-y-2 text-[13px] text-[#EDEDED] mb-5">
+                            <li class="flex items-start gap-2">
+                                <span class="text-[#1FA463] font-bold">✦</span>
+                                <span>Accès illimité à l'intégralité du catalogue master &amp; 4K</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[#1FA463] font-bold">✦</span>
+                                <span>Téléchargement hors-ligne des podcasts et sessions musicales</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[#1FA463] font-bold">✦</span>
+                                <span>Invitations physiques aux avant-premières à Cotonou et Ouidah</span>
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full py-3.5 bg-[#EDEDED] text-[#07130E] text-xs font-extrabold uppercase tracking-widest hover:bg-[#1FA463] hover:text-[#07130E] transition-colors flex items-center justify-center gap-2">
+                            <span>Pré-réserver l'Accès Soutien</span>
+                            <span class="material-symbols-outlined text-base">check</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- SECTION 6: INSTALLATION BLOCK (PWA BÉNIN-READY) -->
+            <section class="bg-[#07130E] py-8 px-4 border-b border-[#153625]">
+                <div class="bg-[#0E2A1D] border border-[#153625] p-4">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="material-symbols-outlined text-[#1FA463] text-2xl">install_mobile</span>
+                        <span class="text-[11px] font-bold text-[#1FA463] uppercase tracking-widest">Technologie
+                            Légère</span>
+                    </div>
+                    <h2 class="text-xl font-extrabold uppercase text-[#EDEDED] mb-1">
+                        Installe Jalado sur ton écran d'accueil
+                    </h2>
+                    <p class="text-[13px] text-[#95AA9E] mb-4 leading-relaxed">
+                        Sans passer par les boutiques d'applications. 0 Mo de téléchargement superflu, démarrage
+                        instantané et consommation de données ultra-réduite sur les réseaux MTN, Moov et Celtiis.
+                    </p>
+                    <div class="grid grid-cols-2 gap-3 mb-4">
+                        <div class="bg-[#07130E] border border-[#153625] p-2.5 text-center">
+                            <span class="block text-base font-extrabold text-[#EDEDED]">0 MO</span>
+                            <span class="text-[10px] text-[#95AA9E] uppercase font-bold">Stockage requis</span>
+                        </div>
+                        <div class="bg-[#07130E] border border-[#153625] p-2.5 text-center">
+                            <span class="block text-base font-extrabold text-[#1FA463]">OFFLINE</span>
+                            <span class="text-[10px] text-[#95AA9E] uppercase font-bold">Mode économie</span>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full h-12 bg-[#EDEDED] text-[#07130E] hover:bg-[#1FA463] hover:text-[#07130E] transition-colors text-xs font-extrabold uppercase tracking-widest flex items-center justify-center gap-2"
+                        onclick="alert('Pour installer : appuyez sur le bouton Partager de votre navigateur puis sur Ajouter sur l\'écran d\'accueil.');">
+                        <span class="material-symbols-outlined text-lg">add_to_home_screen</span>
+                        <span>Installer l'Application</span>
+                    </button>
+                </div>
+            </section>
+            <!-- SECTION 7: EDITORIAL FOOTER -->
+            <footer class="bg-[#07130E] px-4 pt-8 pb-12">
+                <!-- Geometric Hairline Divider -->
+                <div class="w-full flex items-center gap-2 mb-6">
+                    <div class="w-2.5 h-2.5 bg-[#1FA463] rotate-45"></div>
+                    <div class="flex-1 h-px bg-[#1FA463] opacity-40"></div>
+                    <span class="text-[10px] font-bold text-[#1FA463] tracking-widest uppercase">JALADO // BÉNIN</span>
+                    <div class="flex-1 h-px bg-[#1FA463] opacity-40"></div>
+                    <div class="w-2.5 h-2.5 bg-[#1FA463] rotate-45"></div>
+                </div>
+                <!-- Editorial Brand Identification -->
+                <div class="mb-6">
+                    <span
+                        class="text-2xl font-extrabold uppercase tracking-tight text-[#EDEDED] flex items-center gap-1.5 mb-1">JALADO
+                        <span class="w-2.5 h-2.5 rounded-full inline-block bg-[#1FA463]"></span></span>
+                    <p class="text-[13px] text-[#95AA9E] leading-relaxed">
+                        Société des Médias Libres du Bénin.<br />
+                        Avenue Jean-Paul II, Quartier Haie Vive, Cotonou.
+                    </p>
+                </div>
+                <!-- Technical Editorial Links -->
+                <div class="grid grid-cols-2 gap-4 mb-6 text-xs uppercase font-semibold">
+                    <div class="space-y-2">
+                        <a class="block text-[#95AA9E] hover:text-[#1FA463] transition-colors" href="#">Ligne
+                            Éditoriale</a>
+                        <a class="block text-[#95AA9E] hover:text-[#1FA463] transition-colors" href="#">Charte
+                            Déontologique</a>
+                        <a class="block text-[#95AA9E] hover:text-[#1FA463] transition-colors" href="#">Fréquences FM
+                            Cotonou</a>
+                    </div>
+                    <div class="space-y-2">
+                        <a class="block text-[#95AA9E] hover:text-[#1FA463] transition-colors" href="#">Partenaires
+                            Culturels</a>
+                        <a class="block text-[#1FA463] font-bold hover:underline"
+                            href="mailto:contact@jalado.bj">contact@jalado.bj</a>
+                        <a class="block text-[#95AA9E] hover:text-[#1FA463] transition-colors" href="#">Appel à
+                            Films</a>
+                    </div>
+                </div>
+                <!-- Social Handles & Copyright -->
+                <div class="pt-4 border-t border-[#153625] flex flex-col gap-2">
+                    <div class="flex items-center gap-3 text-[#1FA463] text-xs font-bold uppercase">
+                        <a class="hover:text-[#EDEDED] transition-colors" href="#">Instagram</a>
+                        <span class="text-[#95AA9E]/40">/</span>
+                        <a class="hover:text-[#EDEDED] transition-colors" href="#">YouTube</a>
+                        <span class="text-[#95AA9E]/40">/</span>
+                        <a class="hover:text-[#EDEDED] transition-colors" href="#">SoundCloud</a>
+                        <span class="text-[#95AA9E]/40">/</span>
+                        <a class="hover:text-[#EDEDED] transition-colors" href="#">X (Twitter)</a>
+                    </div>
+                    <div
+                        class="flex items-center justify-between text-[10px] text-[#95AA9E] opacity-70 mt-2 font-medium">
+                        <span>© 2025 JALADO MÉDIAS.</span>
+                        <span>TOUS DROITS RÉSERVÉS.</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- Interactive JavaScript for Radio Dial Snapping -->
+            <script>
+                function setDial(percentage, label) {
+                    const needle = document.getElementById('dial-needle');
+                    const labelElem = document.getElementById('current-mode-label');
+                    if (needle && labelElem) {
+                        needle.style.left = percentage + '%';
+                        labelElem.innerText = label;
+                    }
+                }
+            </script>
+        </div>
+    </main>
+    <div class="fixed bottom-20 inset-x-0 z-40 bg-[#0E2A1D]/95 backdrop-blur-xl border-t border-[#153625] px-4">
+        <div class="h-12 flex items-center justify-between max-w-lg mx-auto">
+            <div class="flex items-center gap-2 min-h-[44px]"><span
+                    class="w-2 h-2 rounded-full inline-block animate-pulse bg-[#E5384B]"></span><span
+                    class="text-xs font-extrabold uppercase text-[#1FA463]">Direct</span><span
+                    class="text-xs text-[#95AA9E] font-medium">COT. 88.4 MHz</span></div><button
+                class="h-8 px-4 bg-[#EDEDED] text-[#07130E] text-[11px] font-extrabold uppercase tracking-wider hover:bg-[#1FA463] transition-colors inline-flex items-center justify-center">Être
+                Prévenu</button>
+        </div>
+    </div>
+    <nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#07130E]/95 backdrop-blur-xl border-t border-[#153625]"
+        data-active-classes="text-[#1FA463]">
+        <div class="flex justify-around items-center h-20 px-4"><a aria-current="page"
+                class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] transition-colors text-[#1FA463]"
+                data-path="repertoire" href="#"><span class="material-symbols-outlined text-[22px]">movie</span><span
+                    class="text-[10px] font-bold tracking-widest uppercase">Cinéma</span></a><a
+                class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] text-[#95AA9E] hover:text-[#EDEDED] transition-colors"
+                data-path="documentaires" href="#"><span
+                    class="material-symbols-outlined text-[22px]">video_library</span><span
+                    class="text-[10px] font-bold tracking-widest uppercase">Docu</span></a><a
+                class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] text-[#95AA9E] hover:text-[#EDEDED] transition-colors"
+                data-path="frequences-live" href="#"><span
+                    class="material-symbols-outlined text-[22px]">radio</span><span
+                    class="text-[10px] font-bold tracking-widest uppercase">Radio</span></a><a
+                class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] text-[#95AA9E] hover:text-[#EDEDED] transition-colors"
+                data-path="archives-auditives" href="#"><span
+                    class="material-symbols-outlined text-[22px]">podcasts</span><span
+                    class="text-[10px] font-bold tracking-widest uppercase">Archives</span></a><a
+                class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] text-[#95AA9E] hover:text-[#EDEDED] transition-colors"
+                data-path="connoisseur-salon" href="#"><span
+                    class="material-symbols-outlined text-[22px]">bookmark</span><span
+                    class="text-[10px] font-bold tracking-widest uppercase">Salon</span></a></div>
+    </nav>
+</body>
+
+</html>

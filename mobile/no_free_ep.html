@@ -1,383 +1,572 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#171210;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#40000f", "on-surface": "#eae0dd", "on-secondary-fixed-variant": "#4b463b", "on-background": "#eae0dd", "on-secondary": "#343025", "on-secondary-container": "#bfb8a9", "tertiary-container": "#c28425", "outline": "#ae8789", "primary-fixed": "#ffdadb", "primary-container": "#ff506e", "on-primary-container": "#5b0018", "error-container": "#93000a", "inverse-surface": "#eae0dd", "secondary-fixed": "#eae1d2", "secondary-fixed-dim": "#cec6b6", "on-secondary-fixed": "#1f1b12", "error": "#ffb4ab", "primary": "#ffb2b8", "background": "#171210", "surface": "#171210", "surface-container-high": "#2e2927", "surface-container": "#231f1c", "on-tertiary-container": "#3d2500", "surface-container-lowest": "#110d0b", "outline-variant": "#5e3e41", "tertiary-fixed": "#ffddb5", "on-error": "#690005", "surface-variant": "#393431", "inverse-on-surface": "#342f2d", "primary-fixed-dim": "#ffb2b8", "secondary": "#cec6b6", "surface-tint": "#ffb2b8", "tertiary-fixed-dim": "#ffb958", "on-tertiary": "#462b00", "on-primary-fixed-variant": "#91002d", "on-tertiary-fixed-variant": "#643f00", "surface-container-low": "#1f1b18", "inverse-primary": "#be003d", "on-surface-variant": "#e8bcbe", "on-primary": "#67001d", "on-error-container": "#ffdad6", "on-tertiary-fixed": "#2a1800", "tertiary": "#ffb958", "surface-dim": "#171210", "surface-container-highest": "#393431", "secondary-container": "#4e493d", "surface-bright": "#3d3836" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "6rem", "gutter-lg": "2.5rem", "gutter": "1.5rem", "gutter-sm": "1rem", "space-xs": "0.25rem", "space-xl": "3.5rem", "space-sm": "0.5rem", "margin-lg": "5rem", "space-md": "1rem", "space-lg": "2rem", "margin": "1.5rem", "margin-md": "3rem" }, "fontFamily": { "label-mono-technical": ["Hanken Grotesk"], "label-caps": ["Hanken Grotesk"], "headline-lg": ["Bodoni Moda"], "body-md": ["Hanken Grotesk"], "title-editorial": ["Bodoni Moda"], "display-hero-mobile": ["Bodoni Moda"], "body-sm": ["Hanken Grotesk"], "display-hero": ["Bodoni Moda"], "headline-lg-mobile": ["Bodoni Moda"], "headline-sm": ["Bodoni Moda"], "headline-md": ["Bodoni Moda"], "body-lg": ["Hanken Grotesk"] }, "fontSize": { "label-mono-technical": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }], "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "700" }], "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }], "title-editorial": ["18px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-hero-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "400" }], "display-hero": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }] } } } };</script><style>
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    name="viewport" />
+  <meta content="mobile_stack" name="shell-type" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <style id="custom-palette-override">
+    :root {
+      --bg-main: #07130E;
+      --bg-card: #0E2A1D;
+      --text-light: #EDEDED;
+      --green-accent: #1FA463;
+      --gold-accent: #C9A227;
+    }
+
+    body,
+    main {
+      background-color: #07130E !important;
+      color: #EDEDED !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+    }
+
+    header {
+      background-color: rgba(7, 19, 14, 0.85) !important;
+      border-bottom: 1px solid rgba(237, 237, 237, 0.06);
+    }
+
+    header h1,
+    .font-headline-lg-mobile,
+    .font-title-editorial,
+    .font-headline-lg,
+    .font-headline-md,
+    .font-headline-sm {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 700 !important;
+      letter-spacing: -0.02em !important;
+    }
+
+    .bg-surface,
+    .bg-surface-dim {
+      background-color: #07130E !important;
+    }
+
+    .bg-surface-container,
+    .bg-surface-container-high,
+    .bg-surface-container-low,
+    .bg-surface-container-highest {
+      background-color: #0E2A1D !important;
+    }
+
+    .bg-surface-container-lowest {
+      background-color: #07130E !important;
+    }
+
+    .text-on-surface,
+    .text-on-surface-variant {
+      color: #EDEDED !important;
+    }
+
+    .text-secondary,
+    .text-tertiary {
+      color: #EDEDED;
+      opacity: 0.75;
+    }
+
+    .from-surface {
+      --tw-gradient-from: #07130E var(--tw-gradient-from-position) !important;
+      --tw-gradient-to: rgb(7 19 14 / 0) var(--tw-gradient-to-position) !important;
+      --tw-gradient-stops: var(--tw-gradient-from), #07130E var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
+    }
+
+    .via-surface\/85 {
+      --tw-gradient-stops: var(--tw-gradient-from), rgba(7, 19, 14, 0.85) var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
+    }
+  </style>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    @layer base {
+
+      html,
+      body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #171210;
+      }
+
+      body {
+        overscroll-behavior-y: none;
+      }
+
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#40000f", "on-surface": "#eae0dd", "on-secondary-fixed-variant": "#4b463b", "on-background": "#eae0dd", "on-secondary": "#343025", "on-secondary-container": "#bfb8a9", "tertiary-container": "#c28425", "outline": "#ae8789", "primary-fixed": "#ffdadb", "primary-container": "#ff506e", "on-primary-container": "#5b0018", "error-container": "#93000a", "inverse-surface": "#eae0dd", "secondary-fixed": "#eae1d2", "secondary-fixed-dim": "#cec6b6", "on-secondary-fixed": "#1f1b12", "error": "#ffb4ab", "primary": "#ffb2b8", "background": "#171210", "surface": "#171210", "surface-container-high": "#2e2927", "surface-container": "#231f1c", "on-tertiary-container": "#3d2500", "surface-container-lowest": "#110d0b", "outline-variant": "#5e3e41", "tertiary-fixed": "#ffddb5", "on-error": "#690005", "surface-variant": "#393431", "inverse-on-surface": "#342f2d", "primary-fixed-dim": "#ffb2b8", "secondary": "#cec6b6", "surface-tint": "#ffb2b8", "tertiary-fixed-dim": "#ffb958", "on-tertiary": "#462b00", "on-primary-fixed-variant": "#91002d", "on-tertiary-fixed-variant": "#643f00", "surface-container-low": "#1f1b18", "inverse-primary": "#be003d", "on-surface-variant": "#e8bcbe", "on-primary": "#67001d", "on-error-container": "#ffdad6", "on-tertiary-fixed": "#2a1800", "tertiary": "#ffb958", "surface-dim": "#171210", "surface-container-highest": "#393431", "secondary-container": "#4e493d", "surface-bright": "#3d3836" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "6rem", "gutter-lg": "2.5rem", "gutter": "1.5rem", "gutter-sm": "1rem", "space-xs": "0.25rem", "space-xl": "3.5rem", "space-sm": "0.5rem", "margin-lg": "5rem", "space-md": "1rem", "space-lg": "2rem", "margin": "1.5rem", "margin-md": "3rem" }, "fontFamily": { "label-mono-technical": ["Hanken Grotesk"], "label-caps": ["Hanken Grotesk"], "headline-lg": ["Bodoni Moda"], "body-md": ["Hanken Grotesk"], "title-editorial": ["Bodoni Moda"], "display-hero-mobile": ["Bodoni Moda"], "body-sm": ["Hanken Grotesk"], "display-hero": ["Bodoni Moda"], "headline-lg-mobile": ["Bodoni Moda"], "headline-sm": ["Bodoni Moda"], "headline-md": ["Bodoni Moda"], "body-lg": ["Hanken Grotesk"] }, "fontSize": { "label-mono-technical": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }], "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "700" }], "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }], "title-editorial": ["18px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-hero-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "400" }], "display-hero": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }] } } } };</script>
+  <style>
     body {
       min-height: max(884px, 100dvh);
     }
   </style>
-  </head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col relative selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Back" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-title-editorial text-title-editorial text-on-surface truncate max-w-[180px]">Film Detail</h1></div><div class="flex items-center gap-space-sm"><button aria-label="Share Content" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">share</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full text-on-surface">
-<!-- Hero Section with Cinematic Still -->
-<div class="relative w-full aspect-[4/5] max-h-[460px] bg-surface-container-lowest">
-<div class="w-full h-full bg-cover bg-center" data-alt="Cinematic close-up of ancestral Dahomey bronze artifact and royal Fon bas-reliefs in Abomey museum vault. Subtle golden amber museum lighting on dark mahogany pedestals, deep obsidian shadows, warm atmospheric dust, ultra-luxurious 8k documentary cinematography, muted earth and rich crimson accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCiCA22m5U1-deve2M86J6xc5t-DEHFhH0L9W9rlsFMcZaLhmd8cJfWVEHTdAIZIJwrs5r5XkIC4m383ZWrIMQpOYt66cE2coWfMBE61BVJT5vQl8t1MxjlDDMZFELBNdnmD3tAVRPsbvX0_USJZXNQZh5X13LUzx-eDUoXoXqrcec8eNg71mxQDWJ612IqvYwJo0P6NtKG8LlbLnP4Y5p_aqgjCj0_jXQCxeaxmN2e_2CO9uuU1O8m6w')"></div>
-<!-- Scrim to fade naturally into canvas surface -->
-<div class="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-surface via-surface/85 to-transparent pointer-events-none"></div>
-<!-- Bottom contextual overlay badges inside hero -->
-<div class="absolute bottom-4 left-gutter right-gutter flex items-center justify-between pointer-events-none">
-<div class="flex items-center gap-space-xs">
-<span class="bg-surface-container-high text-on-surface font-label-caps text-label-caps px-2 py-1 tracking-wider uppercase">
-          Documentaire
-        </span>
-<span class="bg-primary-container text-on-primary font-label-caps text-label-caps px-2 py-1 flex items-center gap-1 uppercase tracking-wider font-semibold">
-<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">lock</span>
-          Exclusif
-        </span>
-</div>
-<span class="bg-surface-container/90 text-tertiary font-label-mono-technical text-label-mono-technical px-2 py-1">
-        4K MASTER
-      </span>
-</div>
-</div>
-<!-- Content Header Block -->
-<div class="flex flex-col px-gutter pt-space-md">
-<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-semibold tracking-tight leading-tight">
-      Les Statues Royales d'Abomey
-    </h1>
-<!-- Metadata Row -->
-<div class="flex flex-wrap items-center gap-x-2 gap-y-1 mt-2 font-body-sm text-body-sm text-secondary">
-<span>2024</span>
-<span>•</span>
-<span>Série 4K</span>
-<span>•</span>
-<span>Production locale</span>
-<span>•</span>
-<span class="text-primary font-label-caps text-label-caps font-bold inline-flex items-center gap-1">
-<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">lock</span>
-        PREMIUM
-      </span>
-</div>
-<!-- Primary Action: Unlock with Premium -->
-<div class="flex flex-col mt-space-md gap-space-xs">
-<button class="w-full h-12 bg-primary-container hover:bg-tertiary text-on-primary hover:text-on-tertiary flex items-center justify-center gap-2 font-label-caps text-label-caps tracking-widest uppercase transition-colors" type="button">
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">lock_open</span>
-<span>Débloquer avec Premium</span>
-</button>
-<!-- Reassurance Pricing Sub-label -->
-<p class="text-center font-body-sm text-body-sm text-secondary tracking-wide">
-        3 000 FCFA / mois <span class="opacity-40">•</span> Sans engagement
-      </p>
-<!-- Secondary Outlined Button -->
-<button class="w-full h-12 mt-1 bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center gap-2 font-label-caps text-label-caps tracking-widest uppercase transition-colors" id="btn-watchlist" onclick="toggleWatchlist()" type="button">
-<span class="material-symbols-outlined text-[18px]" id="watchlist-icon">bookmark_add</span>
-<span id="watchlist-text">Ajouter à ma liste</span>
-</button>
-</div>
-<!-- Synopsis -->
-<div class="mt-space-md text-on-surface-variant font-body-md text-body-md leading-relaxed">
-<p class="inline" id="synopsis-preview">
-        Immersion inédite dans les secrets de conservation des trésors restitués du Palais des Rois d'Abomey. Une enquête patrimoniale et spirituelle exclusive au cœur des ateliers d'ébénisterie sacrée et des sanctuaires du Danxomè...
-      </p>
-<button class="text-tertiary font-body-md text-body-md underline ml-1 cursor-pointer hover:text-primary transition-colors inline-block" id="synopsis-toggle" onclick="toggleSynopsis()" type="button">
-        Lire la suite
-      </button>
-</div>
-<!-- Credits Block -->
-<div class="mt-space-md bg-surface-container-low p-space-md flex flex-col gap-1">
-<div class="flex items-baseline gap-2">
-<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider w-24 flex-shrink-0">Réalisation</span>
-<span class="font-body-md text-body-md text-on-surface">Hélène Adanho</span>
-</div>
-<div class="flex items-baseline gap-2">
-<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider w-24 flex-shrink-0">Production</span>
-<span class="font-body-md text-body-md text-on-surface">Jalado Studios Bénin</span>
-</div>
-</div>
-</div>
-<!-- Interactive Section Tabs -->
-<div class="flex items-center px-gutter mt-space-lg gap-space-lg bg-surface">
-<button class="pb-space-sm font-label-caps text-label-caps tracking-widest uppercase text-on-surface relative font-bold" id="tab-episodes" onclick="switchTab('episodes')" type="button">
-      Épisodes
-      <span class="absolute bottom-0 inset-x-0 h-0.5 bg-primary-container" id="indicator-episodes"></span>
-</button>
-<button class="pb-space-sm font-label-caps text-label-caps tracking-widest uppercase text-secondary relative transition-colors" id="tab-extraits" onclick="switchTab('extraits')" type="button">
-      Extraits
-      <span class="absolute bottom-0 inset-x-0 h-0.5 bg-transparent" id="indicator-extraits"></span>
-</button>
-<button class="pb-space-sm font-label-caps text-label-caps tracking-widest uppercase text-secondary relative transition-colors" id="tab-details" onclick="switchTab('details')" type="button">
-      À Propos
-      <span class="absolute bottom-0 inset-x-0 h-0.5 bg-transparent" id="indicator-details"></span>
-</button>
-</div>
-<!-- Tab Content: Épisodes -->
-<div class="flex flex-col px-gutter mt-space-md gap-space-sm" id="content-episodes">
-<!-- Episode 1: Free Preview (Unlocked) -->
-<div class="bg-surface-container flex flex-col p-space-md">
-<div class="flex items-start gap-space-md">
-<!-- Thumbnail Container -->
-<div class="relative w-28 aspect-video flex-shrink-0 bg-surface-container-high overflow-hidden">
-<div class="w-full h-full bg-cover bg-center" data-alt="Documentary video still of King Behanzin royal scepter surrounded by archeologists handling museum vitrines under dim lighting, documentary frame 16:9 cinematic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAl6Z7KUs-aUZ3K0tzpOTWsj8yj_mWO-9aCbBg0daXlWDp08P6bZI98Y6B1B-CNX-pirBWzSUB2RM7fGp_UXyYZlwtspGHm-Kbs0MwVTXatz1CO0x25l-jt_jDXCXiT2J-kjxTDQ6jxF8Ksh8w0kmeKkDUkX01-BTfsemXXV8lK-lXn5As9jFbAZRZMvFGCX0d4awv8goS7BfMl9i9WyKsuywUWec5Q_afDaAYwFWh92g7x8P21j4BMvg')"></div>
-<div class="absolute inset-0 bg-surface-container-lowest/30 flex items-center justify-center">
-<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center">
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-</span>
-</div>
-</div>
-<!-- Meta -->
-<div class="flex flex-col min-w-0 flex-1">
-<div class="flex items-center justify-between gap-1">
-<span class="font-label-caps text-label-caps text-tertiary">ÉPISODE 1</span>
-<span class="font-label-mono-technical text-label-mono-technical text-secondary">48 MIN</span>
-</div>
-<h2 class="font-title-editorial text-title-editorial text-on-surface truncate mt-0.5">
-            Le Retour des Trésors
-          </h2>
-<div class="mt-2 flex items-center">
-<span class="bg-tertiary-container/30 text-tertiary-fixed font-label-caps text-label-caps px-1.5 py-0.5 uppercase tracking-wide">
-              Aperçu gratuit
+</head>
+
+<body
+  class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col relative selection:bg-primary-container selection:text-on-primary-container">
+  <header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-16 px-gutter flex items-center justify-between">
+      <div class="flex items-center gap-space-sm"><button aria-label="Back"
+          class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors"
+          onclick="history.back()" type="button"><span
+            class="material-symbols-outlined text-[24px]">arrow_back</span></button>
+        <h1 class="font-title-editorial text-title-editorial text-on-surface truncate max-w-[180px]">Film Detail</h1>
+      </div>
+      <div class="flex items-center gap-space-sm"><button aria-label="Share Content"
+          class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors"
+          type="button"><span class="material-symbols-outlined text-[20px]">share</span></button>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"
+          style="background-color: #0E2A1D; border: 1px solid rgba(237, 237, 237, 0.2); color: #EDEDED;"><span
+            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface">
+    <div class="flex flex-col w-full text-on-surface">
+      <!-- Hero Section with Cinematic Still -->
+      <div class="relative w-full aspect-[4/5] max-h-[460px] bg-surface-container-lowest">
+        <div class="w-full h-full bg-cover bg-center"
+          data-alt="Cinematic close-up of ancestral Dahomey bronze artifact and royal Fon bas-reliefs in Abomey museum vault. Subtle golden amber museum lighting on dark mahogany pedestals, deep obsidian shadows, warm atmospheric dust, ultra-luxurious 8k documentary cinematography, muted earth and rich crimson accents."
+          style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCiCA22m5U1-deve2M86J6xc5t-DEHFhH0L9W9rlsFMcZaLhmd8cJfWVEHTdAIZIJwrs5r5XkIC4m383ZWrIMQpOYt66cE2coWfMBE61BVJT5vQl8t1MxjlDDMZFELBNdnmD3tAVRPsbvX0_USJZXNQZh5X13LUzx-eDUoXoXqrcec8eNg71mxQDWJ612IqvYwJo0P6NtKG8LlbLnP4Y5p_aqgjCj0_jXQCxeaxmN2e_2CO9uuU1O8m6w')">
+        </div>
+        <!-- Scrim to fade naturally into canvas surface -->
+        <div
+          class="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-surface via-surface/85 to-transparent pointer-events-none">
+        </div>
+        <!-- Bottom contextual overlay badges inside hero -->
+        <div class="absolute bottom-4 left-gutter right-gutter flex items-center justify-between pointer-events-none">
+          <div class="flex items-center gap-space-xs"><span
+              class="bg-[#0E2A1D]/90 text-[#EDEDED] font-label-caps text-label-caps px-2 py-1 tracking-wider uppercase border border-[#EDEDED]/10">Documentaire</span><span
+              class="bg-[#0E2A1D]/90 text-[#C9A227] font-label-caps text-label-caps px-2 py-1 flex items-center gap-1 uppercase tracking-wider font-semibold border border-[#C9A227]/30"><span
+                class="material-symbols-outlined text-[12px]"
+                style="font-variation-settings: 'FILL' 1; color: #C9A227;">lock</span>Exclusif</span></div><span
+            class="bg-[#0E2A1D]/90 text-[#EDEDED]/80 font-label-mono-technical text-label-mono-technical px-2 py-1 border border-[#EDEDED]/10">4K
+            MASTER</span>
+        </div>
+      </div>
+      <!-- Content Header Block -->
+      <div class="flex flex-col px-gutter pt-space-md">
+        <h1
+          class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-semibold tracking-tight leading-tight">
+          Les Statues Royales d'Abomey
+        </h1>
+        <!-- Metadata Row -->
+        <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mt-2 font-body-sm text-body-sm text-secondary">
+          <span>2024</span><span>•</span><span>Série 4K</span><span>•</span><span>Production
+            locale</span><span>•</span><span
+            class="font-label-caps text-label-caps font-bold inline-flex items-center gap-1"
+            style="color: #C9A227;"><span class="material-symbols-outlined text-[12px]"
+              style="font-variation-settings: 'FILL' 1; color: #C9A227;">lock</span>PREMIUM</span></div>
+        <!-- Primary Action: Unlock with Premium -->
+        <div class="flex flex-col mt-space-md gap-space-xs"><button
+            class="w-full h-12 bg-[#EDEDED] hover:bg-[#FFFFFF] text-[#07130E] flex items-center justify-center gap-2 font-label-caps text-label-caps tracking-widest uppercase transition-colors font-bold shadow-sm rounded-none"
+            type="button"><span class="material-symbols-outlined text-[18px] text-[#07130E]"
+              style="font-variation-settings: 'FILL' 1;">lock_open</span><span>Débloquer avec Premium</span></button>
+          <p class="text-center font-body-sm text-body-sm text-[#EDEDED]/70 tracking-wide mt-1">3 000 FCFA / mois <span
+              class="opacity-40">•</span> Sans engagement</p><button
+            class="w-full h-12 mt-1 bg-[#0E2A1D] hover:bg-[#163c2b] text-[#EDEDED] border border-[#EDEDED]/20 flex items-center justify-center gap-2 font-label-caps text-label-caps tracking-widest uppercase transition-colors rounded-none"
+            id="btn-watchlist" onclick="toggleWatchlist()" type="button"><span
+              class="material-symbols-outlined text-[18px] text-[#EDEDED]" id="watchlist-icon">bookmark_add</span><span
+              id="watchlist-text">Ajouter à ma liste</span></button>
+        </div>
+        <!-- Synopsis -->
+        <div class="mt-space-md text-on-surface-variant font-body-md text-body-md leading-relaxed">
+          <p class="inline" id="synopsis-preview">
+            Immersion inédite dans les secrets de conservation des trésors restitués du Palais des Rois d'Abomey. Une
+            enquête patrimoniale et spirituelle exclusive au cœur des ateliers d'ébénisterie sacrée et des sanctuaires
+            du Danxomè...
+          </p>
+          <button
+            class="text-tertiary font-body-md text-body-md underline ml-1 cursor-pointer hover:text-primary transition-colors inline-block"
+            id="synopsis-toggle" onclick="toggleSynopsis()" style="color: #1FA463;" type="button">
+            Lire la suite
+          </button>
+        </div>
+        <!-- Credits Block -->
+        <div class="mt-space-md bg-surface-container-low p-space-md flex flex-col gap-1"
+          style="background-color: #0E2A1D; border: 1px solid rgba(237, 237, 237, 0.08);">
+          <div class="flex items-baseline gap-2">
+            <span
+              class="font-label-caps text-label-caps text-secondary uppercase tracking-wider w-24 flex-shrink-0">Réalisation</span>
+            <span class="font-body-md text-body-md text-on-surface">Hélène Adanho</span>
+          </div>
+          <div class="flex items-baseline gap-2">
+            <span
+              class="font-label-caps text-label-caps text-secondary uppercase tracking-wider w-24 flex-shrink-0">Production</span>
+            <span class="font-body-md text-body-md text-on-surface">Jalado Studios Bénin</span>
+          </div>
+        </div>
+      </div>
+      <!-- Interactive Section Tabs -->
+      <div class="flex items-center px-gutter mt-space-lg gap-space-lg bg-surface"><button
+          class="pb-space-sm font-label-caps text-label-caps tracking-widest uppercase text-[#EDEDED] relative font-bold"
+          id="tab-episodes" onclick="switchTab('episodes')" type="button">Épisodes<span
+            class="absolute bottom-0 inset-x-0 h-0.5 bg-[#1FA463]" id="indicator-episodes"></span></button><button
+          class="pb-space-sm font-label-caps text-label-caps tracking-widest uppercase text-[#EDEDED]/60 hover:text-[#EDEDED] relative transition-colors"
+          id="tab-extraits" onclick="switchTab('extraits')" type="button">Extraits<span
+            class="absolute bottom-0 inset-x-0 h-0.5 bg-transparent" id="indicator-extraits"></span></button><button
+          class="pb-space-sm font-label-caps text-label-caps tracking-widest uppercase text-[#EDEDED]/60 hover:text-[#EDEDED] relative transition-colors"
+          id="tab-details" onclick="switchTab('details')" type="button">À Propos<span
+            class="absolute bottom-0 inset-x-0 h-0.5 bg-transparent" id="indicator-details"></span></button></div>
+      <!-- Tab Content: Épisodes -->
+      <div class="flex flex-col px-gutter mt-space-md gap-space-sm" id="content-episodes">
+        <!-- Episode 1: Free Preview (Unlocked) -->
+        <div class="bg-surface-container flex flex-col p-space-md"
+          style="background-color: #0E2A1D; border: 1px solid rgba(237, 237, 237, 0.08);">
+          <div class="flex items-start gap-space-md">
+            <!-- Thumbnail Container -->
+            <div class="relative w-28 aspect-video flex-shrink-0 bg-surface-container-high overflow-hidden">
+              <div class="w-full h-full bg-cover bg-center"
+                data-alt="Documentary video still of King Behanzin royal scepter surrounded by archeologists handling museum vitrines under dim lighting, documentary frame 16:9 cinematic."
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAl6Z7KUs-aUZ3K0tzpOTWsj8yj_mWO-9aCbBg0daXlWDp08P6bZI98Y6B1B-CNX-pirBWzSUB2RM7fGp_UXyYZlwtspGHm-Kbs0MwVTXatz1CO0x25l-jt_jDXCXiT2J-kjxTDQ6jxF8Ksh8w0kmeKkDUkX01-BTfsemXXV8lK-lXn5As9jFbAZRZMvFGCX0d4awv8goS7BfMl9i9WyKsuywUWec5Q_afDaAYwFWh92g7x8P21j4BMvg')">
+              </div>
+              <div class="absolute inset-0 bg-surface-container-lowest/30 flex items-center justify-center">
+                <span class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center"
+                  style="background-color: #1FA463; color: #07130E;">
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                </span>
+              </div>
+            </div>
+            <!-- Meta -->
+            <div class="flex flex-col min-w-0 flex-1">
+              <div class="flex items-center justify-between gap-1">
+                <span class="font-label-caps text-label-caps text-tertiary">ÉPISODE 1</span>
+                <span class="font-label-mono-technical text-label-mono-technical text-secondary">48 MIN</span>
+              </div>
+              <h2 class="font-title-editorial text-title-editorial text-on-surface truncate mt-0.5">
+                Le Retour des Trésors
+              </h2>
+              <div class="mt-2 flex items-center">
+                <span
+                  class="bg-tertiary-container/30 text-tertiary-fixed font-label-caps text-label-caps px-1.5 py-0.5 uppercase tracking-wide"
+                  style="background-color: rgba(31, 164, 99, 0.15); color: #1FA463; border: 1px solid rgba(31, 164, 99, 0.3);">
+                  Aperçu gratuit
+                </span>
+              </div>
+            </div>
+          </div>
+          <p class="font-body-sm text-body-sm text-secondary mt-space-sm line-clamp-2">
+            Les premières caisses scellées arrivent à Cotonou. Restituteurs et prêtres de Fâ orchestrent l'ouverture
+            solennelle.
+          </p>
+        </div>
+        <!-- Episode 2: Locked State -->
+        <div class="bg-surface-container/70 flex flex-col p-space-md opacity-90"
+          style="background-color: #0E2A1D; border: 1px solid rgba(237, 237, 237, 0.08);">
+          <div class="flex items-start gap-space-md">
+            <!-- Thumbnail Locked -->
+            <div class="relative w-28 aspect-video flex-shrink-0 bg-surface-container-lowest overflow-hidden">
+              <div class="w-full h-full bg-cover bg-center grayscale opacity-40"
+                data-alt="Atmospheric archival documentary footage of Beninese royal council elders seated on woven reed mats consulting ancient divination symbols."
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAR7nQqy8ZLpF36IgTvWiSbvcvAg8zPPT1ED-PMiGLPGfD6vvo9NQo8OrDTh_lG-dL-__zNS5Lzt7GL0an9gjv2LlMCae3QI2R_TTtUjW46Jdvh6birWMe58kRdQhFnb-_GIlMvOwa1wTPAFmwU-kPR3KyiCeTVI4ye6Ps1x1r37qJ14IkE0-qv6rCK9WVpA3E_Wgxc_NThzqyPC_AkobPx8ykXC2CjMGWA_34DfC0OV4ND4kKf7yJsCQ')">
+              </div>
+              <div class="absolute inset-0 bg-surface-container-lowest/60 flex items-center justify-center">
+                <span
+                  class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center"
+                  style="background-color: #07130E; color: #C9A227; border: 1px solid rgba(201, 162, 39, 0.3);">
+                  <span class="material-symbols-outlined text-[16px]">lock</span>
+                </span>
+              </div>
+            </div>
+            <!-- Meta -->
+            <div class="flex flex-col min-w-0 flex-1">
+              <div class="flex items-center justify-between gap-1">
+                <span class="font-label-caps text-label-caps text-secondary">ÉPISODE 2</span>
+                <span class="font-label-mono-technical text-label-mono-technical text-secondary">52 MIN</span>
+              </div>
+              <h2 class="font-title-editorial text-title-editorial text-on-surface truncate mt-0.5">
+                La Parole des Anciens
+              </h2>
+              <div class="mt-2 flex items-center">
+                <span
+                  class="bg-surface-container-highest text-secondary-fixed-dim font-label-caps text-label-caps px-1.5 py-0.5 uppercase tracking-wide flex items-center gap-1"
+                  style="background-color: rgba(201, 162, 39, 0.12); color: #C9A227; border: 1px solid rgba(201, 162, 39, 0.3);">
+                  <span class="material-symbols-outlined text-[11px]"
+                    style="font-variation-settings: 'FILL' 1;">lock</span>
+                  Réservé aux membres
+                </span>
+              </div>
+            </div>
+          </div>
+          <p class="font-body-sm text-body-sm text-secondary mt-space-sm line-clamp-2">
+            Témoignages intimes des gardiens des palais d'Abomey sur la résonance tellurique et mémorielle de chaque
+            effigie.
+          </p>
+        </div>
+        <!-- Episode 3: Locked State -->
+        <div class="bg-surface-container/70 flex flex-col p-space-md opacity-90"
+          style="background-color: #0E2A1D; border: 1px solid rgba(237, 237, 237, 0.08);">
+          <div class="flex items-start gap-space-md">
+            <!-- Thumbnail Locked -->
+            <div class="relative w-28 aspect-video flex-shrink-0 bg-surface-container-lowest overflow-hidden">
+              <div class="w-full h-full bg-cover bg-center grayscale opacity-40"
+                data-alt="Sculptural details of carved anthropomorphic wooden lion statue of King Glele under conservation microscopic lamps."
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGmLwSvSkH_yA9FZqimoSP7Rx6BRZtWO2Vus1ohWRRarGWh2LxXHVCmuU7Yoy--sl5Nh8q970pKVVEp5tNmsQUcHujOa1AUB_q5KrBByfvii6fM70AGCOtHGhqbtHBvfZUYA734bF7L6k-wunnqCt0IIYxyKcRPyQF_2O4Neg6ZHvF4Q5aGENI9WdFKcFgWq74khp_JmiwWcON0yRhXtOaf96uf_ZurqR8k3E-4NvYAj7iv3LaWHmyUA')">
+              </div>
+              <div class="absolute inset-0 bg-surface-container-lowest/60 flex items-center justify-center">
+                <span
+                  class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center"
+                  style="background-color: #07130E; color: #C9A227; border: 1px solid rgba(201, 162, 39, 0.3);">
+                  <span class="material-symbols-outlined text-[16px]">lock</span>
+                </span>
+              </div>
+            </div>
+            <!-- Meta -->
+            <div class="flex flex-col min-w-0 flex-1">
+              <div class="flex items-center justify-between gap-1">
+                <span class="font-label-caps text-label-caps text-secondary">ÉPISODE 3</span>
+                <span class="font-label-mono-technical text-label-mono-technical text-secondary">50 MIN</span>
+              </div>
+              <h2 class="font-title-editorial text-title-editorial text-on-surface truncate mt-0.5">
+                L'Héritage Vivant
+              </h2>
+              <div class="mt-2 flex items-center">
+                <span
+                  class="bg-surface-container-highest text-secondary-fixed-dim font-label-caps text-label-caps px-1.5 py-0.5 uppercase tracking-wide flex items-center gap-1"
+                  style="background-color: rgba(201, 162, 39, 0.12); color: #C9A227; border: 1px solid rgba(201, 162, 39, 0.3);">
+                  <span class="material-symbols-outlined text-[11px]"
+                    style="font-variation-settings: 'FILL' 1;">lock</span>
+                  Réservé aux membres
+                </span>
+              </div>
+            </div>
+          </div>
+          <p class="font-body-sm text-body-sm text-secondary mt-space-sm line-clamp-2">
+            La jeunesse béninoise redécouvre son legs. Les artistes contemporains réinventent l'esthétique du panthéon
+            vodun.
+          </p>
+        </div>
+      </div>
+      <!-- Extraits Tab Content (Hidden by default) -->
+      <div class="hidden flex-col px-gutter mt-space-md gap-space-sm" id="content-extraits">
+        <div class="bg-surface-container p-space-md flex flex-col">
+          <div class="relative w-full aspect-video bg-surface-container-high overflow-hidden">
+            <div class="w-full h-full bg-cover bg-center"
+              data-alt="Documentary clip still of torchlight night procession outside royal compound in Abomey, ritual drums and shadows, 16:9 ratio."
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBIbIKpwZMf-P0Rg5pKQ3cXbzO6i8IET282jtuTgZpo6JKU8-nA-9OU3k7pO9oo3sZarxue7qQrs7Yw09SXe3cYZg4xrazPNspp5i6Du6nAiw6KHwfCxZdeQ8F0xVNv5RVU3TuwkoFFkVVVNPPRQSxnuXroe_pfAYHrl2iIYlKbT7FH4LSfWd3JE21kfDfUEbuiMsr-9NAdTOncvxypisXkDrID2b7zYzsQlWffdgPOweTFh_gubuLGuQ')">
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center bg-surface-container-lowest/40">
+              <span
+                class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-[22px]"
+                  style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+              </span>
+            </div>
+            <span
+              class="absolute bottom-2 right-2 bg-surface-container-lowest/80 text-on-surface font-label-mono-technical text-label-mono-technical px-1.5 py-0.5">
+              02:45
             </span>
-</div>
-</div>
-</div>
-<p class="font-body-sm text-body-sm text-secondary mt-space-sm line-clamp-2">
-        Les premières caisses scellées arrivent à Cotonou. Restituteurs et prêtres de Fâ orchestrent l'ouverture solennelle.
-      </p>
-</div>
-<!-- Episode 2: Locked State -->
-<div class="bg-surface-container/70 flex flex-col p-space-md opacity-90">
-<div class="flex items-start gap-space-md">
-<!-- Thumbnail Locked -->
-<div class="relative w-28 aspect-video flex-shrink-0 bg-surface-container-lowest overflow-hidden">
-<div class="w-full h-full bg-cover bg-center grayscale opacity-40" data-alt="Atmospheric archival documentary footage of Beninese royal council elders seated on woven reed mats consulting ancient divination symbols." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAR7nQqy8ZLpF36IgTvWiSbvcvAg8zPPT1ED-PMiGLPGfD6vvo9NQo8OrDTh_lG-dL-__zNS5Lzt7GL0an9gjv2LlMCae3QI2R_TTtUjW46Jdvh6birWMe58kRdQhFnb-_GIlMvOwa1wTPAFmwU-kPR3KyiCeTVI4ye6Ps1x1r37qJ14IkE0-qv6rCK9WVpA3E_Wgxc_NThzqyPC_AkobPx8ykXC2CjMGWA_34DfC0OV4ND4kKf7yJsCQ')"></div>
-<div class="absolute inset-0 bg-surface-container-lowest/60 flex items-center justify-center">
-<span class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center">
-<span class="material-symbols-outlined text-[16px]">lock</span>
-</span>
-</div>
-</div>
-<!-- Meta -->
-<div class="flex flex-col min-w-0 flex-1">
-<div class="flex items-center justify-between gap-1">
-<span class="font-label-caps text-label-caps text-secondary">ÉPISODE 2</span>
-<span class="font-label-mono-technical text-label-mono-technical text-secondary">52 MIN</span>
-</div>
-<h2 class="font-title-editorial text-title-editorial text-on-surface truncate mt-0.5">
-            La Parole des Anciens
+          </div>
+          <h3 class="font-title-editorial text-title-editorial text-on-surface mt-space-sm">Bande-annonce officielle
+            (4K)</h3>
+          <p class="font-body-sm text-body-sm text-secondary mt-1">Découvrez les premières images de la fresque
+            documentaire événement.</p>
+        </div>
+      </div>
+      <!-- Details Tab Content (Hidden by default) -->
+      <div class="hidden flex-col px-gutter mt-space-md gap-space-md bg-surface-container p-space-md"
+        id="content-details">
+        <div>
+          <h3 class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider">Note d'intention</h3>
+          <p class="font-body-sm text-body-sm text-on-surface mt-1 leading-relaxed">
+            Ce triptyque filmique documente la traversée matérielle et spirituelle de 26 trésors royaux restitués à la
+            République du Bénin. Une célébration de la mémoire collective panafricaine.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-space-sm pt-space-xs font-body-sm text-body-sm">
+          <div>
+            <span class="text-secondary block font-label-caps text-label-caps">Audio</span>
+            <span class="text-on-surface">Fon, Français (Dolby Atmos)</span>
+          </div>
+          <div>
+            <span class="text-secondary block font-label-caps text-label-caps">Sous-titres</span>
+            <span class="text-on-surface">Français, Anglais, Yoruba</span>
+          </div>
+        </div>
+      </div>
+      <!-- Related Content Rail: À Voir Aussi -->
+      <div class="flex flex-col mt-space-xl pb-space-lg">
+        <div class="flex items-center justify-between px-gutter mb-space-sm">
+          <h2 class="font-label-caps text-label-caps text-on-surface font-bold tracking-widest uppercase">
+            À Voir Aussi
           </h2>
-<div class="mt-2 flex items-center">
-<span class="bg-surface-container-highest text-secondary-fixed-dim font-label-caps text-label-caps px-1.5 py-0.5 uppercase tracking-wide flex items-center gap-1">
-<span class="material-symbols-outlined text-[11px]" style="font-variation-settings: 'FILL' 1;">lock</span>
-              Réservé aux membres
-            </span>
-</div>
-</div>
-</div>
-<p class="font-body-sm text-body-sm text-secondary mt-space-sm line-clamp-2">
-        Témoignages intimes des gardiens des palais d'Abomey sur la résonance tellurique et mémorielle de chaque effigie.
-      </p>
-</div>
-<!-- Episode 3: Locked State -->
-<div class="bg-surface-container/70 flex flex-col p-space-md opacity-90">
-<div class="flex items-start gap-space-md">
-<!-- Thumbnail Locked -->
-<div class="relative w-28 aspect-video flex-shrink-0 bg-surface-container-lowest overflow-hidden">
-<div class="w-full h-full bg-cover bg-center grayscale opacity-40" data-alt="Sculptural details of carved anthropomorphic wooden lion statue of King Glele under conservation microscopic lamps." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGmLwSvSkH_yA9FZqimoSP7Rx6BRZtWO2Vus1ohWRRarGWh2LxXHVCmuU7Yoy--sl5Nh8q970pKVVEp5tNmsQUcHujOa1AUB_q5KrBByfvii6fM70AGCOtHGhqbtHBvfZUYA734bF7L6k-wunnqCt0IIYxyKcRPyQF_2O4Neg6ZHvF4Q5aGENI9WdFKcFgWq74khp_JmiwWcON0yRhXtOaf96uf_ZurqR8k3E-4NvYAj7iv3LaWHmyUA')"></div>
-<div class="absolute inset-0 bg-surface-container-lowest/60 flex items-center justify-center">
-<span class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center">
-<span class="material-symbols-outlined text-[16px]">lock</span>
-</span>
-</div>
-</div>
-<!-- Meta -->
-<div class="flex flex-col min-w-0 flex-1">
-<div class="flex items-center justify-between gap-1">
-<span class="font-label-caps text-label-caps text-secondary">ÉPISODE 3</span>
-<span class="font-label-mono-technical text-label-mono-technical text-secondary">50 MIN</span>
-</div>
-<h2 class="font-title-editorial text-title-editorial text-on-surface truncate mt-0.5">
-            L'Héritage Vivant
-          </h2>
-<div class="mt-2 flex items-center">
-<span class="bg-surface-container-highest text-secondary-fixed-dim font-label-caps text-label-caps px-1.5 py-0.5 uppercase tracking-wide flex items-center gap-1">
-<span class="material-symbols-outlined text-[11px]" style="font-variation-settings: 'FILL' 1;">lock</span>
-              Réservé aux membres
-            </span>
-</div>
-</div>
-</div>
-<p class="font-body-sm text-body-sm text-secondary mt-space-sm line-clamp-2">
-        La jeunesse béninoise redécouvre son legs. Les artistes contemporains réinventent l'esthétique du panthéon vodun.
-      </p>
-</div>
-</div>
-<!-- Extraits Tab Content (Hidden by default) -->
-<div class="hidden flex-col px-gutter mt-space-md gap-space-sm" id="content-extraits">
-<div class="bg-surface-container p-space-md flex flex-col">
-<div class="relative w-full aspect-video bg-surface-container-high overflow-hidden">
-<div class="w-full h-full bg-cover bg-center" data-alt="Documentary clip still of torchlight night procession outside royal compound in Abomey, ritual drums and shadows, 16:9 ratio." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBIbIKpwZMf-P0Rg5pKQ3cXbzO6i8IET282jtuTgZpo6JKU8-nA-9OU3k7pO9oo3sZarxue7qQrs7Yw09SXe3cYZg4xrazPNspp5i6Du6nAiw6KHwfCxZdeQ8F0xVNv5RVU3TuwkoFFkVVVNPPRQSxnuXroe_pfAYHrl2iIYlKbT7FH4LSfWd3JE21kfDfUEbuiMsr-9NAdTOncvxypisXkDrID2b7zYzsQlWffdgPOweTFh_gubuLGuQ')"></div>
-<div class="absolute inset-0 flex items-center justify-center bg-surface-container-lowest/40">
-<span class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center">
-<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-</span>
-</div>
-<span class="absolute bottom-2 right-2 bg-surface-container-lowest/80 text-on-surface font-label-mono-technical text-label-mono-technical px-1.5 py-0.5">
-          02:45
-        </span>
-</div>
-<h3 class="font-title-editorial text-title-editorial text-on-surface mt-space-sm">Bande-annonce officielle (4K)</h3>
-<p class="font-body-sm text-body-sm text-secondary mt-1">Découvrez les premières images de la fresque documentaire événement.</p>
-</div>
-</div>
-<!-- Details Tab Content (Hidden by default) -->
-<div class="hidden flex-col px-gutter mt-space-md gap-space-md bg-surface-container p-space-md" id="content-details">
-<div>
-<h3 class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider">Note d'intention</h3>
-<p class="font-body-sm text-body-sm text-on-surface mt-1 leading-relaxed">
-        Ce triptyque filmique documente la traversée matérielle et spirituelle de 26 trésors royaux restitués à la République du Bénin. Une célébration de la mémoire collective panafricaine.
-      </p>
-</div>
-<div class="grid grid-cols-2 gap-space-sm pt-space-xs font-body-sm text-body-sm">
-<div>
-<span class="text-secondary block font-label-caps text-label-caps">Audio</span>
-<span class="text-on-surface">Fon, Français (Dolby Atmos)</span>
-</div>
-<div>
-<span class="text-secondary block font-label-caps text-label-caps">Sous-titres</span>
-<span class="text-on-surface">Français, Anglais, Yoruba</span>
-</div>
-</div>
-</div>
-<!-- Related Content Rail: À Voir Aussi -->
-<div class="flex flex-col mt-space-xl pb-space-lg">
-<div class="flex items-center justify-between px-gutter mb-space-sm">
-<h2 class="font-label-caps text-label-caps text-on-surface font-bold tracking-widest uppercase">
-        À Voir Aussi
-      </h2>
-<span class="font-label-caps text-label-caps text-secondary">SÉLECTION JALADO</span>
-</div>
-<!-- Horizontal Overflow Rail -->
-<div class="flex overflow-x-auto gap-space-sm px-gutter no-scrollbar py-1">
-<!-- Card 1 -->
-<div class="w-[140px] flex-shrink-0 flex flex-col bg-surface-container cursor-pointer group">
-<div class="relative w-full aspect-[2/3] bg-surface-container-high overflow-hidden">
-<div class="w-full h-full bg-cover bg-center" data-alt="Editorial poster for Dahomey cinema film titled Ouidah Port of Memories. Somber coastal landscape with historic doorway of no return, high-contrast black and sepia hues." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBToB27OMktJf_Zo_hfhZ6Y4W8FKfXtnnhJJN0kQmTJ2gQZdxPDXtUbwedip-LZqatjT7kd-KMPnQfUo1SWRe4kxKHm2nKg5mjkSQxgAcoOtfIc7RjlcNR7D87AvWCLnpx1Yp3U6Wt62vpAO3DCcW6nsH6uGGkU9QYl_OnM4ZNAoSzym4ymfOVRMjUW9D0PxsNq64U9sO_gpjmkIdkrvDX2_6xdQ95sVrPTrPdrV_rBc36Qygt2T8C-6A')"></div>
-<span class="absolute top-1.5 left-1.5 bg-primary-container text-on-primary font-label-caps text-label-caps px-1 py-0.5">
-            PREMIUM
-          </span>
-</div>
-<div class="p-2 flex flex-col">
-<span class="font-label-caps text-label-caps text-tertiary truncate">HISTOIRE</span>
-<h3 class="font-title-editorial text-title-editorial text-on-surface truncate text-[14px]">Ouidah : Mémoires</h3>
-<span class="font-body-sm text-body-sm text-secondary text-[11px] mt-0.5">Film • 1h 42m</span>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="w-[140px] flex-shrink-0 flex flex-col bg-surface-container cursor-pointer group">
-<div class="relative w-full aspect-[2/3] bg-surface-container-high overflow-hidden">
-<div class="w-full h-full bg-cover bg-center" data-alt="Film theatrical poster showing traditional Ganvié stilt village at sunrise with a solitary canoeist reflected in calm waters, vibrant ochre sky." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCq8hctnhZNHaVOuy0ONTpz3CBYTNz9uIGXfqEMHt4a2AMCmBTiNRI5hXRwutdh3OI0q6F_YHpmdu_VosNJSKvo_6_BkZ_O-95KQDlNhLISdWz9c9Qoi48RqiuHe4cNWO-KYnGQswBdQugLSXUQD0LoEsXSTKmbFNj127cL7IusSuFIbRuAWdCM-d_V02cN7kktoXeTffsXJoivxj98SV4Dgmv34DpYzfO5qLJ-j1VgRf3J4mTIn9LtfA')"></div>
-<span class="absolute top-1.5 left-1.5 bg-surface-container-highest text-on-surface font-label-caps text-label-caps px-1 py-0.5">
-            INCLUS
-          </span>
-</div>
-<div class="p-2 flex flex-col">
-<span class="font-label-caps text-label-caps text-tertiary truncate">DOCUMENTAIRE</span>
-<h3 class="font-title-editorial text-title-editorial text-on-surface truncate text-[14px]">Ganvié, Cité Lacustre</h3>
-<span class="font-body-sm text-body-sm text-secondary text-[11px] mt-0.5">Saison 1 • 6 ép.</span>
-</div>
-</div>
-<!-- Card 3 -->
-<div class="w-[140px] flex-shrink-0 flex flex-col bg-surface-container cursor-pointer group">
-<div class="relative w-full aspect-[2/3] bg-surface-container-high overflow-hidden">
-<div class="w-full h-full bg-cover bg-center" data-alt="Luxury musical documentary poster with brass trumpet and African talking drum bathed in crimson studio spotlight, title Danxomè Jazz." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuClM5Ouk2fhMw3SNcJnqauPZ_hJMMzNISBHlHS3d8yOcWybBHl1-x7wWK0FXgEfKKKwXBxnoxvnMhGWQznSApdRCQ6nxbs1x-MHLjeI1586UpzGq_CPlOsZxl_41yutP8DMNWLhZPgKlI9IkAbo1OX49-PIpRC3QjwhbkUy5lPbcPdf3MwPLUJQRp0_DL498YG1TnTNQ8sp6pLlCP-1P3ezxOmY2OlrUKc-N7zjlt0PaUU7E6tj77aF2g')"></div>
-<span class="absolute top-1.5 left-1.5 bg-primary-container text-on-primary font-label-caps text-label-caps px-1 py-0.5">
-            PREMIUM
-          </span>
-</div>
-<div class="p-2 flex flex-col">
-<span class="font-label-caps text-label-caps text-tertiary truncate">CONCERT</span>
-<h3 class="font-title-editorial text-title-editorial text-on-surface truncate text-[14px]">Danxomè Jazz Sessions</h3>
-<span class="font-body-sm text-body-sm text-secondary text-[11px] mt-0.5">Archive • 58m</span>
-</div>
-</div>
-<!-- Card 4 -->
-<div class="w-[140px] flex-shrink-0 flex flex-col bg-surface-container cursor-pointer group">
-<div class="relative w-full aspect-[2/3] bg-surface-container-high overflow-hidden">
-<div class="w-full h-full bg-cover bg-center" data-alt="Cinema poster showing young female West African archaeologist dusting a terra-cotta relic in laboratory setting with dramatic side lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWO75zR0jayADqXAMpIA3StbGXN48NEjaJbxLPlBKM504ZigVPim-3ox55XqY92j4CbrtmWFooD8mI8jMZ1PpZXiCsfm9-K0Zg22Q_tdqwcXJsQvMRHdzEkYfZOzvvR0n28pdof1RuY8UXeN0IBHSiB6nzjZ8bfhjvSSebHfZuqTvr7sFw-rdiO_L0LtgoKqYH1FXYxCGG6g-hggpVMKFYg-61ynYyT6Gc1cfJAOQlHxI-eBy4gjKPYg')"></div>
-<span class="absolute top-1.5 left-1.5 bg-primary-container text-on-primary font-label-caps text-label-caps px-1 py-0.5">
-            PREMIUM
-          </span>
-</div>
-<div class="p-2 flex flex-col">
-<span class="font-label-caps text-label-caps text-tertiary truncate">SÉRIE</span>
-<h3 class="font-title-editorial text-title-editorial text-on-surface truncate text-[14px]">Terre de Rois</h3>
-<span class="font-body-sm text-body-sm text-secondary text-[11px] mt-0.5">Saison 2 • 8 ép.</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Subtle Bottom Brand Bar -->
-<div class="w-full py-6 flex flex-col items-center justify-center bg-surface-container-lowest gap-1">
-<div class="flex items-center gap-2">
-<span class="h-1.5 w-1.5 bg-primary-container"></span>
-<span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase">Jalado Cinéma d'Auteur</span>
-<span class="h-1.5 w-1.5 bg-primary-container"></span>
-</div>
-<span class="font-label-mono-technical text-[10px] text-secondary opacity-60">République du Bénin • Streaming HD/4K</span>
-</div>
-</div>
-<script>
-  function toggleSynopsis() {
-    const preview = document.getElementById('synopsis-preview');
-    const toggleBtn = document.getElementById('synopsis-toggle');
-    const isExpanded = toggleBtn.getAttribute('data-expanded') === 'true';
+          <span class="font-label-caps text-label-caps text-secondary">SÉLECTION JALADO</span>
+        </div>
+        <!-- Horizontal Overflow Rail -->
+        <div class="flex overflow-x-auto gap-space-sm px-gutter no-scrollbar py-1">
+          <div
+            class="w-[140px] flex-shrink-0 flex flex-col bg-[#0E2A1D] border border-[#EDEDED]/10 cursor-pointer group">
+            <div class="relative w-full aspect-[2/3] bg-[#07130E] overflow-hidden">
+              <div class="w-full h-full bg-cover bg-center"
+                data-alt="Editorial poster for Dahomey cinema film titled Ouidah Port of Memories. Somber coastal landscape with historic doorway of no return, high-contrast black and sepia hues."
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBToB27OMktJf_Zo_hfhZ6Y4W8FKfXtnnhJJN0kQmTJ2gQZdxPDXtUbwedip-LZqatjT7kd-KMPnQfUo1SWRe4kxKHm2nKg5mjkSQxgAcoOtfIc7RjlcNR7D87AvWCLnpx1Yp3U6Wt62vpAO3DCcW6nsH6uGGkU9QYl_OnM4ZNAoSzym4ymfOVRMjUW9D0PxsNq64U9sO_gpjmkIdkrvDX2_6xdQ95sVrPTrPdrV_rBc36Qygt2T8C-6A')">
+              </div><span
+                class="absolute top-1.5 left-1.5 bg-[#C9A227] text-[#07130E] font-bold font-label-caps text-label-caps px-1 py-0.5">PREMIUM</span>
+            </div>
+            <div class="p-2 flex flex-col"><span
+                class="font-label-caps text-label-caps text-[#EDEDED]/60 truncate">HISTOIRE</span>
+              <h3 class="font-title-editorial text-title-editorial text-[#EDEDED] truncate text-[14px]">Ouidah :
+                Mémoires</h3><span class="font-body-sm text-body-sm text-[#EDEDED]/60 text-[11px] mt-0.5">Film • 1h
+                42m</span>
+            </div>
+          </div>
+          <div
+            class="w-[140px] flex-shrink-0 flex flex-col bg-[#0E2A1D] border border-[#EDEDED]/10 cursor-pointer group">
+            <div class="relative w-full aspect-[2/3] bg-[#07130E] overflow-hidden">
+              <div class="w-full h-full bg-cover bg-center"
+                data-alt="Film theatrical poster showing traditional Ganvié stilt village at sunrise with a solitary canoeist reflected in calm waters, vibrant ochre sky."
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCq8hctnhZNHaVOuy0ONTpz3CBYTNz9uIGXfqEMHt4a2AMCmBTiNRI5hXRwutdh3OI0q6F_YHpmdu_VosNJSKvo_6_BkZ_O-95KQDlNhLISdWz9c9Qoi48RqiuHe4cNWO-KYnGQswBdQugLSXUQD0LoEsXSTKmbFNj127cL7IusSuFIbRuAWdCM-d_V02cN7kktoXeTffsXJoivxj98SV4Dgmv34DpYzfO5qLJ-j1VgRf3J4mTIn9LtfA')">
+              </div><span
+                class="absolute top-1.5 left-1.5 bg-[#07130E]/80 text-[#EDEDED] border border-[#EDEDED]/20 font-label-caps text-label-caps px-1 py-0.5">INCLUS</span>
+            </div>
+            <div class="p-2 flex flex-col"><span
+                class="font-label-caps text-label-caps text-[#EDEDED]/60 truncate">DOCUMENTAIRE</span>
+              <h3 class="font-title-editorial text-title-editorial text-[#EDEDED] truncate text-[14px]">Ganvié, Cité
+                Lacustre</h3><span class="font-body-sm text-body-sm text-[#EDEDED]/60 text-[11px] mt-0.5">Saison 1 • 6
+                ép.</span>
+            </div>
+          </div>
+          <div
+            class="w-[140px] flex-shrink-0 flex flex-col bg-[#0E2A1D] border border-[#EDEDED]/10 cursor-pointer group">
+            <div class="relative w-full aspect-[2/3] bg-[#07130E] overflow-hidden">
+              <div class="w-full h-full bg-cover bg-center"
+                data-alt="Luxury musical documentary poster with brass trumpet and African talking drum bathed in crimson studio spotlight, title Danxomè Jazz."
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuClM5Ouk2fhMw3SNcJnqauPZ_hJMMzNISBHlHS3d8yOcWybBHl1-x7wWK0FXgEfKKKwXBxnoxvnMhGWQznSApdRCQ6nxbs1x-MHLjeI1586UpzGq_CPlOsZxl_41yutP8DMNWLhZPgKlI9IkAbo1OX49-PIpRC3QjwhbkUy5lPbcPdf3MwPLUJQRp0_DL498YG1TnTNQ8sp6pLlCP-1P3ezxOmY2OlrUKc-N7zjlt0PaUU7E6tj77aF2g')">
+              </div><span
+                class="absolute top-1.5 left-1.5 bg-[#C9A227] text-[#07130E] font-bold font-label-caps text-label-caps px-1 py-0.5">PREMIUM</span>
+            </div>
+            <div class="p-2 flex flex-col"><span
+                class="font-label-caps text-label-caps text-[#EDEDED]/60 truncate">CONCERT</span>
+              <h3 class="font-title-editorial text-title-editorial text-[#EDEDED] truncate text-[14px]">Danxomè Jazz
+                Sessions</h3><span class="font-body-sm text-body-sm text-[#EDEDED]/60 text-[11px] mt-0.5">Archive •
+                58m</span>
+            </div>
+          </div>
+          <div
+            class="w-[140px] flex-shrink-0 flex flex-col bg-[#0E2A1D] border border-[#EDEDED]/10 cursor-pointer group">
+            <div class="relative w-full aspect-[2/3] bg-[#07130E] overflow-hidden">
+              <div class="w-full h-full bg-cover bg-center"
+                data-alt="Cinema poster showing young female West African archaeologist dusting a terra-cotta relic in laboratory setting with dramatic side lighting."
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWO75zR0jayADqXAMpIA3StbGXN48NEjaJbxLPlBKM504ZigVPim-3ox55XqY92j4CbrtmWFooD8mI8jMZ1PpZXiCsfm9-K0Zg22Q_tdqwcXJsQvMRHdzEkYfZOzvvR0n28pdof1RuY8UXeN0IBHSiB6nzjZ8bfhjvSSebHfZuqTvr7sFw-rdiO_L0LtgoKqYH1FXYxCGG6g-hggpVMKFYg-61ynYyT6Gc1cfJAOQlHxI-eBy4gjKPYg')">
+              </div><span
+                class="absolute top-1.5 left-1.5 bg-[#C9A227] text-[#07130E] font-bold font-label-caps text-label-caps px-1 py-0.5">PREMIUM</span>
+            </div>
+            <div class="p-2 flex flex-col"><span
+                class="font-label-caps text-label-caps text-[#EDEDED]/60 truncate">SÉRIE</span>
+              <h3 class="font-title-editorial text-title-editorial text-[#EDEDED] truncate text-[14px]">Terre de Rois
+              </h3><span class="font-body-sm text-body-sm text-[#EDEDED]/60 text-[11px] mt-0.5">Saison 2 • 8 ép.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Subtle Bottom Brand Bar -->
+      <div class="w-full py-6 flex flex-col items-center justify-center bg-surface-container-lowest gap-1">
+        <div class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-[#1FA463]"></span><span
+            class="font-label-caps text-label-caps text-[#EDEDED] tracking-widest uppercase font-semibold">Jalado Cinéma
+            d'Auteur</span><span class="h-1.5 w-1.5 rounded-full bg-[#1FA463]"></span></div><span
+          class="font-label-mono-technical text-[10px] text-[#EDEDED]/50">République du Bénin • Streaming HD/4K</span>
+      </div>
+    </div>
+    <script>
+      function toggleSynopsis() {
+        const preview = document.getElementById('synopsis-preview');
+        const toggleBtn = document.getElementById('synopsis-toggle');
+        const isExpanded = toggleBtn.getAttribute('data-expanded') === 'true';
 
-    if (!isExpanded) {
-      preview.textContent = "Immersion inédite dans les secrets de conservation des trésors restitués du Palais des Rois d'Abomey. Une enquête patrimoniale et spirituelle exclusive au cœur des ateliers d'ébénisterie sacrée et des sanctuaires du Danxomè. Suivez les restaurateurs, historiens d'art et dignitaires coutumiers veillant à l'intégrité de ces chefs-d'œuvre séculaires réinstallés sur leur terre natale.";
-      toggleBtn.textContent = 'Réduire';
-      toggleBtn.setAttribute('data-expanded', 'true');
-    } else {
-      preview.textContent = "Immersion inédite dans les secrets de conservation des trésors restitués du Palais des Rois d'Abomey. Une enquête patrimoniale et spirituelle exclusive au cœur des ateliers d'ébénisterie sacrée et des sanctuaires du Danxomè...";
-      toggleBtn.textContent = 'Lire la suite';
-      toggleBtn.setAttribute('data-expanded', 'false');
-    }
-  }
-
-  function toggleWatchlist() {
-    const icon = document.getElementById('watchlist-icon');
-    const label = document.getElementById('watchlist-text');
-    const btn = document.getElementById('btn-watchlist');
-
-    if (icon.textContent === 'bookmark_add') {
-      icon.textContent = 'bookmark_added';
-      label.textContent = 'Dans ma liste';
-      btn.classList.add('bg-surface-container-high', 'text-tertiary');
-    } else {
-      icon.textContent = 'bookmark_add';
-      label.textContent = 'Ajouter à ma liste';
-      btn.classList.remove('bg-surface-container-high', 'text-tertiary');
-    }
-  }
-
-  function switchTab(tab) {
-    const tabs = ['episodes', 'extraits', 'details'];
-    
-    tabs.forEach(t => {
-      const content = document.getElementById('content-' + t);
-      const btn = document.getElementById('tab-' + t);
-      const indicator = document.getElementById('indicator-' + t);
-
-      if (t === tab) {
-        if (content) content.classList.remove('hidden');
-        if (content) content.classList.add('flex');
-        if (btn) {
-          btn.classList.add('text-on-surface', 'font-bold');
-          btn.classList.remove('text-secondary');
-        }
-        if (indicator) {
-          indicator.classList.remove('bg-transparent');
-          indicator.classList.add('bg-primary-container');
-        }
-      } else {
-        if (content) content.classList.add('hidden');
-        if (content) content.classList.remove('flex');
-        if (btn) {
-          btn.classList.remove('text-on-surface', 'font-bold');
-          btn.classList.add('text-secondary');
-        }
-        if (indicator) {
-          indicator.classList.remove('bg-primary-container');
-          indicator.classList.add('bg-transparent');
+        if (!isExpanded) {
+          preview.textContent = "Immersion inédite dans les secrets de conservation des trésors restitués du Palais des Rois d'Abomey. Une enquête patrimoniale et spirituelle exclusive au cœur des ateliers d'ébénisterie sacrée et des sanctuaires du Danxomè. Suivez les restaurateurs, historiens d'art et dignitaires coutumiers veillant à l'intégrité de ces chefs-d'œuvre séculaires réinstallés sur leur terre natale.";
+          toggleBtn.textContent = 'Réduire';
+          toggleBtn.setAttribute('data-expanded', 'true');
+        } else {
+          preview.textContent = "Immersion inédite dans les secrets de conservation des trésors restitués du Palais des Rois d'Abomey. Une enquête patrimoniale et spirituelle exclusive au cœur des ateliers d'ébénisterie sacrée et des sanctuaires du Danxomè...";
+          toggleBtn.textContent = 'Lire la suite';
+          toggleBtn.setAttribute('data-expanded', 'false');
         }
       }
-    });
-  }
-</script></main></body></html>
+
+      function toggleWatchlist() {
+        const icon = document.getElementById('watchlist-icon');
+        const label = document.getElementById('watchlist-text');
+        const btn = document.getElementById('btn-watchlist');
+
+        if (icon.textContent === 'bookmark_add') {
+          icon.textContent = 'bookmark_added';
+          label.textContent = 'Dans ma liste';
+          btn.classList.add('bg-surface-container-high', 'text-tertiary');
+        } else {
+          icon.textContent = 'bookmark_add';
+          label.textContent = 'Ajouter à ma liste';
+          btn.classList.remove('bg-surface-container-high', 'text-tertiary');
+        }
+      }
+
+      function switchTab(tab) {
+        const tabs = ['episodes', 'extraits', 'details'];
+
+        tabs.forEach(t => {
+          const content = document.getElementById('content-' + t);
+          const btn = document.getElementById('tab-' + t);
+          const indicator = document.getElementById('indicator-' + t);
+
+          if (t === tab) {
+            if (content) content.classList.remove('hidden');
+            if (content) content.classList.add('flex');
+            if (btn) {
+              btn.classList.add('text-on-surface', 'font-bold');
+              btn.classList.remove('text-secondary');
+            }
+            if (indicator) {
+              indicator.classList.remove('bg-transparent');
+              indicator.classList.add('bg-primary-container');
+            }
+          } else {
+            if (content) content.classList.add('hidden');
+            if (content) content.classList.remove('flex');
+            if (btn) {
+              btn.classList.remove('text-on-surface', 'font-bold');
+              btn.classList.add('text-secondary');
+            }
+            if (indicator) {
+              indicator.classList.remove('bg-primary-container');
+              indicator.classList.add('bg-transparent');
+            }
+          }
+        });
+      }
+    </script>
+  </main>
+</body>
+
+</html>

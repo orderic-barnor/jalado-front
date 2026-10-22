@@ -58,6 +58,108 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script
         id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-bright": "#373940", "on-primary-fixed": "#40000f", "on-surface-variant": "#e8bcbe", "surface-container-lowest": "#0c0e14", "outline-variant": "#5e3e41", "on-secondary-container": "#643900", "secondary-fixed-dim": "#ffb86f", "on-error-container": "#ffdad6", "primary-container": "#ff506e", "inverse-on-surface": "#2e3037", "inverse-surface": "#e2e2eb", "surface-variant": "#33343b", "on-secondary-fixed": "#2c1600", "on-secondary": "#4a2800", "on-surface": "#e2e2eb", "primary-fixed": "#ffdadb", "surface-tint": "#ffb2b8", "primary": "#ffb2b8", "error-container": "#93000a", "on-primary-container": "#5b0018", "primary-fixed-dim": "#ffb2b8", "on-background": "#e2e2eb", "surface-container-highest": "#33343b", "on-tertiary-container": "#262935", "inverse-primary": "#be003d", "surface-dim": "#111319", "surface": "#111319", "on-primary-fixed-variant": "#91002d", "surface-container-high": "#282a30", "on-tertiary": "#2c303c", "tertiary-container": "#8d909e", "secondary-fixed": "#ffdcbd", "on-tertiary-fixed": "#171b26", "secondary": "#ffc080", "on-secondary-fixed-variant": "#693c00", "surface-container-low": "#191b22", "surface-container": "#1e1f26", "on-tertiary-fixed-variant": "#434653", "tertiary": "#c3c6d5", "on-primary": "#67001d", "tertiary-fixed": "#dfe2f1", "tertiary-fixed-dim": "#c3c6d5", "error": "#ffb4ab", "on-error": "#690005", "background": "#111319", "secondary-container": "#fe9800", "outline": "#ae8789" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-xl": "3rem", "margin-mobile": "1.25rem", "space-xs": "0.25rem", "gutter": "1.5rem", "margin": "3rem", "space-md": "1rem", "space-lg": "1.75rem", "gutter-mobile": "1rem" }, fontFamily: { "label-caps-lg": ["Barlow Condensed"], "headline-sm": ["Barlow Condensed"], "display-hero-mobile": ["Bodoni Moda"], "body-md": ["Work Sans"], "headline-lg": ["Bodoni Moda"], "headline-xl-mobile": ["Bodoni Moda"], "body-xl": ["Work Sans"], "label-caps-md": ["Barlow Condensed"], "headline-lg-mobile": ["Bodoni Moda"], "headline-md": ["Barlow Condensed"], "headline-xl": ["Bodoni Moda"], "display-hero": ["Bodoni Moda"], "label-caps-sm": ["Barlow Condensed"], "body-sm": ["Work Sans"] }, fontSize: { "label-caps-lg": ["18px", { "lineHeight": "20px", "letterSpacing": "0.14em", "fontWeight": "700" }], "headline-sm": ["22px", { "lineHeight": "26px", "letterSpacing": "0.03em", "fontWeight": "600" }], "display-hero-mobile": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-lg": ["40px", { "lineHeight": "46px", "fontWeight": "500" }], "headline-xl-mobile": ["36px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-xl": ["20px", { "lineHeight": "32px", "fontWeight": "400" }], "label-caps-md": ["14px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "fontWeight": "500" }], "headline-md": ["28px", { "lineHeight": "32px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-xl": ["64px", { "lineHeight": "68px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-hero": ["96px", { "lineHeight": "96px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "label-caps-sm": ["11px", { "lineHeight": "13px", "letterSpacing": "0.16em", "fontWeight": "600" }], "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } }</script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,700&amp;display=swap"
+        rel="stylesheet" />
+    <style id="jalado-recolor-theme">
+        :root {
+            --bg-main: #07130E;
+            --container-card: #0E2A1D;
+            --text-offwhite: #EDEDED;
+            --accent-green: #1FA463;
+            --gold-badge: #C9A227;
+            --live-red: #E5384B;
+        }
+
+        html,
+        body,
+        .bg-surface,
+        .bg-surface-container-lowest {
+            background-color: #07130E !important;
+            color: #EDEDED !important;
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+        }
+
+        .bg-surface-container,
+        .bg-surface-container-low,
+        .bg-surface-container-high,
+        .bg-surface-variant {
+            background-color: #0E2A1D !important;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-display-hero-mobile,
+        .font-headline-lg-mobile,
+        .font-headline-md,
+        .font-headline-sm,
+        .font-headline-xl-mobile,
+        .font-headline-lg {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-weight: 800 !important;
+            letter-spacing: -0.03em !important;
+        }
+
+        .text-primary,
+        .text-primary-container,
+        .text-secondary {
+            color: #1FA463 !important;
+        }
+
+        .bg-primary-container {
+            background-color: #1FA463 !important;
+            color: #07130E !important;
+        }
+
+        .text-on-surface,
+        .text-on-surface-variant,
+        .text-outline {
+            color: #EDEDED !important;
+        }
+
+        .text-on-surface-variant {
+            opacity: 0.85;
+        }
+
+        .bg-primary {
+            background-color: #0E2A1D !important;
+            border: 1px solid #1FA463;
+            color: #EDEDED !important;
+        }
+
+        .bg-primary .material-symbols-outlined {
+            color: #EDEDED !important;
+        }
+
+        button[type="submit"],
+        .bg-primary-container:is(button, a),
+        button.bg-surface-variant {
+            background-color: #EDEDED !important;
+            color: #07130E !important;
+            font-weight: 700 !important;
+        }
+
+        button[type="submit"] span,
+        button[type="submit"] .material-symbols-outlined {
+            color: #07130E !important;
+        }
+
+        #dial-touch-zone .bg-primary-container,
+        #dial-touch-zone div.clip-triangle {
+            background-color: #1FA463 !important;
+            border-color: #1FA463 transparent transparent transparent !important;
+        }
+
+        #sub-feedback .material-symbols-outlined {
+            color: #1FA463 !important;
+        }
+    </style>
 </head>
 
 <body
@@ -67,8 +169,9 @@
             <div class="flex items-center gap-space-sm"><span
                     class="font-headline-lg-mobile text-headline-lg-mobile tracking-tighter uppercase font-bold text-on-surface select-none">JALADO</span>
                 <div class="flex items-center gap-1.5 px-2 py-0.5 bg-surface-container rounded-full"><span
-                        class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span><span
-                        class="font-label-caps-sm text-label-caps-sm uppercase tracking-widest text-on-surface-variant font-bold">DIRECT</span>
+                        class="w-2 h-2 rounded-full animate-pulse"
+                        style="background-color: #E5384B !important;"></span><span
+                        class="font-label-caps-sm text-label-caps-sm uppercase tracking-widest text-[#EDEDED] font-bold">DIRECT</span>
                 </div>
             </div>
             <div class="flex items-center gap-space-md"><a
@@ -117,7 +220,7 @@
                         Plateforme Audiovisuelle Contemporaine // Bénin
                     </p>
                     <h1
-                        class="font-display-hero-mobile text-display-hero-mobile tracking-tighter uppercase font-bold text-on-surface leading-[0.88] break-words -ml-1">
+                        class="font-display-hero-mobile text-display-hero-mobile tracking-tighter uppercase font-bold text-on-surface leading-[0.88] break-words -ml-1" style="font-size: 46px;">
                         ONDES LIBRES,<br />
                         <span class="italic font-light text-primary">RÉCITS</span><br />
                         INDÉLÉBILES.
@@ -328,11 +431,11 @@
             <section class="w-full bg-surface-container-low px-margin-mobile py-4 flex flex-col gap-3">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center gap-2">
-                        <span class="relative flex h-2.5 w-2.5">
-                            <span
-                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary-container"></span>
-                        </span>
+                        <span class="relative flex h-2.5 w-2.5"><span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
+                                style="background-color: #E5384B;"></span><span
+                                class="relative inline-flex rounded-full h-2.5 w-2.5"
+                                style="background-color: #E5384B;"></span></span>
                         <span
                             class="font-label-caps-sm text-label-caps-sm uppercase tracking-widest text-primary-container font-bold">FRÉQUENCE
                             DIRECT // PILOTE</span>
@@ -393,7 +496,8 @@
                 </div>
             </section>
             <!-- LIVE SCROLLING TICKER TAPE (MARQUEE 60FPS) -->
-            <div class="w-full bg-primary-container text-on-surface py-2 overflow-hidden flex whitespace-nowrap">
+            <div class="w-full bg-primary-container text-on-surface py-2 overflow-hidden flex whitespace-nowrap"
+                style="background-color: #0E2A1D !important; color: #EDEDED !important; border-top: 1px solid #1FA463; border-bottom: 1px solid #1FA463;">
                 <div class="flex gap-4 items-center animate-[marquee_18s_linear_infinite]">
                     <span
                         class="font-label-caps-md text-label-caps-md tracking-wider uppercase font-bold flex items-center gap-2">
@@ -490,7 +594,8 @@
                         <!-- SPECIAL EXCLUSIF GRADIENT BADGE (The ONLY gradient allowed) -->
                         <div class="absolute top-3 left-3 flex items-center gap-1.5">
                             <span
-                                class="px-2.5 py-1 bg-gradient-to-r from-[#FF0055] to-[#FF9900] text-surface-container-lowest font-label-caps-sm text-label-caps-sm font-extrabold uppercase tracking-wider flex items-center gap-1">
+                                class="px-2.5 py-1 bg-gradient-to-r from-[#FF0055] to-[#FF9900] text-surface-container-lowest font-label-caps-sm text-label-caps-sm font-extrabold uppercase tracking-wider flex items-center gap-1"
+                                style="background: #C9A227 !important; color: #07130E !important;">
                                 <span class="material-symbols-outlined text-[13px] font-bold"
                                     style="font-variation-settings: 'FILL' 1;">lock</span>
                                 <span>EXCLUSIF // ABONNÉS</span>
@@ -618,7 +723,8 @@
                     </div>
                     <!-- Tier 2: Abonnement Soutien -->
                     <div class="flex flex-col bg-surface-container-high p-4 relative">
-                        <div class="absolute top-0 right-0 bg-primary-container px-2 py-0.5">
+                        <div class="absolute top-0 right-0 bg-primary-container px-2 py-0.5"
+                            style="background-color: #C9A227 !important; color: #07130E !important;">
                             <span
                                 class="font-label-caps-sm text-label-caps-sm text-on-surface uppercase font-bold">SOUTIEN
                                 DIRECT</span>
@@ -819,7 +925,8 @@
         </script>
     </main>
     <nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.6)]"
-        data-active-classes="text-primary-container">
+        data-active-classes="text-primary-container"
+        style="background-color: rgba(7, 19, 14, 0.96) !important; border-top: 1px solid rgba(237, 237, 237, 0.1);">
         <div
             class="px-margin-mobile pt-2 pb-1 bg-surface-container-lowest/80 flex items-center justify-between gap-space-md">
             <div class="flex items-center gap-space-sm flex-1 min-w-0">
@@ -838,13 +945,15 @@
                         class="w-0.5 h-3 bg-primary-container"></span><span
                         class="w-0.5 h-4 bg-outline-variant"></span><span class="w-0.5 h-1 bg-outline-variant"></span>
                 </div><button
-                    class="h-9 px-space-md bg-primary-container text-on-surface font-label-caps-md text-label-caps-md uppercase tracking-wider flex items-center justify-center active:scale-95 transition-transform">Être
+                    class="h-9 px-space-md bg-primary-container text-on-surface font-label-caps-md text-label-caps-md uppercase tracking-wider flex items-center justify-center active:scale-95 transition-transform"
+                    style="background-color: #EDEDED !important; color: #07130E !important; font-weight: 700 !important;">Être
                     prévenu</button>
             </div>
         </div>
         <div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page"
                 class="flex flex-col items-center justify-center gap-1 w-16 h-12 transition-colors text-primary-container"
-                data-path="accueil" href="#"><span class="material-symbols-outlined text-[22px]">radio</span><span
+                data-path="accueil" href="#" style="color: #1FA463 !important;"><span
+                    class="material-symbols-outlined text-[22px]">radio</span><span
                     class="font-label-caps-sm text-label-caps-sm uppercase tracking-wider">Antenne</span></a><a
                 class="flex flex-col items-center justify-center gap-1 w-16 h-12 text-on-surface-variant hover:text-on-surface transition-colors"
                 data-path="cinema" href="#"><span class="material-symbols-outlined text-[22px]">movie</span><span
